@@ -1,1 +1,0 @@
-{"i:enderio:item_basic_item_filter:0":[{"o":"i:enderio:item_enchantment_filter_normal:0","n":"Enchantment Item Filter","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"5aafea7ba3511e36e476.webp","a":1}],"i:gregtech:boiler_firebox_casing:1":[{"o":"i:gregtech:machine:1014","n":"Large Steel Boiler","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"9235e1612c365912ef74.webp","a":1}]}

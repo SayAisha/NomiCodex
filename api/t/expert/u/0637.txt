@@ -1,1 +1,0 @@
-{"i:gregtech:ore_palladium_0:0":[{"o":"i:gregtech:meta_crushed:77","n":"Crushed Palladium Ore","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"2a116e7247b6e350d0f4.webp","a":1}]}

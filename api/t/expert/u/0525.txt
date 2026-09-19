@@ -1,1 +1,0 @@
-{"i:minecraft:rotten_flesh:0":[{"o":"i:darkutils:filter:3","n":"Mob Filter","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e5bee462d4b681b322a5.webp","a":1}]}

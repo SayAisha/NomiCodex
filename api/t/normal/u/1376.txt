@@ -1,1 +1,0 @@
-{"i:nomilabs:stabilizedcalifornium:0":[{"o":"i:extendedcrafting:singularity_ultimate:0","n":"The Ultimate Singularity","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"327061f40a29423ce1dc.webp","a":1},{"o":"i:gregtech:meta_item_1:752","n":"Zero Point Module","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"ce72f2199e6594b59313.webp","a":1}]}

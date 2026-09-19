@@ -1,1 +1,0 @@
-{"i:gregtech:gt_armor:21":[{"o":"i:gregtech:gt_armor:30","n":"Advanced NanoMuscle\u00e2\u0084\u00a2 Suite Chestplate","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"729fb1cff49d773a0e15.webp","a":1}]}

@@ -1,1 +1,0 @@
-{"i:draconicevolution:chaos_shard:1":[{"o":"i:draconicevolution:chaos_shard:0","n":"Chaos Shard","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"2abbd9711f69642831a3.webp","a":1}]}

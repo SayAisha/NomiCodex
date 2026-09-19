@@ -1,1 +1,0 @@
-{"i:gregtech:meta_tool_head_chainsaw:2":[{"o":"i:gregtech:meta_dust_small:324","n":"Small Pile of Steel Dust","t":"Pulverization","e":8,"d":304,"x":"ULV","h":0,"g":"51114f9ce05bccc46e32.webp","a":1}]}

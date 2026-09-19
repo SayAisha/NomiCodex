@@ -1,1 +1,0 @@
-{"i:redstonearsenal:tool.axe_flux:0":[{"o":"i:armorplus:ender_dragon_battle_axe:0","n":"Ender Dragon Battle Axe","t":"Elite Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"6540bb355eccdc8df19f.webp","a":1}]}

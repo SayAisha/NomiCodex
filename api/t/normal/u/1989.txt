@@ -1,1 +1,0 @@
-{"i:gregtech:meta_tool_head_screwdriver:287":[{"o":"i:gregtech:meta_dust:287","n":"Invar Dust","t":"Pulverization","e":2,"d":56,"x":"ULV","h":0,"g":"69ad76bc0e35fb44da88.webp","a":1},{"o":"f:gregtech:invar","n":"Molten Invar","t":"Extractor","e":30,"d":56,"x":"LV","h":0,"g":"33c1e3e2e1a7e1f39b80.webp","a":1}]}

@@ -1,1 +1,0 @@
-{"i:extendedcrafting:table_ultimate:0":[{"o":"i:packagedexcrafting:ultimate_crafter:0","n":"Ultimate Package Crafter","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"9cbc6f6a0f60bfbea278.webp","a":1},{"o":"i:extendedcrafting:table_ultimate:0","n":"Ultimate Crafting Table","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"10bcb246c39b6b775b0c.webp","a":1}]}

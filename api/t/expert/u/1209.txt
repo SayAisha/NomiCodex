@@ -1,1 +1,0 @@
-{"i:appliedenergistics2:inscriber:0":[{"o":"i:ae2stuff:inscriber:0","n":"Advanced Inscriber","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"9b643fde6ca79087662b.webp","a":1}]}

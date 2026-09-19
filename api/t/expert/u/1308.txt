@@ -1,1 +1,0 @@
-{"i:armorplus:redstone_chestplate:0":[{"o":"i:armorplus:the_ultimate_part:3","n":"The Ultimate Chestplate Right","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"f72494ee12f642f49889.webp","a":1}]}

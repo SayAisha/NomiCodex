@@ -1,1 +1,0 @@
-{"i:gregtech:meta_crushed_purified:10":[{"o":"i:gregtech:meta_dust_pure:10","n":"Purified Pile of Beryllium Dust","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"ffc790aa00241a9d2874.webp","a":1},{"o":"i:gregtech:meta_dust_pure:10","n":"Purified Pile of Beryllium Dust","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"efc801e25479634284dc.webp","a":1}]}

@@ -1,1 +1,0 @@
-{"i:chisel:stonebrick:0":[{"o":"i:extrautils2:decorativesolid:0","n":"Border Stone","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"606db6e1c9caeb3f91b6.webp","a":1}]}

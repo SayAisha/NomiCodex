@@ -1,1 +1,0 @@
-{"i:gregtech:meta_ingot_hot:118":[{"o":"i:gregtech:meta_ingot:118","n":"Vanadium Ingot","t":"Vacuum Freezer","e":120,"d":153,"x":"MV","h":0,"g":"05da633289f588a34d01.webp","a":1}]}

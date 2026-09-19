@@ -1,1 +1,0 @@
-{"i:draconicevolution:crafting_injector:3":[{"o":"i:packageddraconic:marked_chaotic_injector:0","n":"Marked Chaotic Fusion Crafting Injector","t":"Assembler","e":7680,"d":100,"x":"IV","h":0,"g":"000c8e6cc60196929a0a.webp","a":1}]}

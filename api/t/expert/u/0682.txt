@@ -1,1 +1,0 @@
-{"i:gregtech:meta_dust_tiny:10":[{"o":"i:gregtech:meta_dust:10","n":"Beryllium Dust","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a8c46d24f330f02c47cb.webp","a":1}]}

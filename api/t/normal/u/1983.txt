@@ -1,1 +1,0 @@
-{"i:gregtech:meta_tool_head_screwdriver:335":[{"o":"i:gregtech:meta_dust:335","n":"Wrought Iron Dust","t":"Pulverization","e":2,"d":56,"x":"ULV","h":0,"g":"7b6dc8366000cc43ce38.webp","a":1},{"o":"f:gregtech:wrought_iron","n":"Wrought Iron","t":"Extractor","e":30,"d":56,"x":"LV","h":0,"g":"7f912771b62e5c8f8895.webp","a":1}]}

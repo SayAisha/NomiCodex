@@ -1,1 +1,0 @@
-{"i:draconicevolution:chaos_shard:2":[{"o":"i:draconicevolution:chaos_shard:1","n":"Large Chaos Fragment","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"8a0992f0f3f9f1ea3c41.webp","a":1},{"o":"i:draconicevolution:chaos_shard:3","n":"Tiny Chaos Fragment","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"7bdce0c96285f6854efd.webp","a":1}]}

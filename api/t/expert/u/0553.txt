@@ -1,1 +1,0 @@
-{"i:nuclearcraft:neptunium:3":[{"o":"i:nuclearcraft:neptunium:1","n":"Neptunium-236 Oxide","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"01f78bf03fa8ebe925c5.webp","a":1}],"i:gregtech:ore_asbestos_0:1":[{"o":"i:gregtech:meta_dust:253","n":"Asbestos Dust","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"94cb2364b56fbc87c876.webp","a":1}]}

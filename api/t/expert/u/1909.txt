@@ -1,1 +1,0 @@
-{"f:gregtech:gasoline":[{"o":"f:gregtech:gasoline_premium","n":"Gasoline Premium","t":"Large Chemical Reactor","e":1920,"d":50,"x":"EV","h":0,"g":"06505e93484de07c6bc7.webp","a":20000}]}

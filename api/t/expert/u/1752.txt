@@ -1,1 +1,0 @@
-{"i:gregtech:meta_crushed_centrifuged:311":[{"o":"i:gregtech:meta_dust:311","n":"Ruby Dust","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"2538029cf15116a2455d.webp","a":1}]}

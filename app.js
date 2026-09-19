@@ -9,7 +9,7 @@ const TIERS = ["ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV",
 // engine-side smoothing, crisp pixels even without image-rendering support
 const ATLAS_COLS = 128;
 const ATLAS_UNIT = 64;
-const DATA_V = 14, ATLAS_V = 1;
+const DATA_V = 15, ATLAS_V = 2;
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (html) => {
@@ -273,6 +273,9 @@ function metaChips(r) {
             case "coil_heat": chips.push(`<span class="mchip hot"><b>${Math.round(v)}</b>K heat</span>`); break;
             case "ender_time": chips.push(`<span class="mchip time"><b>${Math.round(v)}</b>s ender</span>`); break;
             case "combination_cost": case "power_cost": chips.push(`<span class="mchip"><b>${fmt(v)}</b> FE</span>`); break;
+            case "eio_energy": chips.push(`<span class="mchip"><b>${fmt(v)}</b> µI</span>`); break;
+            case "de_energy": case "xu2_energy": chips.push(`<span class="mchip"><b>${fmt(v)}</b> RF</span>`); break;
+            case "de_tier": chips.push(`<span class="mchip tier">tier <b>${Math.round(v)}</b></span>`); break;
             case "cleanroom": if (v === 1) chips.push(`<span class="mchip">cleanroom</span>`); break;
             case "low_gravity": if (v === 1) chips.push(`<span class="mchip">low gravity</span>`); break;
             default: break;
@@ -382,6 +385,7 @@ function renderBrowse(params) {
     </div>`;
     const tiles = $("#tiles");
     const CHUNK = 240;
+    const CAP = 1500;   // keeps phone memory sane; search narrows anyway
     let idx = 0;
     const addChunk = () => {
         const frag = document.createDocumentFragment();
@@ -395,8 +399,13 @@ function renderBrowse(params) {
         tiles.appendChild(frag);
     };
     addChunk();
-    new IntersectionObserver((ents) => { if (ents[0].isIntersecting && idx < filtered.length) addChunk(); })
-        .observe($("#sentinel"));
+    new IntersectionObserver((ents) => {
+        if (ents[0].isIntersecting && idx < Math.min(filtered.length, CAP)) addChunk();
+    }).observe($("#sentinel"));
+    if (filtered.length > CAP) {
+        const note = el(`<div class="empty" style="padding:16px">Showing the first ${CAP.toLocaleString()} of ${filtered.length.toLocaleString()} — type more of the name to narrow it down.</div>`);
+        $("#sentinel").before(note);
+    }
     $("#mod-sel").addEventListener("change", (e) => {
         const p = new URLSearchParams(location.hash.split("?")[1] ?? "");
         e.target.value ? p.set("mod", e.target.value) : p.delete("mod");
@@ -455,7 +464,7 @@ function renderItem(id) {
             <span class="fchip${filter ? "" : " on"}" data-f="">All <span class="n">${list.length}</span></span>
             ${types.slice(0, 14).map(([t, n]) => `<span class="fchip${filter === t ? " on" : ""}" data-f="${esc(t)}">${esc(t)} <span class="n">${n}</span></span>`).join("")}
         </div>` : "<div style='height:14px'></div>"}
-        ${shownCards.length ? `<div class="cards">${shownCards.map(recipeCard).join("")}</div>
+        ${shownCards.length ? `<div class="cards${shownCards.length === 1 ? " single" : ""}${shownCards.length === 2 ? " pair" : ""}">${shownCards.map(recipeCard).join("")}</div>
             ${shown.length > shownCards.length ? `<div style="text-align:center;padding-bottom:30px"><button class="chip" id="more">Show all ${shown.length}</button></div>` : ""}`
         : `<div class="empty"><div class="big">${usesView ? "🔌" : "⚗️"}</div>${usesView
             ? (uses.length ? "No recipes match this filter." : "Not used as an input in any indexed recipe.")

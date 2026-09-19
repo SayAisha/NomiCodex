@@ -1,1 +1,0 @@
-{"i:nuclearcraft:glowing_mushroom:0":[{"o":"i:minecraft:brown_mushroom:0","n":"Mushroom","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"8593c2749cf1e745a8d0.webp","a":1}],"i:appliedenergistics2:paint_ball:3":[{"o":"i:appliedenergistics2:paint_ball:23","n":"Paint Ball - Lumen Light Blue","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"f0e4f47b929a7b543cf0.webp","a":1}]}

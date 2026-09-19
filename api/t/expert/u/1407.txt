@@ -1,1 +1,0 @@
-{"i:gregtech:fluid_pipe_quadruple:2037":[{"o":"i:gregtech:meta_ingot:2037","n":"Potin Ingot","t":"Arc Furnace","e":30,"d":364,"x":"LV","h":0,"g":"2832fd71fabc556463e1.webp","a":1}]}

@@ -1,1 +1,0 @@
-{"i:gregtech:fluid_pipe_quadruple:33":[{"o":"i:gregtech:meta_ingot:33","n":"Europium Ingot","t":"Arc Furnace","e":30,"d":604,"x":"LV","h":0,"g":"1988de1b8b305f8927f6.webp","a":1}]}

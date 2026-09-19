@@ -1,1 +1,0 @@
-{"i:gregtech:boiler_firebox_casing:2":[{"o":"i:gregtech:meta_ingot:113","n":"Titanium Ingot","t":"Arc Furnace","e":30,"d":192,"x":"LV","h":0,"g":"439dd6530bdb2a2ea5c4.webp","a":1},{"o":"i:gregtech:machine:1015","n":"Large Titanium Boiler","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"77a08a88432f247a94d5.webp","a":1}]}

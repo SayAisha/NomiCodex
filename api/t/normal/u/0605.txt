@@ -1,1 +1,0 @@
-{"i:gregtech:turbine_casing:0":[{"o":"i:gregtech:meta_dust:260","n":"Bronze Dust","t":"Pulverization","e":2,"d":532,"x":"ULV","h":0,"g":"4cc8bf076679df8e7064.webp","a":1}]}

@@ -1,1 +1,0 @@
-{"i:gregtech:meta_dust_small:1599":[{"o":"i:gregtech:meta_dust:1599","n":"Stone Dust","t":"Packager","e":12,"d":10,"x":"ULV","h":0,"g":"6a4030deb0bbbcf998db.webp","a":4}]}

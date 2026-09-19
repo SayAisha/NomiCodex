@@ -1,1 +1,0 @@
-{"i:gregtech:machine:4":[{"o":"i:gregtech:meta_dust:2524","n":"Brick Dust","t":"Pulverization","e":8,"d":1162,"x":"ULV","h":0,"g":"216a931d280363d18938.webp","a":1},{"o":"i:gregtech:meta_ingot:100","n":"Silver Ingot","t":"Arc Furnace","e":30,"d":1038,"x":"LV","h":0,"g":"d531abed2216fba89ecd.webp","a":1}]}

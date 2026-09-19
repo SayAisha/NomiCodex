@@ -1,1 +1,0 @@
-{"i:enderio:block_aversion_obelisk:0":[{"o":"i:enderio:block_relocator_obelisk:0","n":"Relocator Obelisk","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"2bbce026b4096446b9f2.webp","a":1}],"i:actuallyadditions:block_placer:0":[{"o":"i:actuallyadditions:block_phantom_placer:0","n":"Phantom Placer","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"721f3a9121b26591c25a.webp","a":1}]}

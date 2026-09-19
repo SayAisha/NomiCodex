@@ -1,1 +1,0 @@
-{"i:chisel:chisel_diamond:0":[{"o":"i:chisel:chisel_hitech:0","n":"iChisel","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"22647042f37cd42e45c2.webp","a":1}]}

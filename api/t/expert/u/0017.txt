@@ -1,1 +1,0 @@
-{"i:nuclearcraft:block_depleted_berkelium:0":[{"o":"i:nuclearcraft:berkelium:0","n":"Berkelium-247","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"098073998175e523734b.webp","a":1},{"o":"f:gregtech:berkelium","n":"Berkelium","t":"Extractor","e":32,"d":720,"x":"LV","h":0,"g":"f6f18ab6c6bf83258b1e.webp","a":1}]}

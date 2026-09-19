@@ -896,3 +896,28 @@ html.light .sicon .amt { background: rgba(20, 26, 40, 0.8); }
 }
 
 html.light .sicon .amt.cfg { background: rgba(255, 244, 224, 0.95); }
+
+/* smart card layout: one recipe -> centered, two -> centered pair */
+.cards.single {
+    grid-template-columns: minmax(430px, 640px);
+    justify-content: center;
+}
+
+.cards.pair {
+    grid-template-columns: repeat(2, minmax(430px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* keep sprites on their own raster layers so fractional browser zoom
+   re-rasterizes cleanly instead of bleeding neighbor icons */
+.sicon, .slot {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* let the browser skip rendering off-screen tiles — big win on phones */
+.tile {
+    content-visibility: auto;
+    contain-intrinsic-size: 120px;
+}

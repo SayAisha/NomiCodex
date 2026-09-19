@@ -1,1 +1,0 @@
-{"i:nuclearcraft:block_depleted_uranium:0":[{"o":"f:gregtech:uranium","n":"Molten Uranium","t":"Extractor","e":32,"d":720,"x":"LV","h":0,"g":"fe8ab75c7a28afd549a7.webp","a":1}]}

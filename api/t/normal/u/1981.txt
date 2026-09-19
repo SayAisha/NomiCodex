@@ -1,1 +1,0 @@
-{"i:gregtech:meta_tool_head_screwdriver:324":[{"o":"i:gregtech:meta_dust:324","n":"Steel Dust","t":"Pulverization","e":8,"d":56,"x":"ULV","h":0,"g":"9e85655b0a1fd1a6eaaf.webp","a":1},{"o":"f:gregtech:steel","n":"Steel","t":"Extractor","e":120,"d":56,"x":"MV","h":0,"g":"e3117030744d4c9d8269.webp","a":1}]}

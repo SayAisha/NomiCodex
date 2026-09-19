@@ -1,1 +1,0 @@
-{"i:gregtech:meta_tool_head_buzz_saw:129":[{"o":"i:gregtech:machine:252","n":"Ultimate Cutting Machine","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"500d83fa921ce5725f30.webp","a":1}]}

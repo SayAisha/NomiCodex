@@ -1,1 +1,0 @@
-{"i:craftelytra:elytra_wing:0":[{"o":"i:minecraft:elytra:0","n":"Elytra","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"cc176bbd4bec5b464bb3.webp","a":1}],"i:nomilabs:meta_dust_tiny:8":[{"o":"i:nomilabs:meta_dust:8","n":"Manyullyn Dust","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"4a04d59ee9db5eed1ae2.webp","a":1}]}

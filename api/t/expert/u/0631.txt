@@ -1,1 +1,0 @@
-{"i:minecraft:pumpkin_seeds:0":[{"o":"f:thermalfoundation:seed_oil","n":"Seed Oil","t":"Extractor","e":2,"d":32,"x":"ULV","h":0,"g":"7015c829cbad515bc56d.webp","a":1}]}

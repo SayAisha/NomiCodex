@@ -1,1 +1,0 @@
-{"i:nuclearcraft:plutonium:9":[{"o":"i:nuclearcraft:plutonium:11","n":"Tiny Clump of Plutonium-241 Oxide","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"071b454ea7b4071d6717.webp","a":1}],"i:gregtech:ore_dulysite_0:0":[{"o":"i:nomilabs:meta_gem:111","n":"Dulysite","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"53875cec78601867907d.webp","a":1}]}

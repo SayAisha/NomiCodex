@@ -1,1 +1,0 @@
-{"i:gregtech:treated_wood_stairs:0":[{"o":"i:gregtech:meta_dust_small:1648","n":"Small Pile of Treated Wood Pulp","t":"Pulverization","e":2,"d":147,"x":"ULV","h":0,"g":"eeb7019912c7011b0d2a.webp","a":1}]}

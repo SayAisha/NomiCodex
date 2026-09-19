@@ -1,1 +1,0 @@
-{"i:gregtech:machine:98":[{"o":"i:gregtech:meta_dust:341","n":"Graphite Dust","t":"Pulverization","e":8,"d":700,"x":"ULV","h":0,"g":"c090f781631ddf8d1c19.webp","a":1}],"i:darkutils:filter:6":[{"o":"i:darkutils:filter_inverted:6","n":"Inverted Mob Filter","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"93113cd80e0f8a5dc98e.webp","a":1}]}

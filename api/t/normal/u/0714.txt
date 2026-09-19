@@ -1,1 +1,0 @@
-{"i:gregtech:meta_ingot_hot:126":[{"o":"i:gregtech:meta_ingot:126","n":"Naquadria Ingot","t":"Vacuum Freezer","e":30720,"d":200,"x":"LuV","h":0,"g":"de1dacab71e52fc7c414.webp","a":1},{"o":"f:gregtech:helium","n":"Helium","t":"Vacuum Freezer","e":30720,"d":200,"x":"LuV","h":0,"g":"de1dacab71e52fc7c414.webp","a":1}]}

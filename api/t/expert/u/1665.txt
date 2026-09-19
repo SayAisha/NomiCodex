@@ -1,1 +1,0 @@
-{"i:gregtech:meta_tool_head_buzz_saw:323":[{"o":"i:gregtech:buzzsaw:0:7e00ba58b79074af436e77bc393d1a515cff0eaf","n":"Iron Buzzsaw (LV)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e94d5fdd9d74d34db395.webp","a":1}]}

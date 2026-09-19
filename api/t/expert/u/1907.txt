@@ -1,1 +1,0 @@
-{"i:enderio:block_inventory_chest_small:0":[{"o":"i:enderio:block_inventory_chest_medium:0","n":"Medium Inventory System Storage","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e26bdb9507ec48050253.webp","a":1}]}

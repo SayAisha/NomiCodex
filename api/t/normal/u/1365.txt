@@ -1,1 +1,0 @@
-{"f:gregtech:acidic_osmium_solution":[{"o":"i:gregtech:meta_dust:436","n":"Osmium Tetroxide Dust","t":"Distillery","e":30,"d":160,"x":"LV","h":0,"g":"df9abc3a91d37c9198b1.webp","a":400},{"o":"i:gregtech:meta_dust:436","n":"Osmium Tetroxide Dust","t":"Distillation Tower","e":120,"d":400,"x":"MV","h":0,"g":"7e3c8e1e0a05b6635a07.webp","a":2000}]}

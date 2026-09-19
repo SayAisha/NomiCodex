@@ -1,1 +1,0 @@
-{"i:gregtech:meta_tool_head_drill:2013":[{"o":"i:gregtech:meta_ingot:2013","n":"Tungstensteel Ingot","t":"Arc Furnace","e":30,"d":700,"x":"LV","h":0,"g":"10b2d386fd0cbefe54e2.webp","a":1},{"o":"f:gregtech:tungsten_steel","n":"Tungsten Steel","t":"Extractor","e":480,"d":700,"x":"HV","h":0,"g":"7bc93fb74bf8904da1e3.webp","a":1}]}

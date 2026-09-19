@@ -1,1 +1,0 @@
-{"i:actuallyadditions:block_colored_lamp:0":[{"o":"i:actuallyadditions:block_lamp_powerer:0","n":"Lamp Controller","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"5798e838408f88564ef2.webp","a":1}]}

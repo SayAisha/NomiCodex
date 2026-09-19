@@ -1,1 +1,0 @@
-{"i:nuclearcraft:neptunium:7":[{"o":"i:nuclearcraft:neptunium:5","n":"Neptunium-237 Oxide","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"b17ce17fb76610916e74.webp","a":1}]}

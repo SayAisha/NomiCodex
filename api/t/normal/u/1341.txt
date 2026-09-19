@@ -1,1 +1,0 @@
-{"i:gregtech:meta_crushed_purified:2":[{"o":"i:gregtech:meta_dust_pure:2","n":"Purified Pile of Aluminium Dust","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"4d19fb95a2037267a154.webp","a":1},{"o":"i:gregtech:meta_dust_pure:2","n":"Purified Pile of Aluminium Dust","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"67c3ef5c7a7be8f6b8a9.webp","a":1}]}

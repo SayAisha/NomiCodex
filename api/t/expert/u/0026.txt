@@ -1,1 +1,0 @@
-{"f:gregtech:plasma.tin":[{"o":"f:gregtech:tin","n":"Molten Tin","t":"Plasma Fuels","e":2048,"d":128,"x":"EV","h":0,"g":"ee29e7547b37b5192f03.webp","a":1}]}

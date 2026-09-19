@@ -1,1 +1,0 @@
-{"i:nuclearcraft:ingot_block:6":[{"o":"i:nuclearcraft:ingot:6","n":"Lithium Ingot","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"ca0f56fcacf7ebc9d9c9.webp","a":1}],"i:gregtech:meta_dust_small:4":[{"o":"i:gregtech:meta_dust:4","n":"Antimony Dust","t":"Packager","e":12,"d":10,"x":"ULV","h":0,"g":"32b704912899a19bdc01.webp","a":4}]}

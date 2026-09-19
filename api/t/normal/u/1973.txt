@@ -1,1 +1,0 @@
-{"f:gregtech:lightly_hydrocracked_naphtha":[{"o":"f:gregtech:butane","n":"Butane","t":"Distillery","e":30,"d":9,"x":"LV","h":0,"g":"753b61af6ca7b5d6df3f.webp","a":40}]}

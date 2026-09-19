@@ -1,1 +1,0 @@
-{"i:thermalfoundation:coin:69":[{"o":"f:gregtech:nickel","n":"Nickel","t":"Extractor","e":7,"d":40,"x":"ULV","h":0,"g":"c023e349b465c862e4f0.webp","a":1}]}

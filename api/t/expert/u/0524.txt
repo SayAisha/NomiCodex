@@ -1,1 +1,0 @@
-{"f:thermalfoundation:ender":[{"o":"i:thermalfoundation:material:895","n":"Resonant Clathrate","t":"Large Chemical Reactor","e":75,"d":120,"x":"MV","h":0,"g":"9009eabb33ae7db02155.webp","a":250},{"o":"i:thermalfoundation:material:895","n":"Resonant Clathrate","t":"Chemical Reactor","e":75,"d":120,"x":"MV","h":0,"g":"fe7acfd0bfec4972fcbb.webp","a":250}]}

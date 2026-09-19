@@ -1,1 +1,0 @@
-{"f:nomilabs:taranium_depleted_helium":[{"o":"i:nomilabs:meta_dust:100","n":"Clean Inert Residue","t":"Centrifuge","e":1920,"d":320,"x":"EV","h":0,"g":"993f027bde89872d8946.webp","a":2500}]}

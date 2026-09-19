@@ -1,1 +1,0 @@
-{"i:libvulpes:productdust:4":[{"o":"i:libvulpes:productingot:4","n":"Copper Ingot","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"bc37975f011758ca0320.webp","a":1}]}

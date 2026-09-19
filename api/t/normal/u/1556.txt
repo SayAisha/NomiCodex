@@ -1,1 +1,0 @@
-{"i:redstonearsenal:armor.plate_flux:0":[{"o":"i:armorplus:ender_dragon_chestplate:0","n":"Ender Dragon Chestplate","t":"Elite Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"24652db29b09b0391c0d.webp","a":1},{"o":"i:simplyjetpacks:itemjetpack:18","n":"Flux-Infused JetPlate","t":"Assembly Line","e":30720,"d":3000,"x":"LuV","h":0,"g":"dadd0af0009b464063ce.webp","a":1}]}

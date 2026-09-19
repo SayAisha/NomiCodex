@@ -1,1 +1,0 @@
-{"i:nuclearcraft:depleted_fuel_americium:2":[{"o":"i:nuclearcraft:berkelium:2","n":"Tiny Clump of Berkelium-247","t":"Centrifuge","e":24,"d":1200,"x":"LV","h":0,"g":"3f5c1015fceae0225e98.webp","a":1}]}

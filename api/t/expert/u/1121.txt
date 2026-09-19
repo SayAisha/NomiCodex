@@ -1,1 +1,0 @@
-{"i:gregtech:ore_certus_quartz_0:1":[{"o":"i:gregtech:meta_gem:214","n":"Certus Quartz","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"a7c872b1932e912669bb.webp","a":1}]}

@@ -1,1 +1,0 @@
-{"i:gregtech:meta_item_1:461:6eac590bdb91fdf85c89b3a61d500bf1289333e6":[{"o":"f:gregtech:butadiene","n":"Butadiene","t":"Large Chemical Reactor","e":7680,"d":300,"x":"IV","h":0,"g":"bcfa2571793b200e7b8c.webp","a":0}]}

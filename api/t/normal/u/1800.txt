@@ -1,1 +1,0 @@
-{"f:gregtech:arsenic":[{"o":"f:gregtech:darmstadtium","n":"Darmstadtium","t":"Fusion Reactor","e":30720,"d":32,"x":"LuV","h":0,"g":"8239444aeee1960e74f2.webp","a":32}]}

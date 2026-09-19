@@ -1,1 +1,0 @@
-{"i:minecraft:cooked_chicken:0":[{"o":"i:nuclearcraft:dominos:0","n":"Domino's Special","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a6460d3106df8432abed.webp","a":1}]}

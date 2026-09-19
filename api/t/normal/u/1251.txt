@@ -1,1 +1,0 @@
-{"i:redstonearsenal:tool.bow_flux:0":[{"o":"i:armorplus:ender_dragon_bow:0","n":"Ender Dragon Bow","t":"Elite Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"268c42f19f7e6da06d47.webp","a":1}]}

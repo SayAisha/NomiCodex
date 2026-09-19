@@ -1,1 +1,0 @@
-{"i:extrautils2:machine:0:d8dd377e03639c18ca0c719ac0ca21640686a2d4":[{"o":"i:extrautils2:rainbowgenerator:2","n":"Rainbow Generator (top half)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"109151e622cbdc4ecd85.webp","a":1},{"o":"i:nomilabs:ultimate_generator:0","n":"Ultimate Generator","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"8c26bd290fcfd8b74447.webp","a":1}]}

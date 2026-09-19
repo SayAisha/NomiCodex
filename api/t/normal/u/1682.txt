@@ -1,1 +1,0 @@
-{"i:minecraft:beef:0":[{"o":"i:minecraft:cooked_beef:0","n":"Steak","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"5ffc6aa7151be17d34af.webp","a":1}]}
