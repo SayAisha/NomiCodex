@@ -13,9 +13,9 @@
     --text: #e2e8f4;
     --muted: #8a94a8;
     --faint: #5b6577;
-    --amber: #ffb454;
-    --amber-soft: rgba(255, 180, 84, 0.14);
-    --amber-line: rgba(255, 180, 84, 0.45);
+    --accent: #a78bfa;
+    --accent-soft: rgba(167, 139, 250, 0.14);
+    --accent-line: rgba(167, 139, 250, 0.45);
     --cyan: #6cd3ff;
     --green: #7ce38b;
     --red: #ff7a8a;
@@ -37,9 +37,9 @@ html.light {
     --text: #1c2434;
     --muted: #5d6879;
     --faint: #8b95a6;
-    --amber: #c97a10;
-    --amber-soft: rgba(201, 122, 16, 0.12);
-    --amber-line: rgba(201, 122, 16, 0.4);
+    --accent: #6d28d9;
+    --accent-soft: rgba(109, 40, 217, 0.12);
+    --accent-line: rgba(109, 40, 217, 0.4);
     --shadow: 0 12px 34px rgba(23, 32, 60, 0.14);
 }
 
@@ -99,21 +99,10 @@ body {
 .logo-mark {
     width: 36px;
     height: 36px;
-    border-radius: 9px;
-    background:
-        linear-gradient(135deg, var(--amber) 0%, #d98a2b 100%);
-    box-shadow: 0 0 0 1px var(--amber-line), 0 4px 16px var(--amber-soft);
+    background: url("./assets/images/logo.png") center/contain no-repeat;
+    image-rendering: pixelated;
     position: relative;
     flex: 0 0 auto;
-}
-
-.logo-mark::after {
-    content: "";
-    position: absolute;
-    inset: 9px;
-    background: var(--bg);
-    border-radius: 3px;
-    box-shadow: inset 0 0 0 2px var(--amber);
 }
 
 .logo-name {
@@ -124,7 +113,7 @@ body {
 
 .logo-name em {
     font-style: normal;
-    color: var(--amber);
+    color: var(--accent);
 }
 
 /* command bar */
@@ -148,8 +137,8 @@ body {
 }
 
 .cmdbar input:focus {
-    border-color: var(--amber-line);
-    box-shadow: 0 0 0 3px var(--amber-soft);
+    border-color: var(--accent-line);
+    box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .cmdbar input::placeholder { color: var(--faint); }
@@ -202,7 +191,7 @@ body {
 }
 
 .cmdbar-row.sel, .cmdbar-row:hover {
-    background: var(--amber-soft);
+    background: var(--accent-soft);
 }
 
 .cmdbar-row .row-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -243,7 +232,7 @@ body {
 
 .seg button.on {
     color: #241304;
-    background: var(--amber);
+    background: var(--accent);
 }
 
 .seg button.on[data-mode="expert"] {
@@ -269,7 +258,7 @@ body {
     transition: color .12s ease, border-color .12s ease, transform .08s ease;
 }
 
-.iconbtn:hover { color: var(--text); border-color: var(--amber-line); transform: translateY(-1px); }
+.iconbtn:hover { color: var(--text); border-color: var(--accent-line); transform: translateY(-1px); }
 
 /* ---------------- view area ---------------- */
 
@@ -300,7 +289,7 @@ body {
     margin: 0 0 10px;
 }
 
-.hero h1 em { font-style: normal; color: var(--amber); }
+.hero h1 em { font-style: normal; color: var(--accent); }
 
 .hero p {
     color: var(--muted);
@@ -328,8 +317,8 @@ body {
 }
 
 .hero-search input:focus {
-    border-color: var(--amber-line);
-    box-shadow: 0 0 0 4px var(--amber-soft), var(--shadow);
+    border-color: var(--accent-line);
+    box-shadow: 0 0 0 4px var(--accent-soft), var(--shadow);
 }
 
 .hero-search .search-ico {
@@ -377,7 +366,7 @@ body {
     transition: border-color .12s ease, transform .08s ease, background-color .12s ease;
 }
 
-.chip:hover { border-color: var(--amber-line); transform: translateY(-1px); background: var(--panel-2); }
+.chip:hover { border-color: var(--accent-line); transform: translateY(-1px); background: var(--panel-2); }
 .chip .mini-icon {
     width: 24px; height: 24px; border-radius: 6px;
     background-color: var(--panel-2);
@@ -447,7 +436,7 @@ body {
 }
 
 .tile:hover {
-    border-color: var(--amber-line);
+    border-color: var(--accent-line);
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
@@ -552,10 +541,10 @@ body {
     transition: all .12s ease;
 }
 
-.fchip:hover { color: var(--text); border-color: var(--amber-line); }
-.fchip.on { color: var(--amber); border-color: var(--amber-line); background: var(--amber-soft); }
+.fchip:hover { color: var(--text); border-color: var(--accent-line); }
+.fchip.on { color: var(--accent); border-color: var(--accent-line); background: var(--accent-soft); }
 .fchip .n { font-family: var(--mono); font-size: 13px; color: var(--faint); }
-.fchip.on .n { color: var(--amber); }
+.fchip.on .n { color: var(--accent); }
 
 /* ---------------- recipe cards ---------------- */
 
@@ -576,8 +565,8 @@ body {
 }
 
 .rcard:hover {
-    border-color: var(--amber-line);
-    box-shadow: 0 0 0 3px var(--amber-soft), var(--shadow);
+    border-color: var(--accent-line);
+    box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow);
 }
 
 .rcard-head {
@@ -612,7 +601,7 @@ body {
 }
 
 .rcard:hover .oc-btn, .rcard-head .oc-btn:focus { opacity: 1; }
-.rcard-head .oc-btn:hover { color: var(--amber); border-color: var(--amber-line); }
+.rcard-head .oc-btn:hover { color: var(--accent); border-color: var(--accent-line); }
 
 .rcard-body {
     display: flex;
@@ -660,7 +649,7 @@ html.light .rcard-arrow { filter: invert(0.82) saturate(1.05); }
 .mchip b { color: var(--text); font-weight: 600; }
 .mchip.hot b { color: var(--red); }
 .mchip.time b { color: var(--cyan); }
-.mchip.tier b { color: var(--amber); }
+.mchip.tier b { color: var(--accent); }
 
 /* slot grids */
 
@@ -697,7 +686,7 @@ html.light .sgrid { background-image: url("./assets/images/Slot-light.png"); }
     border-radius: 3px;
 }
 
-.sicon:hover { filter: brightness(1.3); outline: 1px solid var(--amber-line); z-index: 3; }
+.sicon:hover { filter: brightness(1.3); outline: 1px solid var(--accent-line); z-index: 3; }
 
 .sicon.ore { box-shadow: 0 0 0 2px rgba(195, 155, 255, 0.55); border-radius: 3px; }
 
@@ -723,7 +712,7 @@ html.light .sgrid { background-image: url("./assets/images/Slot-light.png"); }
     top: -6px;
     font-size: 12px;
     font-weight: 700;
-    color: var(--amber);
+    color: var(--accent);
     text-shadow: 0 1px 2px #000;
     pointer-events: none;
 }
@@ -793,7 +782,7 @@ html.light .sicon .amt { background: rgba(20, 26, 40, 0.8); }
     height: 44px;
     border-radius: 50%;
     border: 3px solid var(--line);
-    border-top-color: var(--amber);
+    border-top-color: var(--accent);
     animation: spin 0.9s linear infinite;
 }
 
@@ -821,9 +810,9 @@ html.light .sicon .amt { background: rgba(20, 26, 40, 0.8); }
     --input-bg: var(--panel-2);
     --radius: var(--r-md);
     --radius-sm: var(--r-sm);
-    --accent: var(--amber);
-    --accent-dim: var(--amber-line);
-    --accent-glow: var(--amber-soft);
+    --accent: var(--accent);
+    --accent-dim: var(--accent-line);
+    --accent-glow: var(--accent-soft);
     --text-muted: var(--muted);
 }
 
@@ -877,7 +866,7 @@ html.light .sicon .amt { background: rgba(20, 26, 40, 0.8); }
 }
 
 .viewseg button:not(.on):not(:disabled):hover { color: var(--text); }
-.viewseg button.on { color: var(--text); background: var(--amber-soft); box-shadow: inset 0 0 0 1px var(--amber-line); }
+.viewseg button.on { color: var(--text); background: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent-line); }
 .viewseg button:disabled { opacity: 0.4; cursor: default; }
 .viewseg .vc {
     font-family: var(--mono);
@@ -887,11 +876,11 @@ html.light .sicon .amt { background: rgba(20, 26, 40, 0.8); }
     border-radius: 999px;
     padding: 1px 7px;
 }
-.viewseg button.on .vc { color: var(--amber); }
+.viewseg button.on .vc { color: var(--accent); }
 
 /* circuit configuration badge (non-consumable programmed circuits) */
 .sicon .amt.cfg {
-    color: var(--amber);
+    color: var(--accent);
     background: rgba(20, 14, 4, 0.85);
     text-shadow: none;
 }
