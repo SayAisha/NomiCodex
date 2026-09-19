@@ -44,7 +44,7 @@ try {
     let response = null;
     for (let attempt = 0; attempt < 3; attempt++) {
         try {
-            response = await fetch(`./data-${mode}/data.bin?v=12`);
+            response = await fetch(`./data-${mode}/data.bin?v=13`);
             if (response.ok) break;
         } catch (e) { /* retry */ }
         await new Promise(r => setTimeout(r, 500 * (attempt + 1)));
