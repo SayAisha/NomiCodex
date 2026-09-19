@@ -37,25 +37,33 @@ try {
     // Warm the atlas cache
     const atlas = new Image();
     atlas.src = `./data-${mode}/atlas.webp?v=10`;
-    // Load repository and data in parallel
-    const [repositoryModule, response] = await Promise.all([
-        import("./repository.js?v=21"),
-        fetch(`./data-${mode}/data.bin?v=11`)
-    ]);
+    loading.innerHTML = "Downloading recipe database…";
+    const repositoryModule = await import("./repository.js?v=21");
+    // GitHub Pages occasionally drops a request — retry a couple of times
+    // instead of dying behind the loading screen
+    let response = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+            response = await fetch(`./data-${mode}/data.bin?v=11`);
+            if (response.ok) break;
+        } catch (e) { /* retry */ }
+        await new Promise(r => setTimeout(r, 500 * (attempt + 1)));
+    }
+    if (!response || !response.ok)
+        throw new Error("Could not download the recipe database — check your connection and reload.");
     const stream = response.body.pipeThrough(new DecompressionStream("gzip"));
     const buffer = await new Response(stream).arrayBuffer();
     repositoryModule.Repository.load(buffer);
     console.log("Repository loaded", repositoryModule.Repository.current);
-    // Then load other modules
+    // Then load the interface (the old calculator modules — page/solver/
+    // recipeList — are not part of the NEI browser and are never loaded)
+    loading.innerHTML = "Loading interface…";
     await Promise.all([
         import("./itemIcon.js?v=21"),
         import("./tooltip.js?v=21"),
         import("./nei.js?v=21"),
-        import("./menu.js?v=21"),
-        import("./recipeList.js?v=21")
+        import("./menu.js?v=21")
     ]);
-    let page = await import("./page.js?v=21");
-    try { page.UpdateProject(); } catch (e) { /* calculator remnant, NEI-only mode */ }
     loading.remove();
     // theme toggle
     const themeToggle = document.getElementById("theme-toggle");
