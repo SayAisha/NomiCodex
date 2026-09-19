@@ -1,1 +1,1 @@
-{"i:minecraft:stained_hardened_clay:1":[{"o":"i:minecraft:orange_glazed_terracotta:0","n":"Orange Glazed Terracotta","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"f2eedb86e48d1f628e51.webp","a":1}]}
+{"i:minecraft:stained_hardened_clay:1":[{"o":"i:minecraft:orange_glazed_terracotta:0","n":"Orange Glazed Terracotta","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"f2eedb86e48d1f628e51.webp","a":1,"i":"Orange Terracotta"}]}

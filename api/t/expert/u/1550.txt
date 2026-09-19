@@ -1,1 +1,1 @@
-{"i:chisel:glass:14":[{"o":"i:chisel:glasspane:14","n":"Glass Pane","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"fc506aa6281bb5ffa4bc.webp","a":1}]}
+{"i:chisel:glass:14":[{"o":"i:chisel:glasspane:14","n":"Glass Pane","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"fc506aa6281bb5ffa4bc.webp","a":1,"i":"Glass"}]}

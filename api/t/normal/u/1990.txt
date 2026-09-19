@@ -1,1 +1,1 @@
-{"i:gregtech:machine:100":[{"o":"i:gregtech:meta_dust:341","n":"Graphite Dust","t":"Pulverization","e":32,"d":1552,"x":"LV","h":0,"g":"2eed7341f571582a54c1.webp","a":1}]}
+{"i:gregtech:machine:100":[{"o":"i:gregtech:meta_dust:341","n":"Graphite Dust","t":"Pulverization","e":32,"d":1552,"x":"LV","h":0,"g":"2eed7341f571582a54c1.webp","a":1,"i":"Elite Arc Furnace II"}]}

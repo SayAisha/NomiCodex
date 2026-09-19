@@ -1,0 +1,1 @@
+{"i:enderio:item_dark_steel_upgrade:1:c149672dfbf499ab5f384e189db8049575c394af":[{"o":"i:advancedrocketry:itemupgrade:3","n":"Padded Landing Boots","t":"Assembler","e":100,"d":400,"x":"MV","h":0,"g":"44ae90d76691b8c62556.webp","a":1,"i":"Dark Steel Upgrade &quot;Empowered V&quot;, Radiation Layer, Pressure Layer"}]}

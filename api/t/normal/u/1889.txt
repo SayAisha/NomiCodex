@@ -1,1 +1,1 @@
-{"i:gregtech:ore_granitic_mineral_sand_0:0":[{"o":"i:gregtech:meta_crushed:2513","n":"Crushed Granitic Mineral Sand Ore","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"4e55f26488b8e39066a1.webp","a":1}]}
+{"i:gregtech:ore_granitic_mineral_sand_0:0":[{"o":"i:gregtech:meta_crushed:2513","n":"Crushed Granitic Mineral Sand Ore","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"4e55f26488b8e39066a1.webp","a":1,"i":"Granitic Mineral Sand Ore"}]}

@@ -1,1 +1,1 @@
-{"i:enderio:item_dark_steel_leggings:0":[{"o":"i:armorplus:the_ultimate_part:7","n":"The Ultimate Legging Middle","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"7e8d11f63079c962916f.webp","a":1}]}
+{"i:enderio:item_dark_steel_leggings:0":[{"o":"i:armorplus:the_ultimate_part:7","n":"The Ultimate Legging Middle","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"7e8d11f63079c962916f.webp","a":1,"i":"Reinforced Obsidian, Quantum Star, Super Star Leggings"}]}

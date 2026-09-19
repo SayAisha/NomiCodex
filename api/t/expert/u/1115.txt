@@ -1,1 +1,1 @@
-{"i:enderio:block_electric_light:2":[{"o":"i:enderio:block_electric_light:3","n":"Light (Inverted)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a300bf5908ace1895aa6.webp","a":1}]}
+{"i:enderio:block_electric_light:2":[{"o":"i:enderio:block_electric_light:3","n":"Light (Inverted)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a300bf5908ace1895aa6.webp","a":1,"i":"Light, Redstone Torch"}]}

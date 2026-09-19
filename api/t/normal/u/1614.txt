@@ -1,1 +1,1 @@
-{"f:gregtech:enriched_bacterial_sludge":[{"o":"f:gregtech:mutagen","n":"Mutagen","t":"Distillery","e":7680,"d":100,"x":"IV","h":0,"g":"eb2bd02f2ef7cafabd9d.webp","a":1000}]}
+{"f:gregtech:enriched_bacterial_sludge":[{"o":"f:gregtech:mutagen","n":"Mutagen","t":"Distillery","e":7680,"d":100,"x":"IV","h":0,"g":"eb2bd02f2ef7cafabd9d.webp","a":1000,"i":"Programmed Circuit, Enriched Bacterial Sludge"}]}

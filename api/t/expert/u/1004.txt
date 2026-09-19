@@ -1,1 +1,1 @@
-{"f:gregtech:steamcracked_butene":[{"o":"f:gregtech:propene","n":"Propene","t":"Distillery","e":30,"d":24,"x":"LV","h":0,"g":"4800076d6bf9318e19fd.webp","a":100}]}
+{"f:gregtech:steamcracked_butene":[{"o":"f:gregtech:propene","n":"Propene","t":"Distillery","e":30,"d":24,"x":"LV","h":0,"g":"4800076d6bf9318e19fd.webp","a":100,"i":"Programmed Circuit, Steamcracked Butene"}]}

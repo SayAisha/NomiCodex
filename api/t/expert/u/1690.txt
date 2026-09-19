@@ -1,1 +1,1 @@
-{"i:nuclearcraft:water_source_compact:0":[{"o":"i:nuclearcraft:water_source_dense:0","n":"Dense Infinite Water Source","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"405d538931d7ce58965e.webp","a":1}]}
+{"i:nuclearcraft:water_source_compact:0":[{"o":"i:nuclearcraft:water_source_dense:0","n":"Dense Infinite Water Source","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"405d538931d7ce58965e.webp","a":1,"i":"Compact Infinite Water Source, Gold Ingot"}]}

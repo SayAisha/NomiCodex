@@ -1,1 +1,1 @@
-{"i:enderio:item_dark_steel_helmet:0":[{"o":"i:armorplus:the_ultimate_part:1","n":"The Ultimate Helmet Middle","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e43bdaf3d0d56d78f7cc.webp","a":1}]}
+{"i:enderio:item_dark_steel_helmet:0":[{"o":"i:armorplus:the_ultimate_part:1","n":"The Ultimate Helmet Middle","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e43bdaf3d0d56d78f7cc.webp","a":1,"i":"Reinforced Obsidian, Super Star Helmet, Cobalt Helmet"}]}

@@ -1,1 +1,1 @@
-{"i:gregtech:meta_tool_head_screwdriver:113":[{"o":"i:gregtech:meta_ingot:113","n":"Titanium Ingot","t":"Arc Furnace","e":30,"d":48,"x":"LV","h":0,"g":"e11a17ed86f5acc0ec34.webp","a":1}]}
+{"i:gregtech:meta_tool_head_screwdriver:113":[{"o":"i:gregtech:meta_ingot:113","n":"Titanium Ingot","t":"Arc Furnace","e":30,"d":48,"x":"LV","h":0,"g":"e11a17ed86f5acc0ec34.webp","a":1,"i":"Titanium Screwdriver Tip, Oxygen"}]}

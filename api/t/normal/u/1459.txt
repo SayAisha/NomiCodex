@@ -1,1 +1,1 @@
-{"i:nae2:exposer:0":[{"o":"i:nae2:part:2","n":"ME Storage Exposer","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"c3b57fe0791e4e869ae8.webp","a":1}]}
+{"i:nae2:exposer:0":[{"o":"i:nae2:part:2","n":"ME Storage Exposer","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"c3b57fe0791e4e869ae8.webp","a":1,"i":"ME Storage Exposer"}]}

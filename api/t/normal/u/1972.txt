@@ -1,1 +1,1 @@
-{"i:nuclearcraft:depleted_fuel_berkelium:2":[{"o":"i:nuclearcraft:californium:6","n":"Tiny Clump of Californium-250","t":"Centrifuge","e":24,"d":1200,"x":"LV","h":0,"g":"0bda2bf8e4b891f868b6.webp","a":1}]}
+{"i:nuclearcraft:depleted_fuel_berkelium:2":[{"o":"i:nuclearcraft:californium:6","n":"Tiny Clump of Californium-250","t":"Centrifuge","e":24,"d":1200,"x":"LV","h":0,"g":"0bda2bf8e4b891f868b6.webp","a":1,"i":"Depleted HEB-248 Fuel"}]}

@@ -1,1 +1,1 @@
-{"i:armorplus:infused_lava_helmet:0":[{"o":"i:armorplus:the_ultimate_part:2","n":"The Ultimate Helmet Left","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"5726d342dc7938631c6f.webp","a":1}]}
+{"i:armorplus:infused_lava_helmet:0":[{"o":"i:armorplus:the_ultimate_part:2","n":"The Ultimate Helmet Left","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"5726d342dc7938631c6f.webp","a":1,"i":"Reinforced Obsidian, Redstone Helmet, Infused Lava Helmet"}]}

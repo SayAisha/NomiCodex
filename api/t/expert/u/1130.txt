@@ -1,1 +1,1 @@
-{"f:gregtech:hydrocracked_propane":[{"o":"f:gregtech:methane","n":"Methane","t":"Distillery","e":30,"d":9,"x":"LV","h":0,"g":"702a85fdbce2c869fb83.webp","a":40}]}
+{"f:gregtech:hydrocracked_propane":[{"o":"f:gregtech:methane","n":"Methane","t":"Distillery","e":30,"d":9,"x":"LV","h":0,"g":"702a85fdbce2c869fb83.webp","a":40,"i":"Programmed Circuit, Hydrocracked Propane"}]}

@@ -1,1 +1,1 @@
-{"i:gregtech:meta_dust_small:1597":[{"o":"i:gregtech:meta_dust:1597","n":"Oilsands Dust","t":"Packager","e":12,"d":10,"x":"ULV","h":0,"g":"c5994d64e2b16ff5e84f.webp","a":4}]}
+{"i:gregtech:meta_dust_small:1597":[{"o":"i:gregtech:meta_dust:1597","n":"Oilsands Dust","t":"Packager","e":12,"d":10,"x":"ULV","h":0,"g":"c5994d64e2b16ff5e84f.webp","a":4,"i":"Programmed Circuit, Small Pile of Oilsands Dust"}]}

@@ -1,1 +1,1 @@
-{"i:gregtech:ore_tungstate_0:1":[{"o":"i:gregtech:meta_dust:330","n":"Tungstate Dust","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"9f649eabf03cc4c0744f.webp","a":1}]}
+{"i:gregtech:ore_tungstate_0:1":[{"o":"i:gregtech:meta_dust:330","n":"Tungstate Dust","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"9f649eabf03cc4c0744f.webp","a":1,"i":"Nether Tungstate Ore"}]}

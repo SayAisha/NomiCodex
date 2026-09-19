@@ -1,1 +1,1 @@
-{"i:armorplus:guardian_sword:0":[{"o":"i:avaritia:skullfire_sword:0","n":"Skullfire Sword","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"00804bbcf0ea7901ae8e.webp","a":1}]}
+{"i:armorplus:guardian_sword:0":[{"o":"i:avaritia:skullfire_sword:0","n":"Skullfire Sword","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"00804bbcf0ea7901ae8e.webp","a":1,"i":"Nano Saber, Infused Lava Sword, Guardian Sword"}]}

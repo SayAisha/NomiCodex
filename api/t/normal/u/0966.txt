@@ -1,1 +1,1 @@
-{"i:nomilabs:meta_plate_double:13":[{"o":"i:nomilabs:meta_ingot:13","n":"Vibrant Alloy Ingot","t":"Arc Furnace","e":30,"d":166,"x":"LV","h":0,"g":"65f1088a0f3a08275cfc.webp","a":1}]}
+{"i:nomilabs:meta_plate_double:13":[{"o":"i:nomilabs:meta_ingot:13","n":"Vibrant Alloy Ingot","t":"Arc Furnace","e":30,"d":166,"x":"LV","h":0,"g":"65f1088a0f3a08275cfc.webp","a":1,"i":"Double Vibrant Alloy Plate, Oxygen"}]}

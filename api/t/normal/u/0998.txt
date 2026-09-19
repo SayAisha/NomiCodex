@@ -1,1 +1,1 @@
-{"i:enderio:item_conduit_facade:2":[{"o":"i:enderio:item_conduit_facade:3","n":"Transparent Hardened Conduit Facade","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"d8d4601848b1e07677f4.webp","a":1}]}
+{"i:enderio:item_conduit_facade:2":[{"o":"i:enderio:item_conduit_facade:3","n":"Transparent Hardened Conduit Facade","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"d8d4601848b1e07677f4.webp","a":1,"i":"Transparent Conduit Facade, Obsidian Dust"}]}

@@ -1,1 +1,1 @@
-{"i:gregtech:treated_wood_fence_gate:0":[{"o":"i:gregtech:meta_dust:1648","n":"Treated Wood Pulp","t":"Pulverization","e":2,"d":294,"x":"ULV","h":0,"g":"63e554c0243bde905cc8.webp","a":1}]}
+{"i:gregtech:treated_wood_fence_gate:0":[{"o":"i:gregtech:meta_dust:1648","n":"Treated Wood Pulp","t":"Pulverization","e":2,"d":294,"x":"ULV","h":0,"g":"63e554c0243bde905cc8.webp","a":1,"i":"Treated Wood Fence Gate"}]}

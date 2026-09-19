@@ -1,1 +1,1 @@
-{"i:nuclearcraft:ingot_block:6":[{"o":"i:nuclearcraft:ingot:6","n":"Lithium Ingot","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"ca0f56fcacf7ebc9d9c9.webp","a":1}]}
+{"i:nuclearcraft:ingot_block:6":[{"o":"i:nuclearcraft:ingot:6","n":"Lithium Ingot","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"ca0f56fcacf7ebc9d9c9.webp","a":1,"i":"Lithium Block"}]}

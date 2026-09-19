@@ -1,1 +1,1 @@
-{"i:gregtech:meta_tool_head_screwdriver:301":[{"o":"i:gregtech:meta_ingot:301","n":"Rose Gold Ingot","t":"Arc Furnace","e":30,"d":169,"x":"LV","h":0,"g":"1967469877bf5e53369b.webp","a":1}]}
+{"i:gregtech:meta_tool_head_screwdriver:301":[{"o":"i:gregtech:meta_ingot:301","n":"Rose Gold Ingot","t":"Arc Furnace","e":30,"d":169,"x":"LV","h":0,"g":"1967469877bf5e53369b.webp","a":1,"i":"Rose Gold Screwdriver Tip, Oxygen"}]}

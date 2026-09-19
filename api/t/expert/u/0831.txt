@@ -1,1 +1,1 @@
-{"i:enderio:item_item_conduit:0":[{"o":"i:enderio:block_crafter:0","n":"Crafter","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"1c9265160465b7ad5996.webp","a":1}]}
+{"i:enderio:item_item_conduit:0":[{"o":"i:enderio:block_crafter:0","n":"Crafter","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"1c9265160465b7ad5996.webp","a":1,"i":"Resonating Redstone Crystal, Compressed Crafting Table, Item Conduit"}]}

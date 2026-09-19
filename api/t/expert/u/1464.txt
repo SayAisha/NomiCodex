@@ -1,1 +1,1 @@
-{"i:draconicevolution:draconic_pick:0":[{"o":"i:draconicevolution:draconic_staff_of_power:0","n":"Draconic Staff of Power","t":"Draconic Fusion","e":0,"d":0,"x":"ULV","h":0,"g":"b74c607909e5d94791a7.webp","a":1}]}
+{"i:draconicevolution:draconic_pick:0":[{"o":"i:draconicevolution:draconic_staff_of_power:0","n":"Draconic Staff of Power","t":"Draconic Fusion","e":0,"d":0,"x":"ULV","h":0,"g":"b74c607909e5d94791a7.webp","a":1,"i":"Draconic Pickaxe, Block of Awakened Draconium"}]}

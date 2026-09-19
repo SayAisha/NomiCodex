@@ -1,1 +1,1 @@
-{"i:extrautils2:passivegenerator:5":[{"o":"i:extrautils2:passivegenerator:6","n":"Creative Mill","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"b2e346f3b04dcf59ac80.webp","a":1}]}
+{"i:extrautils2:passivegenerator:5":[{"o":"i:extrautils2:passivegenerator:6","n":"Creative Mill","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"b2e346f3b04dcf59ac80.webp","a":1,"i":"Upgrade Speed (Ultimate), Wind Mill, Fire Mill"}]}

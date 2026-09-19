@@ -1,1 +1,1 @@
-{"i:enderio:item_dark_steel_boots:0":[{"o":"i:armorplus:the_ultimate_part:10","n":"The Ultimate Boots Middle","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a736eaef06a643973928.webp","a":1}]}
+{"i:enderio:item_dark_steel_boots:0":[{"o":"i:armorplus:the_ultimate_part:10","n":"The Ultimate Boots Middle","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a736eaef06a643973928.webp","a":1,"i":"Reinforced Obsidian, Guardian Boots, Manyullyn Boots"}]}

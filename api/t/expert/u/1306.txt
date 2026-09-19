@@ -1,1 +1,1 @@
-{"f:gregtech:steamcracked_butadiene":[{"o":"f:gregtech:propene","n":"Propene","t":"Distillery","e":30,"d":48,"x":"LV","h":0,"g":"baf0653c1daf5a7161fc.webp","a":200}]}
+{"f:gregtech:steamcracked_butadiene":[{"o":"f:gregtech:propene","n":"Propene","t":"Distillery","e":30,"d":48,"x":"LV","h":0,"g":"baf0653c1daf5a7161fc.webp","a":200,"i":"Programmed Circuit, Steamcracked Butadiene"}]}

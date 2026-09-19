@@ -1,1 +1,1 @@
-{"i:gregtech:ore_cooperite_0:1":[{"o":"i:gregtech:meta_dust:273","n":"Sheldonite Dust","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"f855092658a3093e8ae9.webp","a":1}]}
+{"i:gregtech:ore_cooperite_0:1":[{"o":"i:gregtech:meta_dust:273","n":"Sheldonite Dust","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"f855092658a3093e8ae9.webp","a":1,"i":"Nether Sheldonite Ore"}]}

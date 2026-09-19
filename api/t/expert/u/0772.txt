@@ -1,1 +1,1 @@
-{"i:gregtech:meta_dust_pure:2010":[{"o":"i:gregtech:meta_dust:298","n":"Phosphate Dust","t":"Centrifuge","e":5,"d":100,"x":"ULV","h":0,"g":"2009d1fbd8a4061555bd.webp","a":1}]}
+{"i:gregtech:meta_dust_pure:2010":[{"o":"i:gregtech:meta_dust:298","n":"Phosphate Dust","t":"Centrifuge","e":5,"d":100,"x":"ULV","h":0,"g":"2009d1fbd8a4061555bd.webp","a":1,"i":"Purified Pile of Apatite Dust"}]}

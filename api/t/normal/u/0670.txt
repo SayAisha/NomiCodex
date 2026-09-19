@@ -1,1 +1,1 @@
-{"i:extrautils2:ingredients:13":[{"o":"i:extrautils2:passivegenerator:5","n":"Fire Mill","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"cca67fbdf297a4f77acd.webp","a":1}]}
+{"i:extrautils2:ingredients:13":[{"o":"i:extrautils2:passivegenerator:5","n":"Fire Mill","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"cca67fbdf297a4f77acd.webp","a":1,"i":"Stoneburnt, Redstone Gear, Resonating Redstone Crystal"}]}

@@ -1,1 +1,1 @@
-{"i:advancedrocketry:structuretower:0":[{"o":"i:advancedrocketry:hovercraft:0","n":"HoverCraft","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"ac80c69e4325d9136878.webp","a":1}]}
+{"i:advancedrocketry:structuretower:0":[{"o":"i:advancedrocketry:hovercraft:0","n":"HoverCraft","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"ac80c69e4325d9136878.webp","a":1,"i":"Computer Monitor, Structure Tower, Liquid Fueled Engine"}]}

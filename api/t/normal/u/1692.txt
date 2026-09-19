@@ -1,1 +1,1 @@
-{"i:libvulpes:ore0:9":[{"o":"i:libvulpes:productingot:9","n":"Aluminum Ingot","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"5e33539211fa451608f4.webp","a":1}]}
+{"i:libvulpes:ore0:9":[{"o":"i:libvulpes:productingot:9","n":"Aluminum Ingot","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"5e33539211fa451608f4.webp","a":1,"i":"Aluminum Ore"}]}

@@ -1,1 +1,1 @@
-{"i:deepmoblearning:infused_ingot_block:0":[{"o":"i:deepmoblearning:glitch_infused_ingot:0","n":"<span class=\"fmt-b\">Glitch Infused Ingot</span>","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"687508d9da9b09a8b6eb.webp","a":1}]}
+{"i:deepmoblearning:infused_ingot_block:0":[{"o":"i:deepmoblearning:glitch_infused_ingot:0","n":"<span class=\"fmt-b\">Glitch Infused Ingot</span>","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"687508d9da9b09a8b6eb.webp","a":1,"i":"Glitch Infused Block"}]}

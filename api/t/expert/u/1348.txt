@@ -1,1 +1,1 @@
-{"i:appliedenergistics2:paint_ball:15":[{"o":"i:appliedenergistics2:paint_ball:35","n":"Paint Ball - Lumen Black","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"0a0ac917f0cee2e7f435.webp","a":1}]}
+{"i:appliedenergistics2:paint_ball:15":[{"o":"i:appliedenergistics2:paint_ball:35","n":"Paint Ball - Lumen Black","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"0a0ac917f0cee2e7f435.webp","a":1,"i":"Paint Ball - Black, Glowstone Dust"}]}
