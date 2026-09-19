@@ -1,0 +1,232 @@
+#main {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 100%;
+}
+
+#menu {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    color: var(--text);
+    transition: transform 0.15s ease;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    min-width: 250px;
+}
+
+.menu-header {
+    position: relative;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: left;
+}
+
+.menu-header::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 34px;
+    margin-top: 6px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.mode-label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+}
+
+/* segmented pack-mode switch */
+.mode-switch {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+}
+
+.mode-option {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.mode-option:hover {
+    color: var(--text);
+    border-color: var(--border);
+    box-shadow: none;
+    background: var(--surface-2);
+}
+
+.mode-option.active {
+    color: #06231e;
+    background: linear-gradient(135deg, #4fe3c9, #2aa38f);
+    border-color: rgba(61, 219, 196, 0.6);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.mode-option[data-mode="expert"].active {
+    color: #2d1502;
+    background: linear-gradient(135deg, #ffc45c, #f08c2e);
+    border-color: rgba(246, 180, 83, 0.6);
+    box-shadow: 0 0 12px rgba(246, 180, 83, 0.28);
+}
+
+.mode-label select {
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 6px 8px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.mode-label select:focus {
+    border-color: var(--accent-dim);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.menu-links a {
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--text);
+    transition: border-color 0.12s ease, color 0.12s ease;
+}
+
+.menu-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent-dim);
+}
+
+.page-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.page-button {
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: none;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+.new-page-widget {
+    margin-top: auto;
+}
+
+.new-page-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.new-page-form input {
+    width: 70%;
+}
+
+.new-page-form button {
+    width: 30%;
+}
+
+.active-page {
+    color: white;
+    background: var(--surface-2);
+    border: 1px solid var(--accent-dim);
+    border-radius: var(--radius-sm);
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.active-page input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 4px 8px;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 1200px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        z-index: 999;
+    }
+
+    #menu.visible {
+        transform: translateX(0);
+    }
+
+    #recipe-list {
+        margin-left: 0;
+    }
+
+    .status-message {
+        margin-left: 40px;
+    }
+}

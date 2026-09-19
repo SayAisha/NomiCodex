@@ -1,0 +1,107 @@
+#nei {
+    border-top-left-radius: 0px;
+}
+
+#nei .panel {
+    padding: 12px 12px 14px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#nei-content {
+    width: 100%;
+    position: relative;
+}
+
+#nei-search {
+    flex: 1;
+    min-width: 220px;
+}
+
+.search-label {
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* recipe result cards */
+.nei-recipe-box {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    position: absolute;
+    padding: 6px;
+    color: var(--text);
+    transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.nei-recipe-box:hover,
+.nei-recipe-box:focus {
+    outline: none;
+    border-color: var(--accent-dim);
+    box-shadow: 0 0 0 3px var(--accent-glow), 0 10px 26px rgba(0, 0, 0, 0.45);
+}
+
+.nei-recipe-items {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nei-recipe-io {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    flex: 0;
+}
+
+.arrow {
+    position: relative;
+    width: 48px;
+    height: 32px;
+    background-size: 48px;
+    background-image: url('./../images/Arrow.png');
+}
+
+.nei-items-row {
+    --grid-height: 1;
+    position: absolute !important;
+}
+
+.nei-recipe-type {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    height: 36px;
+    width: 100%;
+}
+
+.nei-recipe-type-name {
+    color: var(--text-muted);
+    font-size: 12px;
+    letter-spacing: 0.03em;
+}
+
+.arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+

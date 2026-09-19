@@ -1,0 +1,86 @@
+.panel-tab-bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.panel-tab-container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 54px;
+    z-index: 1;
+}
+
+.panel-tab-container .panel {
+    position: relative;
+    z-index: -1;
+}
+
+.panel-tabs {
+    display: flex;
+    position: relative;
+    bottom: -4px;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    pointer-events: none;
+    max-width: 92vw;
+}
+
+.panel-tab {
+    position: relative;
+    margin-top: 8px;
+    width: 44px;
+    bottom: 0px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    z-index: -1;
+    transition: margin-top 0.12s ease, background-color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.panel-tab:hover:not(.active) {
+    background: #232d44;
+    border-color: var(--accent-dim);
+}
+
+.panel-tab.active {
+    background: var(--surface);
+    margin-top: 0px;
+    z-index: auto;
+    border-color: var(--accent-dim);
+    box-shadow: 0 -3px 14px var(--accent-glow);
+    transition: margin-top 0.12s ease, background-color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.panel-tab .icon {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: -2px;
+    transition: top 0.12s ease;
+}
+
+.panel-tab.active .icon {
+    top: -6px;
+}
+
+.panel-tab:not(.active) .icon {
+    top: -2px;
+    opacity: 0.75;
+}

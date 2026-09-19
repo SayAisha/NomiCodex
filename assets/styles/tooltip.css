@@ -1,0 +1,113 @@
+#tooltip,
+#dropdown {
+    max-width: max(50%, 500px);
+    background: var(--tooltip-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: table;
+    padding: 10px 14px 8px;
+    position: absolute;
+    display: none;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(61, 219, 196, 0.08) inset;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+#dropdown {
+    z-index: 10000;
+    max-height: 80%;
+}
+
+#tooltip {
+    z-index: 2000;
+    max-height: 100%;
+}
+
+#tooltip-header {
+    color: #ffffff;
+    font-weight: 600;
+    white-space: pre-line;
+}
+
+#tooltip-debug {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 10px;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    line-height: 1.35;
+    white-space: pre-line;
+}
+
+#tooltip-text {
+    color: #aeb7c9;
+    white-space: pre-line;
+}
+
+#tooltip-action {
+    color: #f2d98c;
+    white-space: pre-line;
+}
+
+#tooltip-mod {
+    color: #6cb6ff;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+#dropdown {
+    z-index: 1000;
+    padding: 8px;
+}
+
+#tooltip-recipe .nei-recipe-box {
+    position: relative;
+}
+
+.dropdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
+    min-width: 200px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 6px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.12s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(61, 219, 196, 0.12);
+}
+
+.item-name {
+    font-size: 14px;
+    color: #fff;
+}
+
+.crafter-count {
+    width: 160px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    padding: 2px 6px;
+    text-align: right;
+    -moz-appearance: textfield;
+}
+
+html.light #tooltip,
+html.light #dropdown {
+    box-shadow: 0 14px 40px rgba(30, 41, 66, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+}
+
+html.light #tooltip-header { color: #101828; }
+html.light #tooltip-debug { color: rgba(0, 0, 0, 0.38); }
+html.light #tooltip-text { color: #42506b; }
+html.light #tooltip-action { color: #8a6d1a; }
+html.light #tooltip-mod { color: #1d5fd0; }
+html.light .item-name { color: #101828; }

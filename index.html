@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NomiCodex — NomiFactory CEu Recipes</title>
+    <link rel="stylesheet" href="assets/styles/general.css?v=17">
+    <link rel="stylesheet" href="assets/styles/nei.css?v=9">
+    <link rel="stylesheet" href="assets/styles/tabs.css?v=10">
+    <link rel="stylesheet" href="assets/styles/tooltip.css?v=8">
+    <link rel="stylesheet" href="assets/styles/recipe-list.css?v=7">
+    <link rel="stylesheet" href="assets/styles/menu.css?v=9">
+    <link rel="stylesheet" href="assets/styles/format.css?v=8">
+    <link rel="stylesheet" href="assets/styles/oceu.css?v=2">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <style id="item-icon-highlight-style"></style>
+    <style id="item-icon-search-style"></style>
+</head>
+<body>
+    <script type="module" src="index.js?v=22"></script>
+    <script src="assets/js/search.js"></script>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark"></span>
+            <div class="brand-text">
+                <span class="brand-name">NomiCodex</span>
+                <span class="brand-tag">NomiFactory CEu recipe browser</span>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <a href="#" id="nei-link">Browse</a>
+            <a href="#" id="oceu-link">⚡ Overclocks</a>
+            <a href="https://github.com/Nomi-CEu/Nomi-CEu/" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.curseforge.com/minecraft/modpacks/nomifactory-ceu" target="_blank" rel="noopener">CurseForge</a>
+            <button id="theme-toggle" title="Toggle light/dark theme" aria-label="Toggle light/dark theme"></button>
+        </nav>
+    </header>
+
+    <button class="menu-toggle">☰</button>
+
+    <div id="main">
+        <div id="menu" class="menu-container visible">
+            <div class="menu-header">Data</div>
+            <label class="mode-label">
+                Pack mode
+                <div class="mode-switch" id="mode-select">
+                    <button type="button" class="mode-option" data-mode="normal">☀ Normal</button>
+                    <button type="button" class="mode-option" data-mode="expert">⚔ Expert</button>
+                </div>
+            </label>
+            <div class="menu-links">
+                <a href="#" id="nei-link-2">🔍 Browse</a>
+                <a href="https://github.com/Nomi-CEu/Nomi-CEu/" target="_blank" rel="noopener">Github</a>
+                <a href="https://www.curseforge.com/minecraft/modpacks/nomifactory-ceu" target="_blank" rel="noopener">CurseForge</a>
+            </div>
+            <span class="text-small">Item and recipe data exported from Nomi CEu 1.7.7.</span>
+        </div>
+    </div>
+
+    <div id="panels">
+        <div id="nei" class="hidden panel-tab-container">
+            <div class="panel-tab-bar">
+                <div id="nei-tabs" class="panel-tabs"></div>
+            </div>
+            <div class = "panel">
+                <div class="hgroup">
+                    <span class="search-label">Search</span>
+                    <input id="nei-search" placeholder="Type to search items, fluids, recipes…">
+                    <button id="nei-back" title="Back">←</button>
+                    <button id="nei-close" title="Close">✕</button>
+                </div>
+                <div class="scroll-area" id="nei-scroll">
+                    <div id="nei-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="confirm-dialog" class="hidden panel">
+            <p id="confirm-text" style="text-align: left; flex-grow: 1; max-width: 550px; white-space: pre-line;"></p>
+            <div class="hgroup" style="justify-content: center; gap: 10px;">
+                <button id="confirm-yes">Yes</button>
+                <button id="confirm-no">No</button>
+                <button id="confirm-cancel">Cancel</button>
+            </div>
+        </div>
+
+        <div id="loading" class="panel">
+            <div class="loading-spinner"></div>
+            <h1>LOADING</h1>
+            First load may take a moment while the recipe database downloads.
+        </div>
+    </div>
+
+    <div id="tooltip">
+        <p id="tooltip-header">Header</p>
+        <p id="tooltip-debug">Debug</p>
+        <p id="tooltip-text">Text</p>
+        <p id="tooltip-action">Action</p>
+        <p id="tooltip-mod">Mod</p>
+        <div id="tooltip-recipe"></div>
+    </div>
+
+    <div id="dropdown">
+
+    </div>
+
+    <footer class="site-footer">
+        <span>NomiCodex is an unofficial, fan-made tool and is not affiliated with, endorsed by, or sponsored by the NomiFactory CEu team, GTCEu, or any mod authors.</span>
+        <span>Minecraft, NomiFactory CEu, and all mods, items, names, and textures are the property of their respective owners. No ownership is claimed. All rights belong to their owners.</span>
+        <span class="footer-credit"><span class="sparkle">✦</span> made with <span class="heart">♥</span> by <span class="credit-name">Aisha</span> <span class="sparkle">✦</span></span>
+    </footer>
+</body>
+</html>
