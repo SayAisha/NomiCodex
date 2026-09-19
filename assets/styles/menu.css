@@ -1,9 +1,4 @@
-#main {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    height: 100%;
-}
+/* #main layout lives in general.css; only menu-specific rules here */
 
 #menu {
     width: 300px;
