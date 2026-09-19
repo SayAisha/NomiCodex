@@ -1,0 +1,1 @@
+{"i:gregtech:meta_item_1:78:0b085fc314f09a6e46c85e71b850f3b7dbac232e":[{"o":"i:actuallyadditions:block_crystal_empowered:5","n":"Empowered Enori Crystal Block","t":"Combination Crafting","e":100000,"d":200,"x":"ZPM","h":0,"g":"af0669adfdb3e75c3338.webp","a":1}]}

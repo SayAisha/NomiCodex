@@ -1,1 +1,0 @@
-{"i:gregtech:fluid_pipe_quadruple:55":[{"o":"i:gregtech:meta_dust:55","n":"Lead Dust","t":"Pulverization","e":2,"d":828,"x":"ULV","h":0,"g":"849dafe71f284a612528.webp","a":1},{"o":"f:gregtech:lead","n":"Lead","t":"Extractor","e":30,"d":828,"x":"LV","h":0,"g":"be271101d7e53854d13b.webp","a":1}]}

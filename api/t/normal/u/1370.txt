@@ -1,0 +1,1 @@
+{"i:moreplates:empowered_void_gear:0":[{"o":"i:nomilabs:eternalcatalyst:0","n":"Eternal Catalyst","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"5e8f17ed70159f7e2572.webp","a":1}]}

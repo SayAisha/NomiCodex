@@ -1,1 +1,0 @@
-{"i:gregtech:fluid_pipe_quadruple:2036":[{"o":"i:gregtech:meta_ingot:2036","n":"Vanadiumsteel Ingot","t":"Arc Furnace","e":30,"d":220,"x":"LV","h":0,"g":"a8862fe7f098dc28a4c4.webp","a":1}]}

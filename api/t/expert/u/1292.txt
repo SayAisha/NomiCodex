@@ -1,1 +1,0 @@
-{"f:gregtech:molten.indium_tin_barium_titanium_cuprate":[{"o":"i:gregtech:meta_ingot:429","n":"Indium Tin Barium Titanium Cuprate Ingot","t":"Vacuum Freezer","e":30720,"d":165,"x":"LuV","h":0,"g":"09db541376d0170dae98.webp","a":144},{"o":"f:gregtech:helium","n":"Helium","t":"Vacuum Freezer","e":30720,"d":165,"x":"LuV","h":0,"g":"09db541376d0170dae98.webp","a":144}]}

@@ -1,1 +1,0 @@
-{"i:gregtech:fluid_pipe_quadruple:25":[{"o":"i:gregtech:meta_ingot:252","n":"Annealed Copper Ingot","t":"Arc Furnace","e":30,"d":252,"x":"LV","h":0,"g":"59109d13fdb82fac2550.webp","a":1}],"f:gregtech:steamcracked_butadiene":[{"o":"f:gregtech:propene","n":"Propene","t":"Distillery","e":30,"d":48,"x":"LV","h":0,"g":"9cc4389043483be2b885.webp","a":200}]}

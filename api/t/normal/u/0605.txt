@@ -1,1 +1,1 @@
-{"i:gregtech:turbine_casing:0":[{"o":"i:gregtech:meta_dust:260","n":"Bronze Dust","t":"Pulverization","e":2,"d":532,"x":"ULV","h":0,"g":"4cc8bf076679df8e7064.webp","a":1},{"o":"i:gregtech:meta_ingot:260","n":"Bronze Ingot","t":"Arc Furnace","e":30,"d":532,"x":"LV","h":0,"g":"7dd9ce4bd0384d624d7b.webp","a":1}]}
+{"i:gregtech:turbine_casing:0":[{"o":"i:gregtech:meta_dust:260","n":"Bronze Dust","t":"Pulverization","e":2,"d":532,"x":"ULV","h":0,"g":"4cc8bf076679df8e7064.webp","a":1}]}

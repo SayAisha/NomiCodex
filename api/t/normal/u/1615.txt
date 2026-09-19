@@ -1,1 +1,1 @@
-{"i:gregtech:itnt:0":[{"o":"i:gregtech:meta_dust:275","n":"Dark Ashes","t":"Implosion Compressor","e":30,"d":20,"x":"LV","h":0,"g":"d173202790e373078539.webp","a":1}]}
+{"i:nomilabs:exoticmaterialscatalyst:0":[{"o":"i:extendedcrafting:singularity_ultimate:0","n":"The Ultimate Singularity","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"327061f40a29423ce1dc.webp","a":1}]}

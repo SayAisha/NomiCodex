@@ -1,1 +1,1 @@
-{"i:gregtech:meta_plate_dense:130":[{"o":"i:gregtech:meta_block_compressed_8:2","n":"Block of Trinium","t":"Arc Furnace","e":30,"d":2907,"x":"LV","h":0,"g":"b0c652b35de988e83061.webp","a":1}]}
+{"i:gregtech:meta_plate_dense:130":[{"o":"i:advancedrocketry:spacelaser:0","n":"Orbital Laser Drill","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"b1dd987cc6da1e7d6ccf.webp","a":1},{"o":"i:gregtech:meta_block_compressed_8:2","n":"Block of Trinium","t":"Arc Furnace","e":30,"d":2907,"x":"LV","h":0,"g":"b0c652b35de988e83061.webp","a":1}]}

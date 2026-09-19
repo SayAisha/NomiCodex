@@ -1,1 +1,1 @@
-{"f:gregtech:steamcracked_butene":[{"o":"f:gregtech:propene","n":"Propene","t":"Distillery","e":30,"d":24,"x":"LV","h":0,"g":"406b03fa774e52f1398f.webp","a":100}]}
+{"f:gregtech:steamcracked_butene":[{"o":"f:gregtech:methane","n":"Methane","t":"Distillery","e":30,"d":24,"x":"LV","h":0,"g":"aafb088e77ef58e9594e.webp","a":100},{"o":"f:gregtech:propene","n":"Propene","t":"Distillery","e":30,"d":24,"x":"LV","h":0,"g":"406b03fa774e52f1398f.webp","a":100}]}

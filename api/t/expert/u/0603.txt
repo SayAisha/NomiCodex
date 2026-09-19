@@ -1,0 +1,1 @@
+{"i:draconicevolution:draconic_sword:0:f95ae53f112acccddb07713c6e9fb55d7e2bb8d4":[{"o":"i:avaritia:infinity_sword:0","n":"Sword of the Cosmos","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"581b48cdfdde6e6e8cdb.webp","a":1}]}

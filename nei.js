@@ -1,7 +1,7 @@
-import { GetScrollbarWidth, voltageTier, formatAmount, getFusionTierByStartupCost } from "./utils.js?v=20";
-import { Goods, Fluid, Item, Repository, Recipe, RecipeType, RecipeIoType, OreDict } from "./repository.js?v=20";
-import { SearchQuery } from "./searchQuery.js?v=20";
-import { ShowTooltip } from "./tooltip.js?v=20";
+import { GetScrollbarWidth, voltageTier, formatAmount, getFusionTierByStartupCost } from "./utils.js?v=21";
+import { Goods, Fluid, Item, Repository, Recipe, RecipeType, RecipeIoType, OreDict } from "./repository.js?v=21";
+import { SearchQuery } from "./searchQuery.js?v=21";
+import { ShowTooltip } from "./tooltip.js?v=21";
 const repository = Repository.current;
 const nei = document.getElementById("nei");
 const neiScrollBox = nei.querySelector("#nei-scroll");
@@ -174,10 +174,14 @@ class NeiRecipeTypeInfo extends Array {
             this.BuildRecipeIoDom(dom, recipeItems, index, RecipeIoType.ItemOutput, RecipeIoType.FluidOutput, 4);
             dom.push(`</div>`);
             if (recipe.gtRecipe != null) {
-                dom.push(`<span>${voltageTier[recipe.gtRecipe.voltageTier].name} • ${recipe.gtRecipe.durationSeconds}s`);
-                if (recipe.gtRecipe.amperage != 1)
-                    dom.push(` • ${recipe.gtRecipe.amperage}A`);
-                dom.push(`</span><span class="text-small"><span data-info="How much EU/t the recipe draws while running.">${formatAmount(recipe.gtRecipe.voltage)}v</span> • ${formatAmount(recipe.gtRecipe.voltage * recipe.gtRecipe.amperage * recipe.gtRecipe.durationTicks)}eu</span>`);
+                if (recipe.gtRecipe.voltage > 0) {
+                    dom.push(`<span>${voltageTier[recipe.gtRecipe.voltageTier].name} • ${recipe.gtRecipe.durationSeconds}s`);
+                    if (recipe.gtRecipe.amperage != 1)
+                        dom.push(` • ${recipe.gtRecipe.amperage}A`);
+                    dom.push(`</span><span class="text-small"><span data-info="How much EU/t the recipe draws while running.">${formatAmount(recipe.gtRecipe.voltage)}v</span> • ${formatAmount(recipe.gtRecipe.voltage * recipe.gtRecipe.amperage * recipe.gtRecipe.durationTicks)}eu</span>`);
+                } else if (recipe.gtRecipe.durationSeconds > 0) {
+                    dom.push(`<span>${recipe.gtRecipe.durationSeconds}s</span>`);
+                }
                 for (const metadata of recipe.gtRecipe.metadata) {
                     let str = MetadataToString(metadata, recipe);
                     if (str != null) {
@@ -218,6 +222,9 @@ function MetadataToString(metadata, recipe) {
         case "GLASS": return "Glass tier: " + voltageTier[metadata.value - 1].name;
         case "qft_focus_tier": return "QFT focus tier: " + metadata.value;
         case "recycle": return metadata.value == 1 ? "Recycle recipe" : null;
+        case "ender_time": return "Ender crafting: " + Math.round(metadata.value) + "s";
+        case "combination_cost": return "Cost: " + formatAmount(metadata.value) + " FE";
+        case "power_cost": return "Cost: " + formatAmount(metadata.value) + " FE";
         case "coil_heat": return DisplayHeatRequired(metadata.value, recipe);
         case "nke_range": return DisplayNkeRange(metadata.value);
         default: return `${metadata.key}: ${formatAmount(metadata.value)}`;

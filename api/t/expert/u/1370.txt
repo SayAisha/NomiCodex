@@ -1,1 +1,1 @@
-{"i:moreplates:empowered_void_gear:0":[{"o":"i:gregtech:machine:1027","n":"Advanced Ore Drilling Plant","t":"Assembly Line","e":122880,"d":800,"x":"ZPM","h":0,"g":"1801440e486294fe5e16.webp","a":12}]}
+{"i:moreplates:empowered_void_gear:0":[{"o":"i:gregtech:machine:1027","n":"Advanced Ore Drilling Plant","t":"Assembly Line","e":122880,"d":800,"x":"ZPM","h":0,"g":"1801440e486294fe5e16.webp","a":12},{"o":"i:nomilabs:eternalcatalyst:0","n":"Eternal Catalyst","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"5e8f17ed70159f7e2572.webp","a":1}]}

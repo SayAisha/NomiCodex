@@ -1,1 +1,0 @@
-{"i:gregtech:fluid_pipe_quadruple:260":[{"o":"i:gregtech:meta_ingot:260","n":"Bronze Ingot","t":"Arc Furnace","e":30,"d":304,"x":"LV","h":0,"g":"85a34d4e0d93ff37977b.webp","a":1}],"i:gregtech:fluid_pipe_quadruple:323":[{"o":"i:gregtech:meta_ingot:323","n":"Stainless Steel Ingot","t":"Arc Furnace","e":30,"d":220,"x":"LV","h":0,"g":"541b365ee9226d247a68.webp","a":1}]}

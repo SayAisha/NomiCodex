@@ -1,1 +1,1 @@
-{"i:nuclearcraft:neptunium:1":[{"o":"i:nuclearcraft:neptunium:3","n":"Tiny Clump of Neptunium-236 Oxide","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"1ec0c264a783d337074f.webp","a":1}]}
+{"i:nuclearcraft:neptunium:1":[{"o":"i:nuclearcraft:neptunium:3","n":"Tiny Clump of Neptunium-236 Oxide","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"1ec0c264a783d337074f.webp","a":1}],"i:armorplus:cobalt_boots:0":[{"o":"i:armorplus:the_ultimate_part:10","n":"The Ultimate Boots Middle","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a736eaef06a643973928.webp","a":1}]}

@@ -1,1 +1,0 @@
-{"i:gregtech:fluid_pipe_quadruple:129":[{"o":"i:gregtech:meta_ingot:129","n":"Duranium Ingot","t":"Arc Furnace","e":30,"d":1200,"x":"LV","h":0,"g":"2ffea9f49326d63a5b29.webp","a":1}]}

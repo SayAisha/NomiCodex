@@ -1,1 +1,0 @@
-{"i:gregtech:meta_tool_head_buzz_saw:300":[{"o":"i:gregtech:meta_ingot:300","n":"Sterling Silver Ingot","t":"Arc Furnace","e":30,"d":392,"x":"LV","h":0,"g":"5d2cf8b9ab46e1cc2e39.webp","a":1}]}

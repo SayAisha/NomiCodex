@@ -32,15 +32,15 @@ try {
     });
     // Point the icon stylesheet at this mode's atlas (custom property on <html>
     // resolves relative to the document URL)
-    const atlasUrl = new URL(`data-${mode}/atlas.webp?v=8`, document.baseURI).href;
+    const atlasUrl = new URL(`data-${mode}/atlas.webp?v=9`, document.baseURI).href;
     document.documentElement.style.setProperty('--atlas-url', `url("${atlasUrl}")`);
     // Warm the atlas cache
     const atlas = new Image();
-    atlas.src = `./data-${mode}/atlas.webp?v=8`;
+    atlas.src = `./data-${mode}/atlas.webp?v=9`;
     // Load repository and data in parallel
     const [repositoryModule, response] = await Promise.all([
-        import("./repository.js?v=20"),
-        fetch(`./data-${mode}/data.bin?v=10`)
+        import("./repository.js?v=21"),
+        fetch(`./data-${mode}/data.bin?v=11`)
     ]);
     const stream = response.body.pipeThrough(new DecompressionStream("gzip"));
     const buffer = await new Response(stream).arrayBuffer();
@@ -48,13 +48,13 @@ try {
     console.log("Repository loaded", repositoryModule.Repository.current);
     // Then load other modules
     await Promise.all([
-        import("./itemIcon.js?v=20"),
-        import("./tooltip.js?v=20"),
-        import("./nei.js?v=20"),
-        import("./menu.js?v=20"),
-        import("./recipeList.js?v=20")
+        import("./itemIcon.js?v=21"),
+        import("./tooltip.js?v=21"),
+        import("./nei.js?v=21"),
+        import("./menu.js?v=21"),
+        import("./recipeList.js?v=21")
     ]);
-    let page = await import("./page.js?v=20");
+    let page = await import("./page.js?v=21");
     try { page.UpdateProject(); } catch (e) { /* calculator remnant, NEI-only mode */ }
     loading.remove();
     // theme toggle
@@ -67,7 +67,7 @@ try {
     }
 
     // overclock calculator (ported from the Leveret oceu tag)
-    const oceuModule = await import("./oceu.js?v=20");
+    const oceuModule = await import("./oceu.js?v=21");
     document.getElementById("oceu-link")?.addEventListener("click", (e) => {
         e.preventDefault();
         oceuModule.OpenOceu(null);
@@ -94,7 +94,7 @@ try {
     }
 
     // styled hover explanations for [data-info] spans (e.g. recipe voltage)
-    const tooltipModule = await import("./tooltip.js?v=20");
+    const tooltipModule = await import("./tooltip.js?v=21");
     document.addEventListener("mouseover", (e) => {
         const target = e.target instanceof Element ? e.target.closest("[data-info]") : null;
         if (target)
@@ -107,7 +107,7 @@ try {
 
     // NEI-only mode: open the item browser straight away (?item=<id> deep-links to one)
     if (new URL(location.href).searchParams.get("noauto") === null) {
-    const nei = await import("./nei.js?v=20");
+    const nei = await import("./nei.js?v=21");
     const deepLink = new URL(location.href).searchParams.get("item");
     const target = deepLink ? repositoryModule.Repository.current.GetById(deepLink) : null;
     nei.ShowNei(target, nei.ShowNeiMode.Production, null);

@@ -1,0 +1,1 @@
+{"i:armorplus:redstone_leggings:0":[{"o":"i:armorplus:the_ultimate_part:6","n":"The Ultimate Legging Right","t":"Advanced Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"94bcd1dca9380a47475e.webp","a":1}]}

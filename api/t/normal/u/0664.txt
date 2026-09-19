@@ -1,1 +1,1 @@
-{"i:gregtech:ore_wulfenite_0:1":[{"o":"i:gregtech:meta_dust:336","n":"Wulfenite Dust","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"f4d4385b8fcd42d31a79.webp","a":1}],"i:gregtech:ore_saltpeter_0:0":[{"o":"i:gregtech:meta_crushed:313","n":"Crushed Saltpeter Ore","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"85d1ee3ca1e5556d0e64.webp","a":1}]}
+{"i:gregtech:ore_saltpeter_0:0":[{"o":"i:gregtech:meta_crushed:313","n":"Crushed Saltpeter Ore","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"85d1ee3ca1e5556d0e64.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:armorplus:obsidian_chestplate:0":[{"o":"i:armorplus:super_star_chestplate:0","n":"Super Star Chestplate","t":"Elite Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"c357297a2ad98a638d8a.webp","a":1}]}

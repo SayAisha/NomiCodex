@@ -1,0 +1,1 @@
+{"i:nuclearcraft:dust:11":[{"o":"i:nuclearcraft:ingot:11","n":"Manganese Ingot","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"fd1d52e989dd1290fea2.webp","a":1}]}
