@@ -1,1 +1,1 @@
-[{"id":"i:armorplus:lapis_boots:0","name":"Lapis Boots","mod":"armorplus","recipes":1},{"id":"i:armorplus:lapis_sword:0","name":"Lapis Sword","mod":"armorplus","recipes":1},{"id":"i:armorplus:lapis_bow:0","name":"Lapis Bow","mod":"armorplus","recipes":1}]
+[{"id":"f:gregtech:light_fuel","name":"Light Fuel","mod":"gregtech","recipes":7},{"id":"f:gregtech:lightly_hydrocracked_light_fuel","name":"Lightly Hydrocracked Light Fuel","mod":"gregtech","recipes":3}]
