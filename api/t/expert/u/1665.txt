@@ -1,0 +1,1 @@
+{"i:gregtech:meta_tool_head_buzz_saw:260":[{"o":"i:gregtech:meta_ingot:260","n":"Bronze Ingot","t":"Arc Furnace","e":30,"d":304,"x":"LV","h":0,"g":"58f7dbe4b447ab6af511.webp","a":1}],"i:gregtech:meta_tool_head_buzz_saw:323":[{"o":"i:gregtech:meta_ingot:323","n":"Stainless Steel Ingot","t":"Arc Furnace","e":30,"d":220,"x":"LV","h":0,"g":"cee5fbeec8f917b4166c.webp","a":1}]}

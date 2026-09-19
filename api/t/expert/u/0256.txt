@@ -1,0 +1,1 @@
+{"i:gregtech:meta_rotor:22":[{"o":"i:gregtech:meta_item_1:777","n":"Advanced Power Thruster","t":"Assembler","e":30,"d":200,"x":"LV","h":0,"g":"f39496b3ba0b0d6f2892.webp","a":1},{"o":"i:gregtech:meta_ingot:22","n":"Chrome Ingot","t":"Arc Furnace","e":30,"d":208,"x":"LV","h":0,"g":"911d57e4ab77d41f60be.webp","a":1}]}

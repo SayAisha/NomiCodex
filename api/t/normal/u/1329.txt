@@ -1,0 +1,1 @@
+{"i:gregtech:boiler_firebox_casing:2":[{"o":"i:gregtech:meta_dust:113","n":"Titanium Dust","t":"Pulverization","e":8,"d":192,"x":"ULV","h":0,"g":"1b15d5f145a0d3652de5.webp","a":1},{"o":"i:gregtech:machine:1015","n":"Large Titanium Boiler","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"77a08a88432f247a94d5.webp","a":1}]}

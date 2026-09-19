@@ -1,0 +1,1 @@
+{"i:extrautils2:ingredients:15":[{"o":"i:extrautils2:ingredients:16","n":"Upgrade Speed (Ultimate)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"fc4e9bfd0a49736f748a.webp","a":1}],"i:gregtech:ore_soapstone_0:0":[{"o":"i:gregtech:meta_crushed:393","n":"Crushed Soapstone Ore","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"1ac226c6b65558174f40.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:redstonearsenal:armor.plate_flux:0":[{"o":"i:simplyjetpacks:itemjetpack:18","n":"Flux-Infused JetPlate","t":"Assembly Line","e":30720,"d":3000,"x":"LuV","h":0,"g":"dadd0af0009b464063ce.webp","a":1}]}

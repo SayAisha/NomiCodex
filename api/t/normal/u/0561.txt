@@ -1,0 +1,1 @@
+{"i:nuclearcraft:plutonium:3":[{"o":"i:nuclearcraft:plutonium:1","n":"Plutonium-238 Oxide","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"24a46f54d4b83489fbb6.webp","a":1}]}

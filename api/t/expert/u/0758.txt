@@ -1,0 +1,1 @@
+{"i:gregtech:meta_ingot_hot:3002":[{"o":"i:gregtech:meta_ingot:3002","n":"Maraging Steel 300 Ingot","t":"Vacuum Freezer","e":120,"d":165,"x":"MV","h":0,"g":"bbc9b386a855d8981284.webp","a":1}],"i:thermalinnovation:magnet:1":[{"o":"i:thermalinnovation:magnet:2","n":"Fluxomagnet (Reinforced)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"8234facc32a92a902b5c.webp","a":1}]}

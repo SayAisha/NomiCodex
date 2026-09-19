@@ -1,0 +1,1 @@
+{"i:gregtech:ore_tantalite_0:0":[{"o":"i:gregtech:meta_crushed:318","n":"Crushed Tantalite Ore","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"f19ac587680d1f57d11f.webp","a":1}]}

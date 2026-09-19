@@ -1,0 +1,1 @@
+{"i:gregtech:meta_tool_head_screwdriver:127":[{"o":"i:gregtech:meta_dust:127","n":"Neutronium Dust","t":"Pulverization","e":2,"d":1000,"x":"ULV","h":0,"g":"e0cecaf771bbbf954cf2.webp","a":1},{"o":"f:gregtech:neutronium","n":"Neutronium","t":"Extractor","e":30,"d":1000,"x":"LV","h":0,"g":"4dd3bcc9cd591362db02.webp","a":1}]}

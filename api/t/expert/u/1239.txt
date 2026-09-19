@@ -1,0 +1,1 @@
+{"i:solarflux:photovoltaic_cell_6:0":[{"o":"i:solarflux:solar_panel_8:0","n":"Solar Panel VIII","t":"Assembly Line","e":30720,"d":4800,"x":"LuV","h":0,"g":"21613797824d699c68f7.webp","a":3}]}

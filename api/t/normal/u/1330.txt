@@ -1,0 +1,1 @@
+{"i:gregtech:boiler_firebox_casing:3":[{"o":"i:gregtech:meta_dust:2013","n":"Tungstensteel Dust","t":"Pulverization","e":32,"d":476,"x":"LV","h":0,"g":"e0900933fb65b1faec87.webp","a":1},{"o":"i:gregtech:machine:1016","n":"Large Tungstensteel Boiler","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"f2c5a1645cb9c77ced4a.webp","a":1}]}

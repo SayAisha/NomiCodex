@@ -1,0 +1,1 @@
+{"i:gregtech:meta_ingot_hot:428":[{"o":"i:gregtech:meta_ingot:428","n":"Samarium Iron Arsenic Oxide Ingot","t":"Vacuum Freezer","e":7680,"d":200,"x":"IV","h":0,"g":"4f6f22a3c3733b81a49f.webp","a":1},{"o":"f:gregtech:helium","n":"Helium","t":"Vacuum Freezer","e":7680,"d":200,"x":"IV","h":0,"g":"4f6f22a3c3733b81a49f.webp","a":1}]}

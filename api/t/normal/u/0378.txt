@@ -1,0 +1,1 @@
+{"i:gregtech:metal_casing:3":[{"o":"i:gregtech:meta_dust:2","n":"Aluminium Dust","t":"Pulverization","e":8,"d":104,"x":"ULV","h":0,"g":"e392ae75e49c211af319.webp","a":1},{"o":"i:gregtech:machine:1002","n":"Vacuum Freezer","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e390b02f00712b141715.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:solarflux:solar_panel_draconic:0":[{"o":"i:gregtech:meta_item_1:338","n":"Ludicrous Voltage Solar Panel","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a3a9bcc053977982737c.webp","a":1}]}

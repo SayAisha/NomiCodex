@@ -1,0 +1,1 @@
+{"i:gregtech:meta_dust_tiny:8":[{"o":"i:gregtech:meta_dust:8","n":"Barium Dust","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"159b563c2fa0b50fc687.webp","a":1}],"i:gregtech:ore_magnesite_0:0":[{"o":"i:gregtech:meta_crushed:291","n":"Crushed Magnesite Ore","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"e9f0455dedc3f4a4dd1f.webp","a":1}]}

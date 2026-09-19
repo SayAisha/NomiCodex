@@ -1,0 +1,1 @@
+{"i:nomilabs:lairofthechaosguardiandata:0":[{"o":"i:minecraft:dragon_egg:0","n":"Dragon Egg","t":"Mission (MK III)","e":62500,"d":1500,"x":"LuV","h":0,"g":"24557ec1bbea7f599c2d.webp","a":1},{"o":"i:draconicevolution:chaos_shard:0","n":"Chaos Shard","t":"Mission (MK III)","e":62500,"d":1500,"x":"LuV","h":0,"g":"24557ec1bbea7f599c2d.webp","a":1}]}

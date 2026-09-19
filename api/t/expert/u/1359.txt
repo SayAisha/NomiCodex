@@ -1,0 +1,1 @@
+{"i:gregtech:fluid_pipe_quadruple:129":[{"o":"i:gregtech:meta_dust:129","n":"Duranium Dust","t":"Pulverization","e":2,"d":1200,"x":"ULV","h":0,"g":"c842fd9f2b3c4cc1611c.webp","a":1},{"o":"f:gregtech:duranium","n":"Duranium","t":"Extractor","e":30,"d":1200,"x":"LV","h":0,"g":"eec1c6957ca162c8a501.webp","a":1}]}

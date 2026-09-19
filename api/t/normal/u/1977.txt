@@ -1,0 +1,1 @@
+{"i:gregtech:meta_tool_head_screwdriver:113":[{"o":"i:gregtech:meta_dust:113","n":"Titanium Dust","t":"Pulverization","e":8,"d":48,"x":"ULV","h":0,"g":"0f95228b3078c2f0c22f.webp","a":1},{"o":"f:gregtech:titanium","n":"Titanium","t":"Extractor","e":120,"d":48,"x":"MV","h":0,"g":"129916852081e4a1f923.webp","a":1}]}

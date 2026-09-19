@@ -1,0 +1,1 @@
+{"f:nomilabs:antimony_pentafluoride":[{"o":"f:gregtech:fluoroantimonic_acid","n":"Fluoroantimonic Acid","t":"Large Chemical Reactor","e":480,"d":150,"x":"HV","h":0,"g":"56745c26b79864c8bee9.webp","a":1000},{"o":"f:gregtech:fluoroantimonic_acid","n":"Fluoroantimonic Acid","t":"Chemical Reactor","e":480,"d":150,"x":"HV","h":0,"g":"a9f061e323a9ea0820cd.webp","a":1000}]}

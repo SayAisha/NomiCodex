@@ -1,0 +1,1 @@
+{"i:minecraft:stained_glass_pane:0":[{"o":"i:minecraft:glass_pane:0","n":"Glass Pane","t":"Chemical Bath","e":2,"d":400,"x":"ULV","h":0,"g":"83dfac97365c0d6c07e6.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:nuclearcraft:fuel_neptunium:1":[{"o":"i:nuclearcraft:neptunium:1","n":"Neptunium-236 Oxide","t":"Thermal Centrifuge","e":48,"d":3200,"x":"LV","h":0,"g":"3b9a943818379e935f1f.webp","a":1}]}

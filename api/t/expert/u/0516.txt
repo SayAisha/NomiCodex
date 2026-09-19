@@ -1,0 +1,1 @@
+{"i:nuclearcraft:americium:7":[{"o":"i:nuclearcraft:americium:5","n":"Americium-242 Oxide","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"abdc12782213a2a80024.webp","a":1}],"i:nuclearcraft:berkelium:3":[{"o":"i:nuclearcraft:berkelium:1","n":"Berkelium-247 Oxide","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e3903ce4a70d2cdacbb1.webp","a":1}]}

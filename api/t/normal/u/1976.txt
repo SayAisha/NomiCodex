@@ -1,0 +1,1 @@
+{"i:gregtech:meta_tool_head_screwdriver:301":[{"o":"i:gregtech:meta_dust:301","n":"Rose Gold Dust","t":"Pulverization","e":8,"d":169,"x":"ULV","h":0,"g":"e91954e1250a3c3c3995.webp","a":1},{"o":"f:gregtech:rose_gold","n":"Rose Gold","t":"Extractor","e":120,"d":169,"x":"MV","h":0,"g":"cadd0439bb3f99f3d068.webp","a":1}]}

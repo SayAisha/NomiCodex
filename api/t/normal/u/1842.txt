@@ -1,0 +1,1 @@
+{"i:appliedenergistics2:energy_acceptor:0":[{"o":"i:appliedenergistics2:controller:0","n":"ME Controller","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"d59e59a5caea8f61d388.webp","a":1}]}

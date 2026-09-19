@@ -1,0 +1,1 @@
+{"i:gregtech:machine_casing:0":[{"o":"i:gregtech:machine:985","n":"ULV Machine Hull","t":"Assembler","e":16,"d":25,"x":"ULV","h":0,"g":"a916031cc76689904a78.webp","a":1},{"o":"i:gregtech:machine:985","n":"ULV Machine Hull","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"5a8501c24a37c67092dd.webp","a":1}]}

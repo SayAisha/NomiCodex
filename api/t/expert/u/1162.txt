@@ -1,0 +1,1 @@
+{"i:gregtech:meta_item_1:78:a85f75db199513918cef3c41cd17f5fde4b8486f":[{"o":"i:gregtech:metal_casing:1","n":"Firebricks","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"ef069f417b5de085251d.webp","a":1}]}

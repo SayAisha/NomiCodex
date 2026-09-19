@@ -1,0 +1,1 @@
+{"f:gregtech:enriched_uranium_hexafluoride":[{"o":"i:gregtech:meta_dust:117","n":"Uranium 235 Dust","t":"Electrolyzer","e":120,"d":160,"x":"MV","h":0,"g":"0fecb54c7bdb5e4fcd93.webp","a":1000},{"o":"f:gregtech:fluorine","n":"Fluorine","t":"Electrolyzer","e":120,"d":160,"x":"MV","h":0,"g":"0fecb54c7bdb5e4fcd93.webp","a":1000}]}

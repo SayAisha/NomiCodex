@@ -1,0 +1,1 @@
+{"i:thermalexpansion:machine:14:a1f13393ff1123df79e85430d3723f88bf29d7a1":[{"o":"i:thermalexpansion:machine:14:3d8afdbfecc1c24b63470aae1dbd120ee1ffe47c","n":"Glacial Precipitator (Resonant)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"44cd77f5dfd8ad90d515.webp","a":1}]}

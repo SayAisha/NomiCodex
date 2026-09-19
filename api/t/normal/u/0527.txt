@@ -1,0 +1,1 @@
+{"i:libvulpes:productdust:10":[{"o":"i:libvulpes:productingot:10","n":"Iridium Ingot","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"c5454c05a40edd56fc6b.webp","a":1}]}

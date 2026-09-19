@@ -1,0 +1,1 @@
+{"i:gregtech:ore_garnet_yellow_0:1":[{"o":"i:gregtech:meta_gem:2017","n":"Yellow Garnet","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"faa82fbf84a2fd45837b.webp","a":1}],"f:nomilabs:moltendarksoularium":[{"o":"i:simplyjetpacks:metaitemmods:3","n":"Dark Soularium Ingot","t":"Fluid Solidifier","e":30,"d":40,"x":"LV","h":0,"g":"62444fe7eb179bfa9c99.webp","a":144}]}

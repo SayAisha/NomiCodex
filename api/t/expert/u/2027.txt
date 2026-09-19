@@ -1,0 +1,1 @@
+{"f:gregtech:lanthanum":[{"o":"f:gregtech:lutetium","n":"Lutetium","t":"Fusion Reactor","e":7680,"d":16,"x":"IV","h":0,"g":"7bb5658eba5d3d734d0b.webp","a":16}]}

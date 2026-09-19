@@ -1,0 +1,1 @@
+{"i:gregtech:itnt:0":[{"o":"i:gregtech:meta_dust:275","n":"Dark Ashes","t":"Implosion Compressor","e":30,"d":20,"x":"LV","h":0,"g":"d173202790e373078539.webp","a":1}]}

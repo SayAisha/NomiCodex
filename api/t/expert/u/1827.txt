@@ -1,0 +1,1 @@
+{"i:actuallyadditions:item_potion_ring:8":[{"o":"i:actuallyadditions:item_potion_ring_advanced:8","n":"Advanced Ring of Invisibility","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"ae439cc0b335d70de5c5.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:gregtech:metal_casing:6":[{"o":"i:gregtech:multiblock_casing:0","n":"Engine Intake Casing","t":"Assembler","e":16,"d":50,"x":"ULV","h":0,"g":"7b35d8a663b65fafab4a.webp","a":1},{"o":"i:gregtech:multiblock_casing:0","n":"Engine Intake Casing","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"743fbac70b5f451f2576.webp","a":1}]}
