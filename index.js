@@ -32,7 +32,8 @@ try {
     });
     // Point the icon stylesheet at this mode's atlas (custom property on <html>
     // resolves relative to the document URL)
-    document.documentElement.style.setProperty('--atlas-url', `url("data-${mode}/atlas.webp?v=8")`);
+    const atlasUrl = new URL(`data-${mode}/atlas.webp?v=8`, document.baseURI).href;
+    document.documentElement.style.setProperty('--atlas-url', `url("${atlasUrl}")`);
     // Warm the atlas cache
     const atlas = new Image();
     atlas.src = `./data-${mode}/atlas.webp?v=8`;
@@ -54,7 +55,7 @@ try {
         import("./recipeList.js?v=20")
     ]);
     let page = await import("./page.js?v=20");
-    page.UpdateProject();
+    try { page.UpdateProject(); } catch (e) { /* calculator remnant, NEI-only mode */ }
     loading.remove();
     // theme toggle
     const themeToggle = document.getElementById("theme-toggle");
