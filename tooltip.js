@@ -1,4 +1,4 @@
-import { GetSingleRecipeDom } from "./nei.js?v=20";
+import { GetSingleRecipeDom } from "./nei.js?v=21";
 export var currentTooltipElement;
 const tooltip = document.getElementById("tooltip");
 const tooltipHeader = tooltip.querySelector("#tooltip-header");

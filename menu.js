@@ -1,6 +1,6 @@
 import { PageModel, serializer, SetCurrentPage, addProjectChangeListener, page, UpdateProject, ModelObjectValidator } from './page.js';
 import { showConfirmDialog } from './dialogues.js';
-import { ShowNei, ShowNeiMode } from "./nei.js?v=20";
+import { ShowNei, ShowNeiMode } from "./nei.js?v=21";
 async function ValidateAndNotify(page) {
     const validator = new ModelObjectValidator();
     const errors = validator.Validate(page);

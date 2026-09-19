@@ -1,7 +1,7 @@
 import { RecipeGroupModel, RecipeModel, FlowInformation, LinkAlgorithm } from './page.js';
-import { Item, RecipeIoType, Repository } from "./repository.js?v=20";
-import { machines, notImplementedMachine, GetSingleBlockMachine, GetParameter } from "./machines.js?v=20";
-import { voltageTier } from "./utils.js?v=20";
+import { Item, RecipeIoType, Repository } from "./repository.js?v=21";
+import { machines, notImplementedMachine, GetSingleBlockMachine, GetParameter } from "./machines.js?v=21";
+import { voltageTier } from "./utils.js?v=21";
 class LinkCollection {
     constructor() {
         this.output = {};

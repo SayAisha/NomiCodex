@@ -1,6 +1,6 @@
-import { Repository, Goods, OreDict } from "./repository.js?v=20";
-import { NeiSelect, ShowNei, ShowNeiMode } from "./nei.js?v=20";
-import { ShowTooltip, HideTooltip, IsHovered } from "./tooltip.js?v=20";
+import { Repository, Goods, OreDict } from "./repository.js?v=21";
+import { NeiSelect, ShowNei, ShowNeiMode } from "./nei.js?v=21";
+import { ShowTooltip, HideTooltip, IsHovered } from "./tooltip.js?v=21";
 // Global cycling state
 let globalIndex = 0;
 let oredictElements = [];

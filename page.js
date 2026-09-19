@@ -1,7 +1,7 @@
-import { RecipeIoType, Repository } from "./repository.js?v=20";
-import { SolvePage } from "./solver.js?v=20";
-import { singleBlockMachine } from "./machines.js?v=20";
-import { SearchQuery } from "./searchQuery.js?v=20";
+import { RecipeIoType, Repository } from "./repository.js?v=21";
+import { SolvePage } from "./solver.js?v=21";
+import { singleBlockMachine } from "./machines.js?v=21";
+import { SearchQuery } from "./searchQuery.js?v=21";
 let nextIid = 0;
 export class ModelObjectVisitor {
     VisitArray(parent, key, array) {

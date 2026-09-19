@@ -1,4 +1,4 @@
-import { addProjectChangeListener } from "./page.js?v=20";
+import { addProjectChangeListener } from "./page.js?v=21";
 export class Dropdown {
     constructor() {
         this.currentTarget = null;

@@ -1,11 +1,11 @@
-import { ShowNei, ShowNeiMode } from "./nei.js?v=20";
-import { Goods, Repository, Fluid } from "./repository.js?v=20";
-import { UpdateProject, addProjectChangeListener, GetByIid, RecipeModel, RecipeGroupModel, ProductModel, PageModel, DragAndDrop, page, LinkAlgorithm, CopyCurrentPageUrl, DownloadCurrentPage, Search } from "./page.js?v=20";
-import { voltageTier, formatAmount } from "./utils.js?v=20";
-import { ShowTooltip } from "./tooltip.js?v=20";
-import { IconBox } from "./itemIcon.js?v=20";
-import { ShowDropdown, HideDropdown } from "./dropdown.js?v=20";
-import { machines, GetSingleBlockMachine, GetParameter } from "./machines.js?v=20";
+import { ShowNei, ShowNeiMode } from "./nei.js?v=21";
+import { Goods, Repository, Fluid } from "./repository.js?v=21";
+import { UpdateProject, addProjectChangeListener, GetByIid, RecipeModel, RecipeGroupModel, ProductModel, PageModel, DragAndDrop, page, LinkAlgorithm, CopyCurrentPageUrl, DownloadCurrentPage, Search } from "./page.js?v=21";
+import { voltageTier, formatAmount } from "./utils.js?v=21";
+import { ShowTooltip } from "./tooltip.js?v=21";
+import { IconBox } from "./itemIcon.js?v=21";
+import { ShowDropdown, HideDropdown } from "./dropdown.js?v=21";
+import { machines, GetSingleBlockMachine, GetParameter } from "./machines.js?v=21";
 const linkAlgorithmNames = {
     [LinkAlgorithm.Match]: "",
     [LinkAlgorithm.Ignore]: "Ignore",

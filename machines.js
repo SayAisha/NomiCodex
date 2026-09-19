@@ -1,6 +1,6 @@
-import { Fluid, Item, RecipeIoType, Repository } from "./repository.js?v=20";
-import { TIER_LV, TIER_MV, TIER_LUV, TIER_ZPM, TIER_UV, TIER_UHV, TIER_UEV, TIER_UIV, TIER_UXV, CoilTierNames } from "./utils.js?v=20";
-import { voltageTier, getFusionTierByStartupCost, formatTicksAsTime } from "./utils.js?v=20";
+import { Fluid, Item, RecipeIoType, Repository } from "./repository.js?v=21";
+import { TIER_LV, TIER_MV, TIER_LUV, TIER_ZPM, TIER_UV, TIER_UHV, TIER_UEV, TIER_UIV, TIER_UXV, CoilTierNames } from "./utils.js?v=21";
+import { voltageTier, getFusionTierByStartupCost, formatTicksAsTime } from "./utils.js?v=21";
 export class Overclocker {
 }
 export class StandardOverclocker extends Overclocker {
