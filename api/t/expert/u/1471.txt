@@ -1,0 +1,1 @@
+{"i:minecraft:stained_hardened_clay:14":[{"o":"i:minecraft:red_glazed_terracotta:0","n":"Red Glazed Terracotta","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"6941e9ed1d89379dc714.webp","a":1}]}

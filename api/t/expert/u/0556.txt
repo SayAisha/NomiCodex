@@ -1,0 +1,1 @@
+{"i:nuclearcraft:neptunium:6":[{"o":"i:nuclearcraft:neptunium:4","n":"Neptunium-237","t":"Packager","e":12,"d":10,"x":"ULV","h":0,"g":"ef0c978bc2a181c40f6d.webp","a":9}],"i:gregtech:ore_monazite_0:1":[{"o":"i:gregtech:meta_gem:2029","n":"Monazite","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"597cacb9d21507fef740.webp","a":1}]}

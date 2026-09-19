@@ -1,0 +1,1 @@
+{"f:gregtech:severely_steamcracked_naphtha":[{"o":"f:gregtech:benzene","n":"Benzene","t":"Distillery","e":30,"d":120,"x":"LV","h":0,"g":"6f1e555d6088dcf42530.webp","a":500}]}

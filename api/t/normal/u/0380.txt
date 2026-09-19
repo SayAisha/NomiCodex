@@ -1,0 +1,1 @@
+{"i:ae2stuff:wireless_kit:0":[{"o":"i:ae2stuff:wireless_kit:0","n":"Wireless Setup Kit","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"7030192d66713a9b4b17.webp","a":1}],"i:gregtech:metal_casing:5":[{"o":"i:gregtech:meta_ingot:323","n":"Stainless Steel Ingot","t":"Arc Furnace","e":30,"d":220,"x":"LV","h":0,"g":"541b365ee9226d247a68.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:libvulpes:holoprojector:0":[{"o":"i:advancedrocketry:planetholoselector:0","n":"Holographic Planet Selector","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"edde68a41af579308166.webp","a":1}],"i:gregtech:ore_grossular_0:1":[{"o":"i:gregtech:meta_gem:282","n":"Grossular","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"9e27220686d575760632.webp","a":1}]}

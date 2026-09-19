@@ -1,0 +1,1 @@
+{"i:gregtech:machine:100":[{"o":"i:gregtech:meta_dust:341","n":"Graphite Dust","t":"Pulverization","e":32,"d":1552,"x":"LV","h":0,"g":"2eed7341f571582a54c1.webp","a":1}],"i:gregtech:meta_tool_head_screwdriver:396":[{"o":"i:gregtech:meta_ingot:396","n":"Tungstencarbide Ingot","t":"Arc Furnace","e":30,"d":97,"x":"LV","h":0,"g":"c52bc69e3f9db28bbfdb.webp","a":1}]}

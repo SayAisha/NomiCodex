@@ -1,0 +1,1 @@
+{"i:thermalexpansion:machine:4:bc87334301e1eb6985f414e884ef1f9e085a5ae1":[{"o":"i:thermalexpansion:machine:4:d95b30d76bb057e7f4f93b8fc49c049fe75a7bb2","n":"Phytogenic Insolator (Resonant)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"44cd77f5dfd8ad90d515.webp","a":1}]}

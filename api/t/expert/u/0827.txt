@@ -1,0 +1,1 @@
+{"i:nomilabs:meta_dust_small:100":[{"o":"i:nomilabs:meta_dust:100","n":"Clean Inert Residue","t":"Packager","e":12,"d":10,"x":"ULV","h":0,"g":"463e09b9ac8b911cd5c9.webp","a":4}],"i:nuclearcraft:cocoa_butter:0":[{"o":"f:nuclearcraft:cocoa_butter","n":"Cocoa Butter","t":"Extractor","e":16,"d":100,"x":"ULV","h":0,"g":"cd8aa46ec9d34f397b3d.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:minecraft:rotten_flesh:0":[{"o":"i:enderio:item_material:45","n":"Skeletal Contractor","t":"Slice and Splice","e":0,"d":0,"x":"ULV","h":0,"g":"6590060ae33015be11ce.webp","a":1},{"o":"i:darkutils:filter:3","n":"Mob Filter","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e5bee462d4b681b322a5.webp","a":1}]}

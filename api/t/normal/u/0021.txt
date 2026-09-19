@@ -1,0 +1,1 @@
+{"i:nomilabs:moondust:0":[{"o":"i:nomilabs:quantumflux:0","n":"Quantum Flux","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"b3c0511ca59202616363.webp","a":1},{"o":"f:gregtech:deuterium","n":"Deuterium","t":"Centrifuge","e":20,"d":200,"x":"LV","h":0,"g":"d8ad35f86b93aa744411.webp","a":1}]}

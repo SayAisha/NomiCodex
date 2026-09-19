@@ -1,0 +1,1 @@
+{"i:gregtech:meta_ingot_hot:2519":[{"o":"i:gregtech:meta_ingot:2519","n":"HSS-E Ingot","t":"Vacuum Freezer","e":480,"d":243,"x":"HV","h":0,"g":"a98d4d756dd243d1b3bf.webp","a":1},{"o":"f:gregtech:helium","n":"Helium","t":"Vacuum Freezer","e":480,"d":243,"x":"HV","h":0,"g":"a98d4d756dd243d1b3bf.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:enderstorage:ender_storage:0":[{"o":"i:enderstorage:ender_storage:0","n":"Ender Chest","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"af09be02ae5aff13c729.webp","a":1}],"i:gregtech:meta_dust_impure:311":[{"o":"i:gregtech:meta_dust:311","n":"Ruby Dust","t":"Ore Washer","e":4,"d":8,"x":"ULV","h":0,"g":"990890c7665424b399b7.webp","a":1}]}

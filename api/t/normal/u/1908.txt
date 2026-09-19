@@ -1,0 +1,1 @@
+{"i:minecraft:rabbit:0":[{"o":"i:minecraft:cooked_rabbit:0","n":"Cooked Rabbit","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"cc8e686c7bef19635dfe.webp","a":1}]}

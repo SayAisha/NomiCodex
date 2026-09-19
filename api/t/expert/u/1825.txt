@@ -1,0 +1,1 @@
+{"i:actuallyadditions:item_potion_ring:6":[{"o":"i:actuallyadditions:item_potion_ring_advanced:6","n":"Advanced Ring of Fire Resistance","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"0991c0f96bbaca99fb7c.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:gregtech:meta_spring_small:41":[{"o":"i:minecraft:gold_nugget:0","n":"Gold Nugget","t":"Arc Furnace","e":30,"d":43,"x":"LV","h":0,"g":"f6eba9d73e0aaf5e8dd4.webp","a":1},{"o":"i:gregtech:machine:1288","n":"High Voltage Power Transformer","t":"Assembler","e":480,"d":200,"x":"HV","h":0,"g":"40401dc45a2b7d69df63.webp","a":1}]}

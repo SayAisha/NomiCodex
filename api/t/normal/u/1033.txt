@@ -1,0 +1,1 @@
+{"i:nuclearcraft:fuel_americium:1":[{"o":"i:nuclearcraft:americium:5","n":"Americium-242 Oxide","t":"Thermal Centrifuge","e":48,"d":3200,"x":"LV","h":0,"g":"7c28f9ce07c368013887.webp","a":1}]}

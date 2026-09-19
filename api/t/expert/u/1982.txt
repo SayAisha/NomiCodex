@@ -1,0 +1,1 @@
+{"i:gregtech:meta_tool_head_screwdriver:127":[{"o":"i:gregtech:meta_ingot:127","n":"Neutronium Ingot","t":"Arc Furnace","e":30,"d":1000,"x":"LV","h":0,"g":"5ce0b8aa8c468438ac33.webp","a":1}]}

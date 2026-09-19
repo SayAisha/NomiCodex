@@ -1,0 +1,1 @@
+{"i:gregtech:machine:14":[{"o":"i:gregtech:meta_ingot:328","n":"Tin Alloy Ingot","t":"Arc Furnace","e":30,"d":3314,"x":"LV","h":0,"g":"b08e8bf8cd0f35e191df.webp","a":1},{"o":"i:gregtech:meta_block_compressed_20:15","n":"Block of Wrought Iron","t":"Arc Furnace","e":30,"d":3314,"x":"LV","h":0,"g":"b08e8bf8cd0f35e191df.webp","a":1}]}

@@ -1,0 +1,1 @@
+{"i:densemetals:dense_iron_ore:0":[{"o":"i:gregtech:ore_iron_0:0","n":"Iron Ore","t":"Large Chemical Reactor","e":500,"d":200,"x":"HV","h":0,"g":"a822143eb73fa3ea92de.webp","a":1},{"o":"i:gregtech:ore_iron_0:0","n":"Iron Ore","t":"Chemical Reactor","e":500,"d":200,"x":"HV","h":0,"g":"c2f785ab7eac074ebd66.webp","a":1}]}

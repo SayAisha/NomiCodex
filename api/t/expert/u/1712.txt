@@ -1,0 +1,1 @@
+{"i:gregtech:meta_tool_head_buzz_saw:2014":[{"o":"i:gregtech:meta_ingot:2014","n":"Cobalt Brass Ingot","t":"Arc Furnace","e":30,"d":232,"x":"LV","h":0,"g":"950603fc032790ecd567.webp","a":1},{"o":"i:gregtech:machine:245","n":"Basic Cutting Machine","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"cb6a3be055a36d3aa23e.webp","a":1}]}

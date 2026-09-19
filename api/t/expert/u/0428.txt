@@ -1,0 +1,1 @@
+{"i:gregtech:ore_apatite_0:0":[{"o":"i:gregtech:meta_gem:2010","n":"Apatite","t":"Forge Hammer","e":16,"d":10,"x":"ULV","h":0,"g":"0e5dbeea8fe22fd25b0d.webp","a":1},{"o":"i:gregtech:meta_gem:2010","n":"Apatite","t":"Sag Mill","e":0,"d":0,"x":"ULV","h":0,"g":"3a2a691564a46e86de98.webp","a":1}]}

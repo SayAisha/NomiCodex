@@ -1,0 +1,1 @@
+{"i:gregtech:meta_tool_head_screwdriver:287":[{"o":"i:gregtech:meta_ingot:287","n":"Invar Ingot","t":"Arc Furnace","e":30,"d":56,"x":"LV","h":0,"g":"d06929c7f41b2e51cbf8.webp","a":1}]}

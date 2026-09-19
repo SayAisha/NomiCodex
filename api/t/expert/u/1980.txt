@@ -1,0 +1,1 @@
+{"i:gregtech:meta_tool_head_screwdriver:260":[{"o":"i:gregtech:meta_ingot:260","n":"Bronze Ingot","t":"Arc Furnace","e":30,"d":76,"x":"LV","h":0,"g":"fdd3aadda81a8158d4b9.webp","a":1}],"i:gregtech:meta_tool_head_screwdriver:323":[{"o":"i:gregtech:meta_ingot:323","n":"Stainless Steel Ingot","t":"Arc Furnace","e":30,"d":55,"x":"LV","h":0,"g":"f5accfd2d5b041ff98ee.webp","a":1}]}

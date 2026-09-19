@@ -1,0 +1,1 @@
+{"i:extrautils2:passivegenerator:6":[{"o":"i:gregtech:machine:1668","n":"Creative Quantum Chest","t":"Ultimate Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e5fc9943e7fb3c5a90b9.webp","a":1}]}

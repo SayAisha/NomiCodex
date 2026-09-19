@@ -1,0 +1,1 @@
+{"i:enderio:block_inventory_chest_large:0":[{"o":"i:enderio:block_inventory_chest_huge:0","n":"Huge Inventory System Storage","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"e8fe74bf2e30d34d6d57.webp","a":1}]}

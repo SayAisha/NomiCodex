@@ -1,0 +1,1 @@
+{"i:gregtech:meta_gear:80":[{"o":"i:gregtech:meta_dust:80","n":"Platinum Dust","t":"Pulverization","e":2,"d":780,"x":"ULV","h":0,"g":"ce508ea190ce4eb3942d.webp","a":1},{"o":"f:gregtech:platinum","n":"Molten Platinum","t":"Extractor","e":30,"d":780,"x":"LV","h":0,"g":"e79542c779109be17fab.webp","a":1}]}
