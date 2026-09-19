@@ -9,7 +9,7 @@ const TIERS = ["ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV",
 // engine-side smoothing, crisp pixels even without image-rendering support
 const ATLAS_COLS = 128;
 const ATLAS_UNIT = 64;
-const DATA_V = 15, ATLAS_V = 2;
+const DATA_V = 15, ATLAS_V = 4;
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (html) => {
@@ -31,7 +31,7 @@ let state = { filter: null, view: "recipes", showAll: false };
 
 /* ---------------- icons ---------------- */
 
-function iconStyle(iconId, size = 32) {
+function iconStyle(iconId, size = 36) {
     if (iconId == null || iconId < 0)
         return "background:linear-gradient(45deg,#22262e 25%,#191c22 25% 50%,#22262e 50% 75%,#191c22 75%)";
     const s = size / ATLAS_UNIT;
@@ -61,11 +61,11 @@ const tt = (() => {
         let variants = "";
         if (isOre) {
             variants = goods.items.slice(0, 8).map(v =>
-                `<div class="tt-title">${icon(v.iconId, 20)}<span class="t">${v.name ?? ""}</span></div>`).join("");
+                `<div class="tt-title">${icon(v.iconId, 24)}<span class="t">${v.name ?? ""}</span></div>`).join("");
         }
         const lines = (!isOre && goods.tooltip)
             ? `<div class="tt-lines">${goods.tooltip.split("\n").map(l => `<p>${l}</p>`).join("")}</div>` : "";
-        b.innerHTML = `<div class="tt-title">${isOre ? "" : `${icon(goods.iconId, 20)}`}<span class="t">${title}</span></div>
+        b.innerHTML = `<div class="tt-title">${isOre ? "" : `${icon(goods.iconId, 24)}`}<span class="t">${title}</span></div>
             ${isOre ? `<div class="tt-mod">ore dictionary — any of ${goods.items.length}:</div>` : `<div class="tt-mod">${esc(goods.mod ?? "")}</div>`}${variants}${lines}
             <div class="tt-hint"><b>LMB</b> recipes · <b>RMB</b> uses</div>`;
         b.style.display = "block";
@@ -200,7 +200,7 @@ function attachPalette(input, go) {
         sel = 0;
         pop.innerHTML = results.length
             ? results.map((r, i) => `<div class="cmdbar-row${i === 0 ? " sel" : ""}" data-i="${i}">
-                ${icon(r.iconId, 22)}
+                ${icon(r.iconId, 26)}
                 <span class="row-name">${r.nameHtml}</span><span class="row-mod">${esc(r.mod)}</span></div>`).join("")
             : `<div class="cmdbar-empty">No items match “${esc(input.value)}”</div>`;
         pop.querySelectorAll(".cmdbar-row").forEach(row => {
@@ -248,10 +248,10 @@ function gridHtml(entries, dimX, dimY, { compact = false, outputs = false } = {}
         }
     }
     const cells = entries.map(e => {
-        return `<div class="slot" style="left:${(e.slot % dimX) * 36 + 2}px;top:${Math.floor(e.slot / dimX) * 36 + 2}px">
+        return `<div class="slot" style="left:${(e.slot % dimX) * 44 + 4}px;top:${Math.floor(e.slot / dimX) * 44 + 4}px">
             ${slotHtml(e.goods, { ore: e.type === 1, fluid: e.type === 2 || e.type === 4, amount: e.amount, prob: outputs ? e.probability : 1 })}</div>`;
     }).join("");
-    return `<div class="sgrid" style="width:${useX * 36 + 4}px;height:${useY * 36 + 4}px">${cells}</div>`;
+    return `<div class="sgrid" style="width:${useX * 44 + 8}px;height:${useY * 44 + 8}px">${cells}</div>`;
 }
 
 function metaChips(r) {
@@ -347,10 +347,10 @@ function renderHome() {
             <div class="hero-hint">press <kbd>/</kbd> anywhere to search</div>
         </div>
         ${recents.length ? `<div class="home-section"><h2>Recently viewed</h2><div class="chip-row">
-            ${recents.map(r => `<span class="chip" data-go="${esc(r.id)}"><span class="mini-icon">${icon(r.iconId, 20)}</span>${r.nameHtml}</span>`).join("")}
+            ${recents.map(r => `<span class="chip" data-go="${esc(r.id)}"><span class="mini-icon">${icon(r.iconId, 24)}</span>${r.nameHtml}</span>`).join("")}
         </div></div>` : ""}
         <div class="home-section"><h2>Popular</h2><div class="chip-row">
-            ${quicks.map(q => `<span class="chip" data-go="${esc(q.id)}"><span class="mini-icon">${icon(q.iconId, 20)}</span>${q.nameHtml}</span>`).join("")}
+            ${quicks.map(q => `<span class="chip" data-go="${esc(q.id)}"><span class="mini-icon">${icon(q.iconId, 24)}</span>${q.nameHtml}</span>`).join("")}
         </div></div>
         <div class="home-section"><h2>Explore</h2>
             <span class="chip" data-go="#/browse">▦ &nbsp;Browse all ${INDEX.length.toLocaleString()} entries</span>
