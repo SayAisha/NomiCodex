@@ -32,11 +32,11 @@ try {
     });
     // Point the icon stylesheet at this mode's atlas (custom property on <html>
     // resolves relative to the document URL)
-    const atlasUrl = new URL(`data-${mode}/atlas.webp?v=9`, document.baseURI).href;
+    const atlasUrl = new URL(`data-${mode}/atlas.webp?v=10`, document.baseURI).href;
     document.documentElement.style.setProperty('--atlas-url', `url("${atlasUrl}")`);
     // Warm the atlas cache
     const atlas = new Image();
-    atlas.src = `./data-${mode}/atlas.webp?v=9`;
+    atlas.src = `./data-${mode}/atlas.webp?v=10`;
     // Load repository and data in parallel
     const [repositoryModule, response] = await Promise.all([
         import("./repository.js?v=21"),
