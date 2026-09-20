@@ -16,9 +16,9 @@ const { default: chromium } = await import("@sparticuz/chromium");
 // render from THIS deployment's own static copy (public/) — assets come
 // from Vercel's edge instead of a cross-origin GitHub Pages round trip;
 // falls back to Pages if the env vars are missing (e.g. local runs)
-const selfOrigin = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : null);
+// per-deployment VERCEL_URLs are SSO-protected on the Hobby plan — only
+// the production alias is publicly fetchable, so always render from that
+const selfOrigin = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL || "nomi-codex.vercel.app"}`;
 const BASE = (process.env.BASE_URL || (selfOrigin ? selfOrigin + "/" : "https://sayaisha.github.io/NomiCodex/")).replace(/\/*$/, "/");
 const g = globalThis;
 
