@@ -32,11 +32,11 @@ try {
     });
     // Point the icon stylesheet at this mode's atlas (custom property on <html>
     // resolves relative to the document URL)
-    const atlasUrl = new URL(`data-${mode}/atlas.webp?v=10`, document.baseURI).href;
+    const atlasUrl = new URL(`data-${mode}/atlas.webp?v=11`, document.baseURI).href;
     document.documentElement.style.setProperty('--atlas-url', `url("${atlasUrl}")`);
     // Warm the atlas cache
     const atlas = new Image();
-    atlas.src = `./data-${mode}/atlas.webp?v=10`;
+    atlas.src = `./data-${mode}/atlas.webp?v=11`;
     loading.innerHTML = "Downloading recipe database…";
     const repositoryModule = await import("./repository.js?v=21");
     // GitHub Pages occasionally drops a request — retry a couple of times
@@ -44,7 +44,7 @@ try {
     let response = null;
     for (let attempt = 0; attempt < 3; attempt++) {
         try {
-            response = await fetch(`./data-${mode}/data.bin?v=13`);
+            response = await fetch(`./data-${mode}/data.bin?v=14`);
             if (response.ok) break;
         } catch (e) { /* retry */ }
         await new Promise(r => setTimeout(r, 500 * (attempt + 1)));
@@ -61,7 +61,7 @@ try {
     await Promise.all([
         import("./itemIcon.js?v=21"),
         import("./tooltip.js?v=21"),
-        import("./nei.js?v=21"),
+        import("./nei.js?v=22"),
         import("./menu.js?v=21")
     ]);
     loading.remove();
@@ -115,7 +115,7 @@ try {
 
     // NEI-only mode: open the item browser straight away (?item=<id> deep-links to one)
     if (new URL(location.href).searchParams.get("noauto") === null) {
-    const nei = await import("./nei.js?v=21");
+    const nei = await import("./nei.js?v=22");
     const deepLink = new URL(location.href).searchParams.get("item");
     const target = deepLink ? repositoryModule.Repository.current.GetById(deepLink) : null;
     nei.ShowNei(target, nei.ShowNeiMode.Production, null);

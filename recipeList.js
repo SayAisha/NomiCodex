@@ -1,4 +1,4 @@
-import { ShowNei, ShowNeiMode } from "./nei.js?v=21";
+import { ShowNei, ShowNeiMode } from "./nei.js?v=22";
 import { Goods, Repository, Fluid } from "./repository.js?v=21";
 import { UpdateProject, addProjectChangeListener, GetByIid, RecipeModel, RecipeGroupModel, ProductModel, PageModel, DragAndDrop, page, LinkAlgorithm, CopyCurrentPageUrl, DownloadCurrentPage, Search } from "./page.js?v=21";
 import { voltageTier, formatAmount } from "./utils.js?v=21";

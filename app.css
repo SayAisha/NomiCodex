@@ -911,3 +911,11 @@ html.light .sicon .amt.cfg { background: rgba(255, 244, 224, 0.95); }
     content-visibility: auto;
     contain-intrinsic-size: 120px;
 }
+
+/* ---- screenshot mode (?shot=1): bare card for the shot service ---- */
+body.shot { overflow: visible; }
+body.shot .topbar { display: none !important; }
+body.shot .wrap { max-width: none; padding: 0; }
+body.shot .view { overflow: visible; }
+body.shot .cards { padding-bottom: 0; }
+body.shot .sicon { width: 32px; height: 32px; }

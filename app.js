@@ -7,9 +7,10 @@ const TIERS = ["ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV",
     "UEV", "UIV", "UXV", "OpV", "MAX"];
 // @2x atlas (64px cells, 128 cols) so retina screens sample 1:1 — no
 // engine-side smoothing, crisp pixels even without image-rendering support
-const ATLAS_COLS = 128;
-const ATLAS_UNIT = 64;
-const DATA_V = 15, ATLAS_V = 4;
+let ATLAS_COLS = 128;
+let ATLAS_UNIT = 64;
+const SHOT = new URLSearchParams(location.hash.split("?")[1] ?? "").get("shot") === "1";
+const DATA_V = 15, ATLAS_V = 6;
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (html) => {
@@ -31,7 +32,7 @@ let state = { filter: null, view: "recipes", showAll: false };
 
 /* ---------------- icons ---------------- */
 
-function iconStyle(iconId, size = 36) {
+function iconStyle(iconId, size = SHOT ? 32 : 36) {
     if (iconId == null || iconId < 0)
         return "background:linear-gradient(45deg,#22262e 25%,#191c22 25% 50%,#22262e 50% 75%,#191c22 75%)";
     const s = size / ATLAS_UNIT;
@@ -433,6 +434,18 @@ function renderItem(id) {
     const usesView = state.view === "uses";
     const list = usesView ? uses : recipes;
 
+    // screenshot mode: bare single card for the shot service
+    if (state.shot) {
+        const flt = state.filter && list.some(r => r.recipeType.name === state.filter) ? state.filter : null;
+        const lst = flt ? list.filter(r => r.recipeType.name === flt) : list;
+        const r = lst[(state.r ?? 1) - 1];
+        view().innerHTML = `<div class="wrap"><div class="cards single">${r ? recipeCard(r) : ""}</div></div>`;
+        document.title = (goods.name ?? goods.id) + " — NomiCodex";
+        bindGo(view());
+        requestAnimationFrame(() => { document.body.dataset.ready = "1"; });
+        return;
+    }
+
     // machine filter chips for the active view
     const byType = new Map();
     for (const r of list)
@@ -507,10 +520,15 @@ function bindGo(root) {
 
 function route() {
     tt.hide();
-    state = { filter: null, view: null, showAll: false };
+    state = { filter: null, view: null, showAll: false, r: null, shot: false };
     const hash = location.hash.replace(/^#\/?/, "");
     const [path, qs] = hash.split("?");
     const params = new URLSearchParams(qs ?? "");
+    if (params.get("shot") === "1") state.shot = true;
+    const rn = parseInt(params.get("r"), 10);
+    if (rn >= 1) state.r = rn;
+    const tp = params.get("type");
+    if (tp) state.filter = tp;
     const seg = decodeURIComponent(path ?? "");
     if (seg.startsWith("item/")) {
         if (params.get("view") === "uses" || params.get("uses") === "1")
@@ -529,11 +547,14 @@ function route() {
 
 async function boot() {
     const splash = $("#splash .msg");
-    const mode = localStorage.getItem("nomi-mode") === "expert" ? "expert" : "normal";
+    const qp = new URLSearchParams(location.hash.split("?")[1] ?? "");
+    const mode = qp.get("mode") === "expert" || (!qp.has("mode") && localStorage.getItem("nomi-mode") === "expert") ? "expert" : "normal";
     document.querySelectorAll(".seg [data-mode]").forEach(b =>
         b.classList.toggle("on", b.dataset.mode === mode));
-    const atlasUrl = new URL(`data-${mode}/atlas2.webp?v=${ATLAS_V}`, document.baseURI).href;
+    if (SHOT) { ATLAS_COLS = 256; ATLAS_UNIT = 32; }
+    const atlasUrl = new URL(`data-${mode}/${SHOT ? "atlas.webp" : "atlas2.webp"}?v=${ATLAS_V}`, document.baseURI).href;
     document.documentElement.style.setProperty("--atlas-url", `url("${atlasUrl}")`);
+    if (SHOT) document.body.classList.add("shot");
 
     splash.textContent = "Downloading database…";
     let response = null;
