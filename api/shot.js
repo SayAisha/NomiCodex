@@ -76,7 +76,9 @@ export default async function handler(req, res) {
     if (view) params.set("view", view);
     if (type) params.set("type", type);
     const target = `${BASE}#/item/${encodeURIComponent(item)}?${params}`;
-    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}` +
+    // rv busts Discord's image-proxy cache whenever the renderer changes;
+    // unknown params don't affect the prender key
+    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=2` +
         (q.get("sel") ? "&sel=" + q.get("sel") : "");
     const key = target + "|" + sel;
 
@@ -92,7 +94,7 @@ export default async function handler(req, res) {
         if (!png) { g.__shots.delete(key); png = await prender(key, target, sel); }
         if (!png) throw new Error("render failed");
         res.setHeader("Content-Type", "image/png");
-        res.setHeader("Cache-Control", "public, max-age=86400");
+        res.setHeader("Cache-Control", "public, max-age=300");
         return res.end(png);
     } catch (e) {
         res.statusCode = 500;
