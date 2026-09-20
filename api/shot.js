@@ -38,7 +38,7 @@ async function render(target, sel) {
     const browser = await getBrowser();
     const page = await browser.newPage();
     try {
-        await page.setViewport({ width: 1600, height: 1000, deviceScaleFactor: 2 });
+        await page.setViewport({ width: 2000, height: 1200, deviceScaleFactor: 2 });
         await page.goto(target, { waitUntil: "domcontentloaded", timeout: 25000 });
         try {
             await page.waitForSelector(sel, { timeout: 8000 });
@@ -92,7 +92,7 @@ export default async function handler(req, res) {
     const target = `${BASE}#/item/${encodeURIComponent(item)}?${params}`;
     // rv busts Discord's image-proxy cache whenever the renderer changes;
     // unknown params don't affect the prender key
-    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=2` +
+    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=3` +
         (q.get("sel") ? "&sel=" + q.get("sel") : "");
     const key = target + "|" + sel;
 
