@@ -1,5 +1,0 @@
-{
-  "functions": {
-    "api/shot.js": { "maxDuration": 60, "memory": 1024 }
-  }
-}
