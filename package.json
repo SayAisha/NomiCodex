@@ -1,0 +1,9 @@
+{
+  "name": "nomicodex-functions",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "puppeteer-core": "^23.11.1",
+    "@sparticuz/chromium": "^130.0.0"
+  }
+}
