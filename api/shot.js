@@ -3,7 +3,14 @@
 //   -> renders the live site card in headless Chromium, returns the PNG.
 // GET /api/shot?...&format=json -> {ok, url} (probe for the tag's fallback).
 import puppeteer from "puppeteer-core";
-import chromium from "@sparticuz/chromium";
+// Vercel's Node 20+ runtimes are Amazon Linux 2023, but Vercel doesn't set
+// the AWS env vars @sparticuz/chromium uses to detect that — hint it so the
+// al2023 shared-library bundle (libnss3, libnspr4, ...) actually extracts.
+// Dynamic import: ESM imports are hoisted, so this must run first.
+if (process.env.VERCEL && !process.env.AWS_LAMBDA_JS_RUNTIME && !process.env.AWS_EXECUTION_ENV) {
+    process.env.AWS_LAMBDA_JS_RUNTIME = `nodejs${process.versions.node.split(".")[0]}.x`;
+}
+const { default: chromium } = await import("@sparticuz/chromium");
 
 const BASE = (process.env.BASE_URL || "https://sayaisha.github.io/NomiCodex/").replace(/\/*$/, "/");
 
