@@ -38,7 +38,7 @@ async function render(target, sel) {
     const browser = await getBrowser();
     const page = await browser.newPage();
     try {
-        await page.setViewport({ width: 1100, height: 900, deviceScaleFactor: 2 });
+        await page.setViewport({ width: 1600, height: 1000, deviceScaleFactor: 2 });
         await page.goto(target, { waitUntil: "domcontentloaded", timeout: 25000 });
         try {
             await page.waitForSelector(sel, { timeout: 8000 });
