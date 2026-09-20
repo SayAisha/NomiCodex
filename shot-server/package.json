@@ -1,0 +1,9 @@
+{
+  "name": "nomicodex-shot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Recipe-card screenshot service for the NomiCodex Leveret tag",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "playwright-core": "1.49.0" }
+}
