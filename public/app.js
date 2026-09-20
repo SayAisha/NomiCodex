@@ -582,8 +582,14 @@ async function boot() {
         $("#splash").innerHTML = `<div class="err">Could not download the recipe database.<br>Check your connection and reload.</div>`;
         return;
     }
-    const stream = response.body.pipeThrough(new DecompressionStream("gzip"));
-    const buffer = await new Response(stream).arrayBuffer();
+    // servers double-encode on the wire (file is already gzipped, edge
+    // compresses again, browser decodes once) — but the manual stream pipe
+    // stalls on brotli origins, so buffer first and gunzip only when the
+    // gzip magic bytes are actually present
+    let buffer = await response.arrayBuffer();
+    const u8 = new Uint8Array(buffer);
+    if (u8[0] === 0x1f && u8[1] === 0x8b)
+        buffer = await new Response(new Blob([buffer]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
     splash.textContent = "Indexing…";
     await new Promise(r => setTimeout(r, 0));
     repo = Repository.load(buffer);
