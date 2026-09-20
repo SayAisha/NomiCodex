@@ -72,7 +72,7 @@ class NeiRecipeTypeInfo extends Array {
     }
     CalculateWidth() {
         var dims = this.dimensions;
-        return Math.max(dims[0], dims[2]) + Math.max(dims[4], dims[6]) + 3;
+        return Math.max(dims[0], dims[2]) + Math.max(dims[4], dims[6]) + 4;
     }
     CalculateHeight(recipe) {
         var dims = this.dimensions;
@@ -84,15 +84,17 @@ class NeiRecipeTypeInfo extends Array {
         }
         return h;
     }
-    BuildRecipeItemGrid(dom, items, index, type, dimensionOffset) {
+    BuildRecipeItemGrid(dom, items, index, type, dimensionOffset, compact) {
         var dimX = this.dimensions[dimensionOffset];
         if (dimX == 0)
             return index;
         var dimY = this.dimensions[dimensionOffset + 1];
         var count = dimX * dimY;
-        const gridWidth = dimX * 36;
-        const gridHeight = dimY * 36;
-        dom.push(`<div class="icon-grid" style="--grid-pixel-width:${gridWidth}px; --grid-pixel-height:${gridHeight}px">`);
+        var usedX = 0, usedY = 0;
+        const gridWidth = (compact ? 0 : dimX) * 36;
+        const gridHeight = (compact ? 0 : dimY) * 36;
+        const gridIndex = dom.length;
+        dom.push(`<div class="icon-grid" style="--grid-pixel-width:${gridWidth}px; --grid-pixel-height:${gridHeight}px" data-compact="${compact ? 1 : 0}" data-dims="${dimX},${dimY}">`);
         for (; index < items.length; index++) {
             var item = items[index];
             if (item.type > type)
@@ -100,8 +102,11 @@ class NeiRecipeTypeInfo extends Array {
             if (item.slot >= count)
                 continue;
             var goods = item.goods;
-            const gridX = (item.slot % dimX) * 36 + 2;
-            const gridY = Math.floor(item.slot / dimX) * 36 + 2;
+            const col = item.slot % dimX, row = Math.floor(item.slot / dimX);
+            usedX = Math.max(usedX, col + 1);
+            usedY = Math.max(usedY, row + 1);
+            const gridX = col * 36 + 2;
+            const gridY = row * 36 + 2;
             var amountText = formatAmount(item.amount);
             var iconAttrs = `class="item-icon-grid${amountText.length > 4 ? " long-amount" : ""}" style="--grid-x:${gridX}px; --grid-y:${gridY}px" data-id="${goods.id}"`;
             var isFluid = goods instanceof Fluid;
@@ -114,12 +119,17 @@ class NeiRecipeTypeInfo extends Array {
             dom.push(`</item-icon>`);
         }
         dom.push(`</div>`);
+        if (compact) {
+            dom[gridIndex] = dom[gridIndex]
+                .replace(/--grid-pixel-width:0px/, `--grid-pixel-width:${Math.max(1, usedX) * 36}px`)
+                .replace(/--grid-pixel-height:0px/, `--grid-pixel-height:${Math.max(1, usedY) * 36}px`);
+        }
         return index;
     }
-    BuildRecipeIoDom(dom, items, index, item, fluid, dimensionOffset) {
+    BuildRecipeIoDom(dom, items, index, item, fluid, dimensionOffset, compact) {
         dom.push(`<div class = "nei-recipe-items">`);
-        index = this.BuildRecipeItemGrid(dom, items, index, item, dimensionOffset);
-        index = this.BuildRecipeItemGrid(dom, items, index, fluid, dimensionOffset + 2);
+        index = this.BuildRecipeItemGrid(dom, items, index, item, dimensionOffset, compact);
+        index = this.BuildRecipeItemGrid(dom, items, index, fluid, dimensionOffset + 2, compact);
         dom.push(`</div>`);
         return index;
     }
@@ -171,24 +181,27 @@ class NeiRecipeTypeInfo extends Array {
                 dom.push(`<button class="select-recipe-btn" data-recipe="${recipe.objectOffset}">+</button>`);
             }
             dom.push(`</div>`);
-            this.BuildRecipeIoDom(dom, recipeItems, index, RecipeIoType.ItemOutput, RecipeIoType.FluidOutput, 4);
+            this.BuildRecipeIoDom(dom, recipeItems, index, RecipeIoType.ItemOutput, RecipeIoType.FluidOutput, 4, true);
             dom.push(`</div>`);
             if (recipe.gtRecipe != null) {
+                dom.push(`<div class="nei-meta">`);
                 if (recipe.gtRecipe.voltage > 0) {
-                    dom.push(`<span>${voltageTier[recipe.gtRecipe.voltageTier].name} • ${recipe.gtRecipe.durationSeconds}s`);
+                    dom.push(`<span class="nei-meta-main">${voltageTier[recipe.gtRecipe.voltageTier].name} • ${recipe.gtRecipe.durationSeconds}s`);
                     if (recipe.gtRecipe.amperage != 1)
                         dom.push(` • ${recipe.gtRecipe.amperage}A`);
-                    dom.push(`</span><span class="text-small"><span data-info="How much EU/t the recipe draws while running.">${formatAmount(recipe.gtRecipe.voltage)}v</span> • ${formatAmount(recipe.gtRecipe.voltage * recipe.gtRecipe.amperage * recipe.gtRecipe.durationTicks)}eu</span>`);
+                    dom.push(`</span><span class="nei-meta-sub"><span data-info="How much EU/t the recipe draws while running.">${formatAmount(recipe.gtRecipe.voltage)} EU/t</span> • ${formatAmount(recipe.gtRecipe.voltage * recipe.gtRecipe.amperage * recipe.gtRecipe.durationTicks)} EU</span>`);
                 } else if (recipe.gtRecipe.durationSeconds > 0) {
-                    dom.push(`<span>${recipe.gtRecipe.durationSeconds}s</span>`);
+                    dom.push(`<span class="nei-meta-main">${recipe.gtRecipe.durationSeconds}s</span>`);
                 }
                 for (const metadata of recipe.gtRecipe.metadata) {
                     let str = MetadataToString(metadata, recipe);
                     if (str != null) {
-                        dom.push(`<span class="text-small">${str}</span>`);
+                        dom.push(`<span class="nei-meta-sub">${str}</span>`);
                     }
                 }
-                dom.push(`<span class="text-small">${this.FormatCircuitConflicts(recipe.gtRecipe.circuitConflicts)}</span>`);
+                if (recipe.gtRecipe.circuitConflicts !== 0)
+                    dom.push(`<span class="nei-meta-sub">${this.FormatCircuitConflicts(recipe.gtRecipe.circuitConflicts)}</span>`);
+                dom.push(`</div>`);
             }
             dom.push(`</div>`);
         }
@@ -487,25 +500,23 @@ class NeiGrid {
 }
 
 function syncTabPadding() {
-    const bar = document.querySelector(".panel-tab-bar");
-    const container = document.querySelector(".panel-tab-container");
-    if (bar && container)
-        container.style.paddingTop = (bar.offsetHeight + 8) + "px";
+    // tab bar sits in normal document flow now; no padding sync needed
 }
 
 function Resize() {
-    var newUnitWidth = Math.round((window.innerWidth - 30 - scrollWidth) / elementSize);
-    var newUnitHeight = Math.round((window.innerHeight - 120) / elementSize);
+    // measure the actual scroll container — the layout is an app area now,
+    // not a centered modal, so window size alone is wrong
+    var box = document.getElementById("nei-scroll");
+    var availW = (box && box.clientWidth ? box.clientWidth : window.innerWidth) - 30;
+    var availH = (box && box.clientHeight ? box.clientHeight : window.innerHeight - 120) - 30;
+    var newUnitWidth = Math.max(8, Math.round((availW - scrollWidth) / elementSize));
+    var newUnitHeight = Math.max(4, Math.round(availH / elementSize));
     var widthRemainder = window.innerWidth - newUnitWidth;
     if (newUnitWidth !== unitWidth || newUnitHeight !== unitHeight) {
         unitWidth = newUnitWidth;
         unitHeight = newUnitHeight;
         var windowWidth = unitWidth * elementSize + scrollWidth;
         var windowHeight = unitHeight * elementSize;
-        if ((window.innerWidth - windowWidth) % 2 == 1)
-            windowWidth++;
-        if ((window.innerWidth - windowHeight) % 2 == 1)
-            windowHeight++;
         neiScrollBox.style.width = `${windowWidth}px`;
         neiScrollBox.style.height = `${windowHeight}px`;
     }

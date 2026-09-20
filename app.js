@@ -175,7 +175,7 @@ function searchAll(q, limit = 8) {
             else continue;
             scored.push({ e, rank });
         }
-        scored.sort((a, b) => a.rank - b.rank || a.e.plain.length - b.e.plain.length || a.e.plain.localeCompare(b.e.plain));
+        scored.sort((a, b) => a.rank - b.rank || (b.e.mod === "gregtech" ? 1 : 0) - (a.e.mod === "gregtech" ? 1 : 0) || a.e.plain.length - b.e.plain.length || a.e.plain.localeCompare(b.e.plain));
         return scored.slice(0, limit).map(s => s.e);
     }
     const scored = [];
@@ -184,7 +184,7 @@ function searchAll(q, limit = 8) {
         if (score !== null)
             scored.push({ e, score });
     }
-    scored.sort((a, b) => a.score - b.score || a.e.plain.localeCompare(b.e.plain));
+    scored.sort((a, b) => a.score - b.score || (b.e.mod === "gregtech" ? 1 : 0) - (a.e.mod === "gregtech" ? 1 : 0) || a.e.plain.localeCompare(b.e.plain));
     return scored.slice(0, limit).map(s => s.e);
 }
 
