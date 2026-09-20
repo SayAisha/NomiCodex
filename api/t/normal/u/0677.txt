@@ -1,1 +1,1 @@
-{"i:nomilabs:meta_ingot_hot:17":[{"o":"i:nomilabs:meta_ingot:17","n":"Lumium Ingot","t":"Vacuum Freezer","e":480,"d":600,"x":"HV","h":0,"g":"7366aadc47a2124393ec.webp","a":1,"i":"Hot Lumium Ingot"}]}
+{"i:nomilabs:meta_ingot_hot:17":[{"o":"i:nomilabs:meta_ingot:17","n":"Lumium Ingot","t":"Vacuum Freezer","e":480,"d":600,"x":"HV","h":0,"g":"689f7614d710c7a69668.webp","a":1,"i":"Hot Lumium Ingot"}]}

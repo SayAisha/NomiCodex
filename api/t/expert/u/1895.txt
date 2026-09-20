@@ -1,1 +1,1 @@
-{"i:gregtech:machine:2":[{"o":"i:gregtech:meta_dust:2524","n":"Brick Dust","t":"Pulverization","e":8,"d":1184,"x":"ULV","h":0,"g":"f2604210e584aeb48e7a.webp","a":1,"i":"High Pressure Steam Solid Fuel Boiler"}]}
+{"i:gregtech:machine:2":[{"o":"i:gregtech:meta_dust:2524","n":"Brick Dust","t":"Pulverization","e":8,"d":1184,"x":"ULV","h":0,"g":"b63bf5f27fafecbfaecd.webp","a":1,"i":"High Pressure Steam Solid Fuel Boiler"}]}

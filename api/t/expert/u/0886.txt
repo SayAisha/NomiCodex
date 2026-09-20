@@ -1,1 +1,1 @@
-{"i:gregtech:ore_spessartine_0:1":[{"o":"i:gregtech:meta_gem:321","n":"Spessartine","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"b525c45e260021b6e063.webp","a":1,"i":"Nether Spessartine Ore"}]}
+{"i:gregtech:ore_spessartine_0:1":[{"o":"i:gregtech:meta_gem:321","n":"Spessartine","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"14eccc7c47a0220a8f52.webp","a":1,"i":"Nether Spessartine Ore"}]}

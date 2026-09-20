@@ -1,1 +1,1 @@
-{"f:gregtech:sulfuric_copper_solution":[{"o":"f:gregtech:sulfuric_acid","n":"Sulfuric Acid","t":"Electrolyzer","e":60,"d":84,"x":"LV","h":0,"g":"e31d31e354c36d29d9fb.webp","a":1000,"i":"Sulfuric Copper Solution"}]}
+{"f:gregtech:sulfuric_copper_solution":[{"o":"f:gregtech:sulfuric_acid","n":"Sulfuric Acid","t":"Electrolyzer","e":60,"d":84,"x":"LV","h":0,"g":"6398662b5f230aea5def.webp","a":1000,"i":"Sulfuric Copper Solution"}]}

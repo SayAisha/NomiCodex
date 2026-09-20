@@ -1,1 +1,1 @@
-{"i:nomilabs:meta_dust_pure:1":[{"o":"i:nomilabs:meta_dust:1","n":"Draconium Dust","t":"Centrifuge","e":5,"d":100,"x":"ULV","h":0,"g":"d57d411c2eb3d36f93ce.webp","a":1,"i":"Purified Pile of Draconium Dust"}]}
+{"i:nomilabs:meta_dust_pure:1":[{"o":"i:nomilabs:meta_dust:1","n":"Draconium Dust","t":"Centrifuge","e":5,"d":100,"x":"ULV","h":0,"g":"17b861624b4066572f4b.webp","a":1,"i":"Purified Pile of Draconium Dust"}]}

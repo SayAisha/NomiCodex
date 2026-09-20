@@ -1,1 +1,1 @@
-{"i:gregtech:meta_ingot_hot:426":[{"o":"i:gregtech:meta_ingot:426","n":"Mercury Barium Calcium Cuprate Ingot","t":"Vacuum Freezer","e":480,"d":162,"x":"HV","h":0,"g":"cb12e2bc03927e7b4959.webp","a":1,"i":"Hot Mercury Barium Calcium Cuprate Ingot"}]}
+{"i:gregtech:meta_ingot_hot:426":[{"o":"i:gregtech:meta_ingot:426","n":"Mercury Barium Calcium Cuprate Ingot","t":"Vacuum Freezer","e":480,"d":162,"x":"HV","h":0,"g":"c90b6e2979976a5ca5fd.webp","a":1,"i":"Hot Mercury Barium Calcium Cuprate Ingot"}]}

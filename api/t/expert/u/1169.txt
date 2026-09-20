@@ -1,1 +1,1 @@
-{"i:gregtech:ore_green_sapphire_0:1":[{"o":"i:gregtech:meta_gem:281","n":"Green Sapphire","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"7673f8e13f80fc524dd9.webp","a":1,"i":"Nether Green Sapphire Ore"}]}
+{"i:gregtech:ore_green_sapphire_0:1":[{"o":"i:gregtech:meta_gem:281","n":"Green Sapphire","t":"Furnace","e":0,"d":0,"x":"ULV","h":0,"g":"860a8d7c7bcf41cc5ff6.webp","a":1,"i":"Nether Green Sapphire Ore"}]}

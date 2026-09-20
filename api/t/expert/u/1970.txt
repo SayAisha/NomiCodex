@@ -1,1 +1,1 @@
-{"f:gcym:molten.titanium_tungsten_carbide":[{"o":"i:gregtech:meta_ingot:3021","n":"Titanium Tungsten Carbide Ingot","t":"Vacuum Freezer","e":120,"d":156,"x":"MV","h":0,"g":"a4e2777733f71ca02dfe.webp","a":144,"i":"Mold (Ingot), Molten Titanium Tungsten Carbide"}]}
+{"f:gcym:molten.titanium_tungsten_carbide":[{"o":"i:gregtech:meta_ingot:3021","n":"Titanium Tungsten Carbide Ingot","t":"Vacuum Freezer","e":120,"d":156,"x":"MV","h":0,"g":"a77a0160c18535358b5a.webp","a":144,"i":"Mold (Ingot), Molten Titanium Tungsten Carbide"}]}
