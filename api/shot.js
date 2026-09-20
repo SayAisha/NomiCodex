@@ -37,6 +37,8 @@ async function render(target, sel) {
         try {
             await page.waitForSelector(sel, { timeout: 8000 });
             await page.waitForFunction(() => document.body.dataset.ready === "1", { timeout: 8000 });
+            // let the decoded background sprites composite before capture
+            await page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))));
         } catch (e) { /* capture whatever rendered */ }
         const el = await page.$(sel);
         if (!el) throw new Error("card not found");

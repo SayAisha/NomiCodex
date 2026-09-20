@@ -555,7 +555,19 @@ async function boot() {
     if (SHOT) { ATLAS_COLS = 256; ATLAS_UNIT = 32; }
     const atlasUrl = new URL(`data-${mode}/${SHOT ? "atlas.webp" : "atlas2.webp"}?v=${ATLAS_V}`, document.baseURI).href;
     document.documentElement.style.setProperty("--atlas-url", `url("${atlasUrl}")`);
-    if (SHOT) document.body.classList.add("shot");
+    if (SHOT) {
+        document.body.classList.add("shot");
+        // the shot service screenshots on the ready flag — the card's icons
+        // and frames are CSS backgrounds, so they MUST be fetched and decoded
+        // before we render, or the capture beats them on a cold browser cache
+        await Promise.all([atlasUrl, "assets/images/Slot.png", "assets/images/Arrow.png"].map(u =>
+            new Promise(done => {
+                const im = new Image();
+                im.onerror = () => done();
+                im.src = new URL(u, document.baseURI).href;
+                im.decode().then(done, done);
+            })));
+    }
 
     splash.textContent = "Downloading database…";
     let response = null;
