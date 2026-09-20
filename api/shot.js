@@ -60,7 +60,7 @@ function prender(key, target, sel) {
     if (!g.__shots) g.__shots = new Map();
     if (!g.__shots.has(key)) {
         if (g.__shots.size > 8) g.__shots.delete(g.__shots.keys().next().value);
-        g.__shots.set(key, render(target, sel).catch(() => null));
+        g.__shots.set(key, render(target, sel).catch((e) => { g.__lastErr = String((e && e.message) || e).slice(0, 300); return null; }));
     }
     return g.__shots.get(key);
 }
@@ -98,7 +98,7 @@ export default async function handler(req, res) {
     try {
         let png = await prender(key, target, sel);
         if (!png) { g.__shots.delete(key); png = await prender(key, target, sel); }
-        if (!png) throw new Error("render failed");
+        if (!png) throw new Error(g.__lastErr || "render failed");
         res.setHeader("Content-Type", "image/png");
         res.setHeader("Cache-Control", "public, max-age=300");
         return res.end(png);
