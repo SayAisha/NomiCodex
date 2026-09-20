@@ -47,7 +47,15 @@ async function render(target, sel) {
             await page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))));
         } catch (e) { /* capture whatever rendered */ }
         const el = await page.$(sel);
-        if (!el) throw new Error("card not found");
+        if (!el) {
+            const dbg = await page.evaluate(() => ({
+                href: location.href.slice(0, 90),
+                splash: !!document.getElementById("splash"),
+                msg: (document.getElementById("splash")?.textContent || "").trim().slice(0, 60),
+                ready: document.body.dataset.ready || null
+            })).catch((e) => ({ evalErr: String(e) }));
+            throw new Error("card not found: " + JSON.stringify(dbg));
+        }
         return await el.screenshot({ type: "png" });
     } finally {
         await page.close().catch(() => {});
