@@ -436,8 +436,9 @@ function renderItem(id) {
 
     // screenshot mode: bare single card for the shot service
     if (state.shot) {
-        const flt = state.filter && list.some(r => r.recipeType.name === state.filter) ? state.filter : null;
-        const lst = flt ? list.filter(r => r.recipeType.name === flt) : list;
+        const fltName = state.filter ? state.filter.toLowerCase() : null;
+        const flt = fltName && list.some(r => r.recipeType.name.toLowerCase() === fltName) ? fltName : null;
+        const lst = flt ? list.filter(r => r.recipeType.name.toLowerCase() === flt) : list;
         const r = lst[(state.r ?? 1) - 1];
         view().innerHTML = `<div class="wrap"><div class="cards single">${r ? recipeCard(r) : ""}</div></div>`;
         document.title = (goods.name ?? goods.id) + " — NomiCodex";
