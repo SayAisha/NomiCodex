@@ -13,7 +13,13 @@ if (process.env.VERCEL && !process.env.AWS_LAMBDA_JS_RUNTIME && !process.env.AWS
 }
 const { default: chromium } = await import("@sparticuz/chromium");
 
-const BASE = (process.env.BASE_URL || "https://sayaisha.github.io/NomiCodex/").replace(/\/*$/, "/");
+// render from THIS deployment's own static copy (public/) — assets come
+// from Vercel's edge instead of a cross-origin GitHub Pages round trip;
+// falls back to Pages if the env vars are missing (e.g. local runs)
+const selfOrigin = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : null);
+const BASE = (process.env.BASE_URL || (selfOrigin ? selfOrigin + "/" : "https://sayaisha.github.io/NomiCodex/")).replace(/\/*$/, "/");
 const g = globalThis;
 
 // one browser per warm instance (Fluid Compute keeps instances alive between

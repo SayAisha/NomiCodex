@@ -1,0 +1,157 @@
+#nei .panel {
+    padding: 12px 14px 14px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#nei-content {
+    width: 100%;
+    position: relative;
+    flex: 1;
+    min-height: 0;
+}
+
+/* the virtualizer sizes this box in whole cards — center it so the slack
+   splits evenly instead of piling up on the right edge */
+#nei-scroll > #nei-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nei-search {
+    flex: 1;
+    min-width: 220px;
+}
+
+.search-label {
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* recipe result cards */
+.nei-recipe-box {
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: absolute;
+    padding: 10px 10px 8px;
+    color: var(--text);
+    transition: border-color 0.12s ease, box-shadow 0.12s ease, transform 0.08s ease;
+}
+
+.nei-recipe-box:hover,
+.nei-recipe-box:focus {
+    outline: none;
+    border-color: var(--accent-dim);
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 3px var(--accent-glow), 0 14px 30px rgba(0, 0, 0, 0.45);
+    z-index: 5;
+}
+
+.nei-recipe-items {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nei-recipe-io {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+    flex: 0;
+}
+
+.arrow {
+    position: relative;
+    width: 48px;
+    height: 32px;
+    background-size: 48px;
+    background-image: url('./../images/Arrow.png');
+}
+
+.nei-items-row {
+    --grid-height: 1;
+    position: absolute !important;
+}
+
+/* compacted output grids keep their slot background size */
+.icon-grid[data-compact="1"] {
+    background-size: 36px;
+}
+
+/* one-line footer under each card */
+.nei-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    row-gap: 2px;
+    max-width: 100%;
+    line-height: 1.3;
+}
+
+.nei-meta-main {
+    font-size: 12px;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.nei-meta-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.nei-recipe-type {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    height: 36px;
+    width: 100%;
+}
+
+.nei-recipe-type-name {
+    color: var(--text-muted);
+    font-size: 12px;
+    letter-spacing: 0.03em;
+}
+
+.arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* overclock button: quiet until the card is hovered */
+.arrow-container .oceu-btn {
+    opacity: 0;
+    transition: opacity 0.12s ease;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.nei-recipe-box:hover .oceu-btn,
+.oceu-btn:focus {
+    opacity: 1;
+}

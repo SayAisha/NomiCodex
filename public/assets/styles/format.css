@@ -1,0 +1,94 @@
+/* Minecraft formatting codes, remapped for a dark theme:
+   dark colors are lifted so text stays readable on #151b27. */
+.fmt-0 {
+    color: #e8ecf3;
+}
+
+.fmt-1 {
+    color: #7f7fff;
+}
+
+.fmt-2 {
+    color: #55d955;
+}
+
+.fmt-3 {
+    color: #4fd8d8;
+}
+
+.fmt-4 {
+    color: #ff6b6b;
+}
+
+.fmt-5 {
+    color: #ff7bff;
+}
+
+.fmt-6 {
+    color: #ffc45c;
+}
+
+.fmt-7 {
+    color: #b9c1cf;
+}
+
+.fmt-8 {
+    color: #97a0b3;
+}
+
+.fmt-9 {
+    color: #7f9bff;
+}
+
+.fmt-a {
+    color: #6bff6b;
+}
+
+.fmt-b {
+    color: #6bffff;
+}
+
+.fmt-c {
+    color: #ff8080;
+}
+
+.fmt-d {
+    color: #ff8cff;
+}
+
+.fmt-e {
+    color: #ffff7a;
+}
+
+.fmt-f {
+    color: #ffffff;
+}
+
+.fmt-k {}
+
+.fmt-l {
+    font-weight: bold;
+}
+
+.fmt-m {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.fmt-n {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.fmt-o {
+    font-style: italic;
+}
+
+html.light .fmt-0 { color: #10131a; }
+html.light .fmt-1 { color: #1a1ad4; }
+html.light .fmt-2 { color: #067d06; }
+html.light .fmt-3 { color: #077d7d; }
+html.light .fmt-4 { color: #b41414; }
+html.light .fmt-5 { color: #b414b4; }
+html.light .fmt-8 { color: #4a5163; }
+html.light .fmt-9 { color: #4a4ae0; }

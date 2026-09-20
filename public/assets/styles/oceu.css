@@ -1,0 +1,154 @@
+/* Overclock calculator panel */
+.oceu-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    min-width: 520px;
+    max-width: min(92vw, 720px);
+    max-height: 82vh;
+}
+
+.oceu-head {
+    justify-content: space-between;
+}
+
+.oceu-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 0;
+}
+
+.oceu-form,
+.oceu-flags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    align-items: center;
+}
+
+.oceu-form label,
+.oceu-flags label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.oceu-form input,
+.oceu-flags input,
+.oceu-flags select {
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 5px 8px;
+    outline: none;
+    width: 90px;
+    transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.oceu-form input:focus,
+.oceu-flags input:focus,
+.oceu-flags select:focus {
+    border-color: var(--accent-dim);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.oceu-form input:disabled,
+.oceu-flags input:disabled {
+    opacity: 0.4;
+}
+
+.oceu-check {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 6px !important;
+    text-transform: none !important;
+    font-size: 13px !important;
+    color: var(--text) !important;
+    cursor: pointer;
+}
+
+.oceu-check input {
+    width: auto !important;
+    accent-color: var(--accent-dim);
+    margin: 0;
+}
+
+.oceu-flags {
+    padding-top: 8px;
+    border-top: 1px solid var(--border-soft);
+}
+
+.oceu-error {
+    color: var(--danger);
+    font-size: 13px;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 107, 122, 0.4);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 107, 122, 0.08);
+}
+
+.oceu-result {
+    min-height: 120px;
+    max-height: 46vh;
+    overflow-y: auto;
+}
+
+.oceu-table {
+    border-collapse: collapse;
+    font-size: 13px;
+    width: 100%;
+}
+
+.oceu-table th {
+    text-align: right;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 12px 6px 4px;
+    border-bottom: 1px solid var(--border);
+}
+
+.oceu-table td {
+    text-align: right;
+    padding: 6px 12px 6px 4px;
+    border-bottom: 1px solid var(--border-soft);
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.oceu-table td:last-child,
+.oceu-table th:last-child {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ⚡ button inside the recipe card's arrow container (between the grids) */
+.oceu-btn {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.oceu-btn:hover {
+    border-color: var(--accent-dim);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+    transform: none;
+}

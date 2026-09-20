@@ -1,0 +1,354 @@
+/* Main layout */
+#recipe-list {
+    position: relative;
+    overflow-y: auto;
+    padding: 8px;
+    height: calc(100% - 16px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    min-width: 800px;
+}
+
+.product-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    align-items: center;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid;
+    font-size: 12px;
+    background-color: #123530;
+    border-color: var(--accent-dim);
+    border-radius: var(--radius-sm);
+    padding: 2px;
+}
+
+.product-item .amount {
+    width: 80px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: #ffffff;
+    padding: 2px 4px;
+    text-align: right;
+    -moz-appearance: textfield;
+}
+
+/* Recipe list styles */
+.recipe-list {
+    flex: 1;
+}
+
+.recipe-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Base table layout */
+.recipe-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: var(--text-muted);
+}
+
+.recipe-table td {
+    border: 1px solid var(--border-soft);
+}
+
+.recipe-table .nested-level-1 td {
+    border: 1px solid var(--border-soft);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Column widths */
+.icon-cell {
+    width: 36px;
+}
+
+.short-info-cell {
+    /*width: 400px;*/
+}
+
+.energy-cell {
+    width: 70px;
+}
+
+.action-cell {
+    width: 36px;
+}
+
+/* Expanded group styles */
+
+.expanded-group-cell {
+    padding: 2px;
+}
+
+.nested-level-0 {
+    background-color: var(--surface);
+}
+
+.nested-level-1 {
+    background-color: var(--surface-2);
+}
+
+/* Input styles */
+.group-name-input {
+    pointer-events: auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--input-bg);
+    color: var(--text);
+}
+
+.group-name-input:focus {
+    outline: none;
+    border-color: var(--accent-dim);
+}
+
+.group-name {
+    color: #ffffff;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Group content styles */
+.group-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.links-label {
+    display: block;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+select {
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 4px 6px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+select option {
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+    background-color: #151b27;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--accent-dim);
+}
+
+select:hover {
+    border-color: var(--accent-dim);
+}
+
+.group-buttons {
+    padding: 6px;
+    flex-direction: row;
+    gap: 4px;
+}
+
+#dropdown {
+    font-family: inherit;
+}
+
+/* Button styles */
+.collapse-btn {
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url('./../images/Arrow_Small_Down.png');
+    background-size: 22px 22px;
+}
+
+.expand-btn {
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url('./../images/Arrow_Small_Right.png');
+    background-size: 22px 22px;
+}
+
+.delete-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Text and content styles */
+.short-info {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+.io-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 4px;
+    min-height: 32px;
+    pointer-events: none;
+    min-width: 0;
+}
+
+/* Links section */
+.group-links {
+    padding: 8px;
+}
+
+.links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.links-grid item-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.status-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+}
+
+.status-message {
+    color: #ffffff;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    position: relative;
+    width: calc(100% - 350px);
+}
+
+.status-message:not(.solved) {
+    background-color: var(--danger);
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.status-message.solved {
+    color: #ffffff;
+    position: sticky;
+    background-color: #2f9e6e;
+}
+
+/* Drag and Drop styles */
+.recipe-item.dragging,
+.recipe-group.dragging {
+    background-color: rgba(61, 219, 196, 0.15);
+    cursor: grabbing;
+}
+
+.recipe-item.drag-over:not(.dragging) td,
+.recipe-group:not(.expanded).drag-over:not(.dragging) td,
+.group-buttons.drag-over td,
+.recipe-group.expanded.drag-over tr:last-child {
+    border-top: 2px solid var(--accent);
+}
+
+.recipe-item,
+.recipe-group {
+    position: relative;
+}
+
+.machine-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.machine-choice-container {
+    display: flex;
+    align-items: center;
+
+    /* Allows wrapping between text and input control */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Indents second line if there's a split */
+    padding-left: 2em;
+    text-indent: -2em;
+
+    gap: 4px;
+}
+
+.machine-choices input {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    -moz-appearance: textfield;
+    pointer-events: auto;
+}
+
+.search-container {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background-color: #123530;
+    border: 1px solid var(--accent-dim);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-container.hidden {
+    display: none;
+}
