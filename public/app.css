@@ -919,3 +919,4 @@ body.shot .wrap { max-width: none; padding: 0; }
 body.shot .view { overflow: visible; }
 body.shot .cards { padding-bottom: 0; }
 body.shot .sicon { width: 32px; height: 32px; }
+body.shot { zoom: 1.4; } /* bigger cards in the tag screenshots */
