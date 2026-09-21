@@ -2,6 +2,10 @@
   "functions": {
     "api/shot.js": {
       "maxDuration": 60
+    },
+    "api/search.js": {
+      "maxDuration": 30,
+      "includeFiles": "search-data/**"
     }
   }
 }
