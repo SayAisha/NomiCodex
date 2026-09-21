@@ -27,7 +27,7 @@ const MACHINE_ALIASES = {
 };
 
 const KNOWN_TYPES = [
-    "arc furnace", "assembler", "assembly line", "autoclave", "blast furnace",
+    "arc furnace", "alloy blast smelting", "assembler", "assembly line", "autoclave", "blast furnace",
     "brewing machine", "canning machine", "centrifuge", "chemical bath",
     "chemical reactor", "circuit assembler", "coke oven", "combustion fuels",
     "compressor", "crafting", "crystallization", "cutting saw",
@@ -234,14 +234,16 @@ export default async function handler(req, res) {
             if (s2 === "blast furnace" || s2 === "electric blast furnace") return 2;
             if (s2 === "large chemical reactor") return 3;
             if (s2 === "mixer") return 4;
-            if (s2.includes("craft")) return 5;
-            return 6;
+            if (s2 === "alloy blast smelting") return 5;
+            if (s2.includes("craft")) return 6;
+            return 7;
         }
         if (s2 === "blast furnace" || s2 === "electric blast furnace") return 0;
         if (s2 === "large chemical reactor") return 1;
         if (s2 === "mixer") return 2;
-        if (s2.includes("craft")) return 3;
-        return 4;
+        if (s2 === "alloy blast smelting") return 3;
+        if (s2.includes("craft")) return 4;
+        return 5;
     };
 
     let recipes = index.recipes[best[0]] || [];
