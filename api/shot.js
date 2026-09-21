@@ -96,7 +96,7 @@ export default async function handler(req, res) {
     const target = `${BASE}#/item/${encodeURIComponent(item)}?${params}`;
     // rv busts Discord's image-proxy cache whenever the renderer changes;
     // unknown params don't affect the prender key
-    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=3` +
+    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=4` +
         (q.get("sel") ? "&sel=" + q.get("sel") : "");
     const key = target + "|" + sel;
 
