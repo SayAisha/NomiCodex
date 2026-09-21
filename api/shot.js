@@ -40,12 +40,16 @@ async function render(target, sel) {
     try {
         await page.setViewport({ width: 2000, height: 1200, deviceScaleFactor: 2 });
         await page.goto(target, { waitUntil: "domcontentloaded", timeout: 25000 });
-        try {
-            await page.waitForSelector(sel, { timeout: 8000 });
-            await page.waitForFunction(() => document.body.dataset.ready === "1", { timeout: 8000 });
-            // let the decoded background sprites composite before capture
-            await page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))));
-        } catch (e) { /* capture whatever rendered */ }
+        const ready = () => page.waitForFunction(() => document.body.dataset.ready === "1", { timeout: 15000 })
+            .then(() => page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))))
+            .then(() => true).catch(() => false);
+        // a not-ready page means a blank capture — reload and retry rather
+        // than shipping an empty card (cold instances can be slow on the
+        // first atlas download)
+        if (!await ready()) {
+            await page.reload({ waitUntil: "domcontentloaded", timeout: 30000 }).catch(() => {});
+            await ready();
+        }
         const el = await page.$(sel);
         if (!el) {
             const dbg = await page.evaluate(() => ({
