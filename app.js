@@ -10,7 +10,7 @@ const TIERS = ["ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV",
 let ATLAS_COLS = 128;
 let ATLAS_UNIT = 64;
 const SHOT = new URLSearchParams(location.hash.split("?")[1] ?? "").get("shot") === "1";
-const DATA_V = 15, ATLAS_V = 6;
+const DATA_V = 16, ATLAS_V = 7;
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (html) => {
