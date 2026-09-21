@@ -7,5 +7,15 @@
       "maxDuration": 30,
       "includeFiles": "search-data/**"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/data-normal/atlas2.webp",
+      "destination": "https://sayaisha.github.io/NomiCodex/data-normal/atlas2.webp"
+    },
+    {
+      "source": "/data-expert/atlas2.webp",
+      "destination": "https://sayaisha.github.io/NomiCodex/data-expert/atlas2.webp"
+    }
+  ]
 }
