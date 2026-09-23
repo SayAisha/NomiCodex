@@ -1,1 +1,1 @@
-[{"id":"i:gregtech:mortar:0:d306db6680dcda123ab8e47184896027bb8471e1","name":"Wrought Iron Mortar","mod":"gregtech","recipes":1,"uses":0},{"id":"i:actuallyadditions:item_crystal_shard:5","name":"White Crystal Shard","mod":"actuallyadditions","recipes":1,"uses":9}]
+[{"id":"f:gregtech:wood_vinegar","name":"Wood Vinegar","mod":"gregtech","recipes":4,"uses":7},{"id":"f:gregtech:wood_tar","name":"Wood Tar","mod":"gregtech","recipes":5,"uses":6},{"id":"f:gregtech:wrought_iron","name":"Wrought Iron","mod":"gregtech","recipes":12,"uses":5}]
