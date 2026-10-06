@@ -75,6 +75,39 @@ function hasWord(hay, needle) {
     return false;
 }
 
+// Tier 7+ ships stopped being named "Micro Miner" (Dragon Hunter, Sun
+// Eater, …) but everyone still calls them micro miners — bridge queries
+// like "micro miner tier 9" or "microminer 10" to the real item names.
+// Half tiers (4.5, 8.5) and stabilized variants are expert-mode only.
+const MICRO_MINER_TIERS = {
+    "4.5": "Lumium Plated Micro Mob Slayer [Tier Four and Half]",
+    7: "Draconium Plated Micro Dragon Hunter [Tier Seven]",
+    8: "Crystal Matrix Plated Micro Leviathan Slayer [Tier Eight]",
+    "8.5": "Trinium Plated Micro Excavator [Tier Eight and Half]",
+    9: "Eternium Plated Micro Sun Eater [Tier Nine]",
+    10: "Neutronium Plated Micro Universe Harvester [Tier Ten]",
+};
+const MICRO_MINER_TIERS_STABILIZED = {
+    "4.5": "Stabilized Lumium Plated Micro Mob Slayer [Tier Four and Half]",
+    7: "Stabilized Draconium Plated Micro Dragon Hunter [Tier Seven]",
+    8: "Stabilized Crystal Matrix Plated Micro Leviathan Slayer [Tier Eight]",
+};
+function bridgeMicroMiner(queryLower) {
+    const c = canon(queryLower);
+    if (!/micro\s*miner/.test(c)) return null;
+    const stabilized = /stabilized/.test(c);
+    let tier = null;
+    const half = c.match(/(\d+\.\d+)/);
+    if (half) tier = half[1];
+    else {
+        const nums = c.match(/\b\d{1,2}\b/g);
+        if (nums) tier = parseInt(nums[nums.length - 1], 10);
+    }
+    if (tier === null) return null;
+    const map = stabilized ? MICRO_MINER_TIERS_STABILIZED : MICRO_MINER_TIERS;
+    return map[tier] || MICRO_MINER_TIERS[tier] || null;
+}
+
 const _modes = {};
 
 function getMode(mode) {
@@ -180,8 +213,13 @@ export default async function handler(req, res) {
 
     const words = q.trim().split(/\s+/);
     const machineInfo = detectMachine(words);
-    const query = machineInfo ? machineInfo.remaining : q.trim();
+    let query = machineInfo ? machineInfo.remaining : q.trim();
     const machineFilter = machineInfo ? machineInfo.filter : null;
+
+    // bridge "micro miner tier 9"-style queries to the tier 7+ item names
+    // (only when the mapped item exists in this mode — half tiers are expert)
+    const bridged = bridgeMicroMiner(query.toLowerCase());
+    if (bridged && items.some(i => i[1] === bridged)) query = bridged;
 
     if (!query.trim()) return send({ error: "no item query", machine: machineFilter }, 400);
 
