@@ -89,6 +89,8 @@ function scoreItem(item, tokens, alias) {
     const cname = canon(item[1]);
     const aliasCanon = alias ? canon(alias) : null;
     let total = 0;
+    let sq = null; // lazy: name with all non-alphanumerics stripped, for
+    // "microminer"-style queries typed without the space
     for (const t of tokens) {
         const ct = canon(t);
         if (/^\d+$/.test(ct)) {
@@ -99,6 +101,8 @@ function scoreItem(item, tokens, alias) {
         }
         const idx = cname.indexOf(ct);
         if (idx === -1) {
+            if (sq === null) sq = cname.replace(/[^a-z0-9]/g, "");
+            if (ct.length >= 3 && sq.indexOf(ct.replace(/[^a-z0-9]/g, "")) !== -1) { total += 1; continue; }
             if (aliasCanon && cname.indexOf(aliasCanon) !== -1) continue;
             return null;
         }
@@ -220,9 +224,12 @@ export default async function handler(req, res) {
     if (candidates.length === 0) {
         const threshold = Math.max(1, Math.floor(queryLower.length / 3));
         const qCanon = canon(queryLower);
+        const qSq = qCanon.replace(/[^a-z0-9]/g, "");
         for (const item of items) {
             const nameCanon = canon(item[1]);
             let best = levenshtein(qCanon, nameCanon);
+            const dSq = levenshtein(qSq, nameCanon.replace(/[^a-z0-9]/g, ""));
+            if (dSq < best) best = dSq;
             if (best > threshold) {
                 for (const word of nameCanon.split(" ")) {
                     if (Math.abs(word.length - qCanon.length) > threshold) continue;
