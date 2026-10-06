@@ -71,7 +71,7 @@ async function render(target, sel) {
 function prender(key, target, sel) {
     if (!g.__shots) g.__shots = new Map();
     if (!g.__shots.has(key)) {
-        if (g.__shots.size > 8) g.__shots.delete(g.__shots.keys().next().value);
+        if (g.__shots.size > 32) g.__shots.delete(g.__shots.keys().next().value);
         g.__shots.set(key, render(target, sel).catch((e) => { g.__lastErr = String((e && e.message) || e).slice(0, 300); return null; }));
     }
     return g.__shots.get(key);
@@ -96,13 +96,22 @@ export default async function handler(req, res) {
     const target = `${BASE}#/item/${encodeURIComponent(item)}?${params}`;
     // rv busts Discord's image-proxy cache whenever the renderer changes;
     // unknown params don't affect the prender key
-    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=4` +
+    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=5` +
         (q.get("sel") ? "&sel=" + q.get("sel") : "");
     const key = target + "|" + sel;
 
-    // probe: answer instantly, pre-render in the background for the fetch
+    // probe: answer with the URL; wait=<secs> holds the response until the
+    // render finishes (capped) so the caller can embed a URL that is already
+    // rendered and instance-cached — Discord's image proxy will not sit
+    // through a cold render, which is why first-run embeds used to come up
+    // empty and only the second attempt attached
     if (q.get("format") === "json") {
-        prender(key, target, sel);
+        const p = prender(key, target, sel);
+        const waitRaw = parseFloat(q.get("wait"));
+        if (!Number.isNaN(waitRaw)) {
+            const cap = Math.min(12, Math.max(0.5, waitRaw)) * 1000;
+            await Promise.race([p, new Promise(r => setTimeout(r, cap))]);
+        }
         const host = (req.headers && (req.headers.host || req.headers.Host)) || "";
         return res.json({ ok: true, url: selfUrl, abs: host ? `https://${host}${selfUrl}` : selfUrl });
     }

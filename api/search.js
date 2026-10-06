@@ -43,6 +43,38 @@ const KNOWN_TYPES = [
     "ender crafting", "combination crafting", "compression crafting", "casting",
 ];
 
+// recipe types hidden from tag results by default — macerator ore-doubling
+// and extractor steps bury the interesting recipes. Explicitly naming the
+// machine ("rp ore dust macerator") still shows them.
+const HIDDEN_TYPES = new Set(["pulverization", "extractor"]);
+
+// "tier one" ↔ "tier 1": number words canonicalize to digits on both the
+// query and the item-name side, so "Steel Plated Micro Miner [Tier One]"
+// is findable as "micro miner tier 1"
+const NUM_WORDS = {
+    zero: "0", one: "1", two: "2", three: "3", four: "4", five: "5", six: "6",
+    seven: "7", eight: "8", nine: "9", ten: "10", eleven: "11", twelve: "12",
+    thirteen: "13", fourteen: "14", fifteen: "15", sixteen: "16",
+    seventeen: "17", eighteen: "18", nineteen: "19", twenty: "20",
+    thirty: "30", forty: "40", fifty: "50", sixty: "60", seventy: "70",
+    eighty: "80", ninety: "90"
+};
+const NUM_RE = new RegExp("\\b(" + Object.keys(NUM_WORDS).join("|") + ")\\b", "g");
+const canon = s => String(s).toLowerCase().replace(NUM_RE, w => NUM_WORDS[w]);
+const isAlnumChar = c => (c >= "a" && c <= "z") || (c >= "0" && c <= "9");
+// whole-word find: a boundary is any non-alphanumeric, so "1" matches in
+// "[tier 1]" but must not match inside "tier 10"
+function hasWord(hay, needle) {
+    let idx = hay.indexOf(needle);
+    while (idx !== -1) {
+        const b = idx === 0 || !isAlnumChar(hay[idx - 1]);
+        const a = idx + needle.length === hay.length || !isAlnumChar(hay[idx + needle.length]);
+        if (b && a) return true;
+        idx = hay.indexOf(needle, idx + 1);
+    }
+    return false;
+}
+
 const _modes = {};
 
 function getMode(mode) {
@@ -54,16 +86,24 @@ function getMode(mode) {
 }
 
 function scoreItem(item, tokens, alias) {
-    const nameLower = item[1].toLowerCase();
+    const cname = canon(item[1]);
+    const aliasCanon = alias ? canon(alias) : null;
     let total = 0;
     for (const t of tokens) {
-        const idx = nameLower.indexOf(t);
+        const ct = canon(t);
+        if (/^\d+$/.test(ct)) {
+            // digit tokens match whole words only — "1" must not hit "10"
+            if (hasWord(cname, ct)) { total += 1; continue; }
+            if (aliasCanon && cname.indexOf(aliasCanon) !== -1) continue;
+            return null;
+        }
+        const idx = cname.indexOf(ct);
         if (idx === -1) {
-            if (alias && item[1].toLowerCase().indexOf(alias) !== -1) continue;
+            if (aliasCanon && cname.indexOf(aliasCanon) !== -1) continue;
             return null;
         }
         if (idx === 0) total += 0;
-        else if (nameLower[idx - 1] === " ") total += 1;
+        else if (cname[idx - 1] === " ") total += 1;
         else total += 2;
     }
     total += item[1].length / 100;
@@ -179,13 +219,14 @@ export default async function handler(req, res) {
 
     if (candidates.length === 0) {
         const threshold = Math.max(1, Math.floor(queryLower.length / 3));
+        const qCanon = canon(queryLower);
         for (const item of items) {
-            const nameLower = item[1].toLowerCase();
-            let best = levenshtein(queryLower, nameLower);
+            const nameCanon = canon(item[1]);
+            let best = levenshtein(qCanon, nameCanon);
             if (best > threshold) {
-                for (const word of nameLower.split(" ")) {
-                    if (Math.abs(word.length - queryLower.length) > threshold) continue;
-                    const d = levenshtein(queryLower, word);
+                for (const word of nameCanon.split(" ")) {
+                    if (Math.abs(word.length - qCanon.length) > threshold) continue;
+                    const d = levenshtein(qCanon, word);
                     if (d < best) best = d;
                 }
             }
@@ -199,9 +240,10 @@ export default async function handler(req, res) {
     if (candidates.length === 0)
         return send({ error: "not found", query, alternatives: [] });
 
+    const queryCanon = canon(queryLower);
     candidates.sort((a, b) => {
-        const aExact = a.item[1].toLowerCase() === queryLower;
-        const bExact = b.item[1].toLowerCase() === queryLower;
+        const aExact = a.item[1].toLowerCase() === queryLower || canon(a.item[1]) === queryCanon;
+        const bExact = b.item[1].toLowerCase() === queryLower || canon(b.item[1]) === queryCanon;
         if (aExact !== bExact) return aExact ? -1 : 1;
         if (machineFilter && a.hasMachine !== b.hasMachine) return a.hasMachine ? -1 : 1;
         const aIngot = a.item[1].toLowerCase().includes("ingot") ? 0 : 1;
@@ -251,10 +293,15 @@ export default async function handler(req, res) {
         const fUpper = machineFilter.toUpperCase();
         recipes = recipes.filter(r => r.type.toUpperCase().includes(fUpper));
     }
+    const wantsHidden = machineFilter && HIDDEN_TYPES.has(machineFilter);
+    if (!wantsHidden && recipes.length)
+        recipes = recipes.filter(r => !HIDDEN_TYPES.has(r.type.toLowerCase()));
     if (recipes.length > 1)
         recipes = [...recipes].sort((a, b) => typePri(a.type) - typePri(b.type));
 
-    const uses = wantsUses ? (index.uses[best[0]] || []) : [];
+    let uses = wantsUses ? (index.uses[best[0]] || []) : [];
+    if (!wantsHidden && uses.length)
+        uses = uses.filter(e => !HIDDEN_TYPES.has(String(e.t || "").toLowerCase()));
 
     return send({
         item: {
