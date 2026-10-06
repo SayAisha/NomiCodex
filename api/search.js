@@ -43,10 +43,12 @@ const KNOWN_TYPES = [
     "ender crafting", "combination crafting", "compression crafting", "casting",
 ];
 
-// recipe types hidden from tag results by default — macerator ore-doubling
-// and extractor steps bury the interesting recipes. Explicitly naming the
-// machine ("rp ore dust macerator") still shows them.
-const HIDDEN_TYPES = new Set(["pulverization", "extractor"]);
+// recipe types hidden from tag results by default — ore-doubling, packing
+// and other basic processing steps bury the interesting recipes. Explicitly
+// naming the machine ("rp ore dust macerator") still shows them.
+const HIDDEN_TYPES = new Set([
+    "pulverization", "extractor", "arc furnace", "packager", "compressor", "fluid solidifier",
+]);
 
 // "tier one" ↔ "tier 1": number words canonicalize to digits on both the
 // query and the item-name side, so "Steel Plated Micro Miner [Tier One]"
