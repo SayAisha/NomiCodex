@@ -23,13 +23,37 @@ const BASE = (process.env.BASE_URL || (selfOrigin ? selfOrigin + "/" : "https://
 const g = globalThis;
 
 // one browser per warm instance (Fluid Compute keeps instances alive between
-// requests) — launching per request is what made cold renders so slow
-async function getBrowser() {
-    if (!g.__browser) {
+// requests) — launching per request is what made cold renders so slow.
+// Launches are SERIALIZED: concurrent launches race @sparticuz/chromium's
+// binary extraction and die with "spawn ETXTBSY" (text file busy), leaving
+// the instance in a launch-crash loop. ETXTBSY also gets a short backoff —
+// the binary settles once the writer closes it.
+let launchChain = Promise.resolve();
+async function launchBrowser() {
+    const run = async () => {
         const opts = process.env.CHROME_PATH
             ? { executablePath: process.env.CHROME_PATH, args: ["--no-sandbox", "--disable-gpu"] }
             : { executablePath: await chromium.executablePath(), args: [...chromium.args, "--disable-gpu"], headless: chromium.headless };
-        g.__browser = puppeteer.launch(opts).catch((e) => { g.__browser = null; throw e; });
+        for (let attempt = 0; ; attempt++) {
+            try {
+                return await puppeteer.launch(opts);
+            } catch (e) {
+                if (/ETXTBSY/.test(String((e && e.message) || e)) && attempt < 4) {
+                    await new Promise(r => setTimeout(r, 1500 + attempt * 1500));
+                    continue;
+                }
+                throw e;
+            }
+        }
+    };
+    const p = launchChain.then(run, run);
+    launchChain = p.catch(() => {});
+    return p;
+}
+
+async function getBrowser() {
+    if (!g.__browser) {
+        g.__browser = launchBrowser().catch((e) => { g.__browser = null; throw e; });
     }
     return g.__browser;
 }
