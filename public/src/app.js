@@ -438,7 +438,21 @@ function renderItem(id) {
     if (state.shot) {
         const fltName = state.filter ? state.filter.toLowerCase() : null;
         const flt = fltName && list.some(r => r.recipeType.name.toLowerCase() === fltName) ? fltName : null;
-        const lst = flt ? list.filter(r => r.recipeType.name.toLowerCase() === flt) : list;
+        let lst = flt ? list.filter(r => r.recipeType.name.toLowerCase() === flt) : list;
+        // content-based selection (out/eu/dur): pins the exact card without
+        // relying on list positions — external callers (the Discord tag) list
+        // uses in their own order/filtering, which diverges from ours
+        if (state.out) {
+            const sel = lst.filter(r => r.items.some(io =>
+                (io.type === 3 || io.type === 4) && (io.goods.name ?? io.goods.id) === state.out));
+            const byEu = state.eu != null
+                ? sel.filter(r => r.gtRecipe && r.gtRecipe.voltage * r.gtRecipe.amperage === state.eu) : sel;
+            const byDur = state.dur != null
+                ? byEu.filter(r => r.gtRecipe && r.gtRecipe.durationTicks === state.dur) : byEu;
+            if (byDur.length) lst = byDur;
+            else if (byEu.length && byEu !== sel) lst = byEu;
+            else if (sel.length) lst = sel;
+        }
         const r = lst[(state.r ?? 1) - 1];
         view().innerHTML = `<div class="wrap"><div class="cards single">${r ? recipeCard(r) : ""}</div></div>`;
         document.title = (goods.name ?? goods.id) + " — NomiCodex";
@@ -530,6 +544,12 @@ function route() {
     if (rn >= 1) state.r = rn;
     const tp = params.get("type");
     if (tp) state.filter = tp;
+    const os = params.get("out");
+    if (os) state.out = os;
+    const es = parseInt(params.get("eu"), 10);
+    if (Number.isFinite(es) && es > 0) state.eu = es;
+    const ds = parseInt(params.get("dur"), 10);
+    if (Number.isFinite(ds) && ds > 0) state.dur = ds;
     const seg = decodeURIComponent(path ?? "");
     if (seg.startsWith("item/")) {
         if (params.get("view") === "uses" || params.get("uses") === "1")
