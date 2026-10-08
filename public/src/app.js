@@ -544,6 +544,9 @@ function route() {
     if (rn >= 1) state.r = rn;
     const tp = params.get("type");
     if (tp) state.filter = tp;
+    // theme=light renders this view in light mode (used for light Discord
+    // cards); does not persist — the saved theme still rules normal browsing
+    if (params.get("theme") === "light") document.documentElement.classList.add("light");
     const os = params.get("out");
     if (os) state.out = os;
     const es = parseInt(params.get("eu"), 10);
