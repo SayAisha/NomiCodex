@@ -1,0 +1,1 @@
+{"i:minecraft:fence:0":[{"n":"Wood Pulp","t":"Pulverization","e":2,"d":98,"x":"ULV","h":0,"a":1,"i":"Oak Fence (1)","g":""}]}

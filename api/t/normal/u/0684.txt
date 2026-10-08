@@ -1,1 +1,1 @@
-{"i:gregtech:meta_dust_pure:56":[{"o":"i:gregtech:meta_dust:56","n":"Lithium Dust","t":"Centrifuge","e":5,"d":100,"x":"ULV","h":0,"g":"b8bef84c4ebd21cc4877.webp","a":1,"i":"Purified Pile of Lithium Dust"}]}
+{"i:gregtech:meta_dust_pure:56":[{"n":"Lithium Dust","t":"Centrifuge","e":5,"d":100,"x":"ULV","h":0,"a":1,"i":"Purified Pile of Lithium Dust (1)","g":"b8bef84c4ebd21cc4877.webp"},{"n":"Lithium Dust","t":"Ore Washer","e":4,"d":8,"x":"ULV","h":0,"a":1,"i":"Purified Pile of Lithium Dust (1), Water (100L)","g":""}]}

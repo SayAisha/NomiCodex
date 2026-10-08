@@ -1,0 +1,1 @@
+{"i:actuallyadditions:magnet_ring_bauble:0":[{"n":"Ring of Magnetizing","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Ring of Magnetizing (1)","g":"01d40dccb4d29b360440.webp"}]}

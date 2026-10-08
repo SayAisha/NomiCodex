@@ -1,0 +1,1 @@
+{"i:nuclearcraft:fuel_californium:6":[{"n":"Californium-252","t":"Thermal Centrifuge","e":48,"d":3200,"x":"LV","h":0,"a":1,"i":"HECf-251 Fuel (1)","g":""}]}

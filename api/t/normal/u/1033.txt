@@ -1,1 +1,1 @@
-{"i:nuclearcraft:fuel_americium:1":[{"o":"i:nuclearcraft:americium:5","n":"Americium-242 Oxide","t":"Thermal Centrifuge","e":48,"d":3200,"x":"LV","h":0,"g":"7c28f9ce07c368013887.webp","a":1,"i":"LEA-242 Oxide Fuel"}]}
+{"i:nuclearcraft:fuel_americium:1":[{"n":"Americium-243","t":"Thermal Centrifuge","e":48,"d":3200,"x":"LV","h":0,"a":1,"i":"LEA-242 Oxide Fuel (1)","g":""}],"i:enderio:block_alloy_endergy:4":[{"n":"Stone Facade","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Iron Plate (1), Polished Andesite (1)","g":"d1524d0739fe0a0eb832.webp"}]}

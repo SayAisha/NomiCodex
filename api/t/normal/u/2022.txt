@@ -1,0 +1,1 @@
+{"i:chisel:netherrack:0":[{"n":"Stone Facade","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Iron Plate (1), Polished Andesite (1)","g":"d1524d0739fe0a0eb832.webp"}],"i:actuallyadditions:item_crystal_shard:0":[{"n":"Restonia Crystal","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Red Crystal Shard (9)","g":""}]}

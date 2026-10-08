@@ -1,1 +1,1 @@
-{"i:nuclearcraft:fuel_neptunium:1":[{"o":"i:nuclearcraft:neptunium:1","n":"Neptunium-236 Oxide","t":"Thermal Centrifuge","e":48,"d":3200,"x":"LV","h":0,"g":"3b9a943818379e935f1f.webp","a":1,"i":"LEN-236 Oxide Fuel"}]}
+{"i:nuclearcraft:fuel_neptunium:1":[{"n":"Neptunium-237","t":"Thermal Centrifuge","e":48,"d":3200,"x":"LV","h":0,"a":1,"i":"LEN-236 Oxide Fuel (1)","g":""}],"i:gregtech:stone_bricks_mossy:2":[{"n":"Stone Facade","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Iron Plate (1), Polished Andesite (1)","g":"d1524d0739fe0a0eb832.webp"}]}

@@ -1,1 +1,1 @@
-{"i:enderio:block_electric_light:2":[{"o":"i:enderio:block_electric_light:3","n":"Light (Inverted)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"g":"a300bf5908ace1895aa6.webp","a":1,"i":"Light, Redstone Torch"}]}
+{"i:enderio:block_detector_block:0":[{"n":"Block Detector (Silent)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Block Detector (1), White Wool (1)","g":""}],"i:enderio:block_electric_light:2":[{"n":"Light (Inverted)","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Light (1), Redstone Torch (1)","g":"a300bf5908ace1895aa6.webp"}]}

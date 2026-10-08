@@ -1,1 +1,1 @@
-{"f:gregtech:plasma.tin":[{"o":"f:gregtech:tin","n":"Molten Tin","t":"Plasma Fuels","e":2048,"d":128,"x":"EV","h":0,"g":"ee29e7547b37b5192f03.webp","a":1,"i":"Plasma Tin"}]}
+{"i:chisel:netherrack:13":[{"n":"Stone Facade","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Iron Plate (1), Polished Andesite (1)","g":"d1524d0739fe0a0eb832.webp"}],"f:gregtech:plasma.tin":[{"n":"Molten Tin","t":"Plasma Fuels","e":2048,"d":128,"x":"EV","h":0,"a":1,"i":"Plasma Tin (1L)","g":"ee29e7547b37b5192f03.webp"}]}

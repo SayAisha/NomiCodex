@@ -1,0 +1,1 @@
+{"i:actuallyadditions:battery_double_bauble:0":[{"n":"Double Battery","t":"Crafting","e":0,"d":0,"x":"ULV","h":0,"a":1,"i":"Double Battery (1)","g":"4ab93a4a4bc83101650d.webp"}]}

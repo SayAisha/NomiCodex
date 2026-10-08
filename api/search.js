@@ -120,6 +120,15 @@ function getMode(mode) {
     return _modes[mode];
 }
 
+// plural retry forms: "steel ingots" should find "Steel Ingot"
+function singulars(t) {
+    const out = [];
+    if (t.length > 4 && t.endsWith("ies")) out.push(t.slice(0, -3) + "y");
+    if (t.length > 4 && t.endsWith("es")) out.push(t.slice(0, -2));
+    if (t.length > 3 && t.endsWith("s") && !t.endsWith("ss")) out.push(t.slice(0, -1));
+    return out;
+}
+
 function scoreItem(item, tokens, alias) {
     const cname = canon(item[1]);
     const aliasCanon = alias ? canon(alias) : null;
@@ -134,16 +143,28 @@ function scoreItem(item, tokens, alias) {
             if (aliasCanon && cname.indexOf(aliasCanon) !== -1) continue;
             return null;
         }
-        const idx = cname.indexOf(ct);
-        if (idx === -1) {
+        // the token itself first, then singularized retries, then the
+        // space-stripped name (microminer-style queries)
+        const forms = ct.length >= 3 ? [ct, ...singulars(ct)] : [ct];
+        let matched = false;
+        for (const f of forms) {
+            const idx = cname.indexOf(f);
+            if (idx !== -1) {
+                total += idx === 0 ? 0 : cname[idx - 1] === " " ? 1 : 2;
+                matched = true;
+                break;
+            }
+        }
+        if (!matched) {
             if (sq === null) sq = cname.replace(/[^a-z0-9]/g, "");
-            if (ct.length >= 3 && sq.indexOf(ct.replace(/[^a-z0-9]/g, "")) !== -1) { total += 1; continue; }
+            for (const f of forms) {
+                if (f.length >= 3 && sq.indexOf(f.replace(/[^a-z0-9]/g, "")) !== -1) { total += 1; matched = true; break; }
+            }
+        }
+        if (!matched) {
             if (aliasCanon && cname.indexOf(aliasCanon) !== -1) continue;
             return null;
         }
-        if (idx === 0) total += 0;
-        else if (cname[idx - 1] === " ") total += 1;
-        else total += 2;
     }
     total += item[1].length / 100;
     if (item[3] === "gregtech") total -= 0.5;
