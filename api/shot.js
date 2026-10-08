@@ -66,13 +66,27 @@ async function render(target, sel) {
     }
 }
 
+// a crashed browser process leaves a dead cached handle that turns every
+// later render into "Connection closed" until the instance recycles —
+// detect it, drop the handle and relaunch once
+const CRASH_RE = /Connection closed|Target closed|Browser (?:has )?(?:disconnected|closed)|Session closed|Protocol error/i;
+async function renderSafe(target, sel) {
+    try {
+        return await render(target, sel);
+    } catch (e) {
+        if (!CRASH_RE.test(String((e && e.message) || e))) throw e;
+        g.__browser = null;
+        return await render(target, sel);
+    }
+}
+
 // small LRU of in-flight/finished renders; the probe pre-renders so the
 // image fetch that follows (Discord's proxy) usually lands on a finished PNG
 function prender(key, target, sel) {
     if (!g.__shots) g.__shots = new Map();
     if (!g.__shots.has(key)) {
         if (g.__shots.size > 32) g.__shots.delete(g.__shots.keys().next().value);
-        g.__shots.set(key, render(target, sel).catch((e) => { g.__lastErr = String((e && e.message) || e).slice(0, 300); return null; }));
+        g.__shots.set(key, renderSafe(target, sel).catch((e) => { g.__lastErr = String((e && e.message) || e).slice(0, 300); return null; }));
     }
     return g.__shots.get(key);
 }
