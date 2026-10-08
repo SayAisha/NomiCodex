@@ -107,6 +107,12 @@ export default async function handler(req, res) {
     const params = new URLSearchParams({ shot: "1", r: String(r), mode });
     if (view) params.set("view", view);
     if (type) params.set("type", type);
+    // selection/theme params pass through to the page (content-pinned cards,
+    // light renders) — they also make the prender key distinct per variant
+    for (const p of ["out", "eu", "dur", "theme"]) {
+        const v = q.get(p);
+        if (v) params.set(p, v);
+    }
     const target = `${BASE}#/item/${encodeURIComponent(item)}?${params}`;
     // rv busts Discord's image-proxy cache whenever the renderer changes;
     // unknown params don't affect the prender key
