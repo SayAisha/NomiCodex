@@ -28,6 +28,15 @@ export function getFusionTierByStartupCost(euToStart) {
     else
         throw RangeError("Fusion startup cost is too high.");
 }
+// the pack's recipe dumps carry a voltageTier field that is wrong for ~19%
+// of recipes (registered lower than the recipe's own EU requires); the
+// reliable label is derived from the recipe voltage itself
+export function tierIndexOf(voltage) {
+    let idx = 0;
+    for (let i = 0; i < voltageTier.length; i++)
+        if (voltageTier[i].voltage <= voltage) idx = i;
+    return idx;
+}
 export var voltageTier = [
     { name: "ULV", voltage: 8 },
     { name: "LV", voltage: 32 },

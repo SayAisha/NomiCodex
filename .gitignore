@@ -1,3 +1,4 @@
 push-all.sh
 .batch_*.txt
 .DS_Store
+search-data/*.orig.json.gz

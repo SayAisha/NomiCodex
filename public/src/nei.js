@@ -1,4 +1,4 @@
-import { GetScrollbarWidth, voltageTier, formatAmount, getFusionTierByStartupCost } from "./utils.js?v=21";
+import { GetScrollbarWidth, voltageTier, tierIndexOf, formatAmount, getFusionTierByStartupCost } from "./utils.js?v=22";
 import { Goods, Fluid, Item, Repository, Recipe, RecipeType, RecipeIoType, OreDict } from "./repository.js?v=21";
 import { SearchQuery } from "./searchQuery.js?v=21";
 import { ShowTooltip } from "./tooltip.js?v=21";
@@ -186,7 +186,7 @@ class NeiRecipeTypeInfo extends Array {
             if (recipe.gtRecipe != null) {
                 dom.push(`<div class="nei-meta">`);
                 if (recipe.gtRecipe.voltage > 0) {
-                    dom.push(`<span class="nei-meta-main">${voltageTier[recipe.gtRecipe.voltageTier].name} • ${recipe.gtRecipe.durationSeconds}s`);
+                    dom.push(`<span class="nei-meta-main">${voltageTier[tierIndexOf(recipe.gtRecipe.voltage)].name} • ${recipe.gtRecipe.durationSeconds}s`);
                     if (recipe.gtRecipe.amperage != 1)
                         dom.push(` • ${recipe.gtRecipe.amperage}A`);
                     dom.push(`</span><span class="nei-meta-sub"><span data-info="How much EU/t the recipe draws while running.">${formatAmount(recipe.gtRecipe.voltage)} EU/t</span> • ${formatAmount(recipe.gtRecipe.voltage * recipe.gtRecipe.amperage * recipe.gtRecipe.durationTicks)} EU</span>`);

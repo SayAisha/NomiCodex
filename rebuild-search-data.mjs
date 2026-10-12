@@ -8,11 +8,24 @@ import { Repository, Goods, Recipe } from "./src/repository.js";
 const mode = process.argv[2] || "normal";
 const raw = zlib.gunzipSync(fs.readFileSync(`data-${mode}/data.bin`));
 const repo = Repository.load(raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.byteLength));
-// NOTE: run `git checkout -- search-data/` before re-running — this script
-// overwrites the gz it reads from
-const old = JSON.parse(zlib.gunzipSync(fs.readFileSync(`search-data/${mode}.json.gz`)));
+// card-hash carryover source: the ORIGINAL dump-era data (names-only uses
+// summaries). `*.orig.json.gz` files are extracted once from the last
+// pre-rebuild commit — regenerate with:
+//   git show <pre-rebuild-sha>:search-data/<mode>.json.gz > search-data/<mode>.orig.json.gz
+const oldPath = fs.existsSync(`search-data/${mode}.orig.json.gz`)
+    ? `search-data/${mode}.orig.json.gz`
+    : `search-data/${mode}.json.gz`;
+const old = JSON.parse(zlib.gunzipSync(fs.readFileSync(oldPath)));
 
 const TIERS = ["ULV","LV","MV","HV","EV","IV","LuV","ZPM","UV","UHV","UEV","UIV","UXV","OpV","MAX"];
+const TIER_MAX = [8,32,128,512,2048,8192,32768,131072,524288,2097152,8388608,33554432,134217728,536870912,2147483647];
+// the dump's voltageTier field is wrong for ~19% of recipes (pack scripts
+// register a lower tier than the recipe's own EU requires) — always derive
+function tierOf(voltage) {
+    for (let i = 0; i < TIER_MAX.length; i++)
+        if (voltage <= TIER_MAX[i]) return TIERS[i];
+    return TIERS[TIERS.length - 1];
+}
 const fmtN = n => n.toLocaleString("en-US");
 
 function ioSummary(r, kinds) {
@@ -57,7 +70,7 @@ function recipeEntry(r, idx) {
         eu: gt ? gt.voltage * gt.amperage : 0,
         dur: gt ? gt.durationTicks : 0,
         amp: gt ? gt.amperage : 0,
-        tier: gt && gt.voltageTier >= 0 && gt.voltageTier < TIERS.length ? TIERS[gt.voltageTier] : "ULV",
+        tier: gt ? tierOf(gt.voltage) : "ULV",
         heat, clean,
         img: "",
         ins: ioSummary(r, [0, 1, 2]),

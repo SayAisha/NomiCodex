@@ -1,6 +1,7 @@
 // NomiCodex — from-scratch frontend (2026). Built directly on the binary
 // repository (repository.js) and the atlas; no classic-UI code involved.
-import { Repository, Item, Fluid, OreDict, Recipe } from "./repository.js?v=21";
+import { Repository, Item, Fluid, OreDict, Recipe } from "./repository.js?v=22";
+import { tierIndexOf } from "./utils.js?v=22";
 import { OpenOceu } from "./oceu.js?v=21";
 
 const TIERS = ["ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV",
@@ -260,7 +261,7 @@ function metaChips(r) {
     if (!gt) return "";
     const chips = [];
     if (gt.voltage > 0) {
-        chips.push(`<span class="mchip tier"><b>${TIERS[gt.voltageTier] ?? "?"}</b></span>`);
+        chips.push(`<span class="mchip tier"><b>${TIERS[tierIndexOf(gt.voltage)] ?? "?"}</b></span>`);
         chips.push(`<span class="mchip"><b>${fmt(gt.voltage)}</b> EU/t</span>`);
         chips.push(`<span class="mchip time"><b>${gt.durationSeconds % 1 ? gt.durationSeconds.toFixed(1) : gt.durationSeconds}</b>s</span>`);
         chips.push(`<span class="mchip">${fmt(gt.voltage * gt.amperage * gt.durationTicks)} EU</span>`);
