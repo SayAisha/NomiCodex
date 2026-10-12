@@ -30,12 +30,12 @@ export function getFusionTierByStartupCost(euToStart) {
 }
 // the pack's recipe dumps carry a voltageTier field that is wrong for ~19%
 // of recipes (registered lower than the recipe's own EU requires); the
-// reliable label is derived from the recipe voltage itself
+// reliable label is derived from the recipe voltage itself: the minimum
+// machine tier whose max voltage covers the recipe's EU/t (60 EU/t needs MV)
 export function tierIndexOf(voltage) {
-    let idx = 0;
     for (let i = 0; i < voltageTier.length; i++)
-        if (voltageTier[i].voltage <= voltage) idx = i;
-    return idx;
+        if (voltage <= voltageTier[i].voltage) return i;
+    return voltageTier.length - 1;
 }
 export var voltageTier = [
     { name: "ULV", voltage: 8 },

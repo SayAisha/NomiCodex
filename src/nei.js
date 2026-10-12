@@ -1,4 +1,4 @@
-import { GetScrollbarWidth, voltageTier, tierIndexOf, formatAmount, getFusionTierByStartupCost } from "./utils.js?v=22";
+import { GetScrollbarWidth, voltageTier, tierIndexOf, formatAmount, getFusionTierByStartupCost } from "./utils.js?v=23";
 import { Goods, Fluid, Item, Repository, Recipe, RecipeType, RecipeIoType, OreDict } from "./repository.js?v=21";
 import { SearchQuery } from "./searchQuery.js?v=21";
 import { ShowTooltip } from "./tooltip.js?v=21";

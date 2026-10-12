@@ -106,6 +106,19 @@ for (const q of ["steel ingot", "pbi", "iridium ore ebf", "fusion reactor", "hig
         types.every(t => !hidden.has(t.toLowerCase())), types.join(", "));
 }
 {
+    // tier labels derive from the recipe voltage, not the pack's broken
+    // voltageTier field (diorite rock breaker: 60 EU/t = MV, not LV)
+    const r = await call("diorite");
+    const rb = (r.body.recipes || []).find(x => x.type === "Rock Breaker");
+    check(`diorite rock breaker (60 EU/t) labeled MV`, rb && rb.tier === "MV", `got ${rb && rb.tier}`);
+    const r2 = await call("sodium bisulfate");
+    const lcr = (r2.body.recipes || []).find(x => x.type === "Large Chemical Reactor");
+    check(`sodium bisulfate LCR (30 EU/t) still LV`, lcr && lcr.tier === "LV", `got ${lcr && lcr.tier}`);
+    const r3 = await call("steel ingot");
+    const ebf = (r3.body.recipes || []).find(x => x.type === "Blast Furnace");
+    check(`steel ingot EBF (120 EU/t) labeled MV`, ebf && ebf.tier === "MV", `got ${ebf && ebf.tier} (eu=${ebf && ebf.eu})`);
+}
+{
     // variant completeness: sodium bisulfate must carry ALL recipes incl.
     // the salt-variant LCR/CR lines the old data build deduplicated away
     const r = await call("sodium bisulfate");

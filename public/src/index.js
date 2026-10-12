@@ -61,7 +61,7 @@ try {
     await Promise.all([
         import("./itemIcon.js?v=21"),
         import("./tooltip.js?v=21"),
-        import("./nei.js?v=22"),
+        import("./nei.js?v=23"),
         import("./menu.js?v=21")
     ]);
     loading.remove();
@@ -115,7 +115,7 @@ try {
 
     // NEI-only mode: open the item browser straight away (?item=<id> deep-links to one)
     if (new URL(location.href).searchParams.get("noauto") === null) {
-    const nei = await import("./nei.js?v=22");
+    const nei = await import("./nei.js?v=23");
     const deepLink = new URL(location.href).searchParams.get("item");
     const target = deepLink ? repositoryModule.Repository.current.GetById(deepLink) : null;
     nei.ShowNei(target, nei.ShowNeiMode.Production, null);
