@@ -140,7 +140,9 @@ export default async function handler(req, res) {
     const target = `${BASE}#/item/${encodeURIComponent(item)}?${params}`;
     // rv busts Discord's image-proxy cache whenever the renderer changes;
     // unknown params don't affect the prender key
-    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=6` +
+    // rv=7: tier fix — recipe tier derives from EU/t (ceiling), not the pack's
+    // voltageTier field; 19% of cards changed
+    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=7` +
         (q.get("sel") ? "&sel=" + q.get("sel") : "");
     const key = target + "|" + sel;
 
