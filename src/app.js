@@ -610,7 +610,7 @@ async function boot() {
         // the shot service screenshots on the ready flag — the card's icons
         // and frames are CSS backgrounds, so they MUST be fetched and decoded
         // before we render, or the capture beats them on a cold browser cache
-        await Promise.all([...(needAtlas ? [atlasUrl] : []), "assets/images/slot.svg?v=1", "assets/images/Arrow.png"].map(u =>
+        await Promise.all([...(needAtlas ? [atlasUrl] : []), "assets/images/slot.svg?v=2", "assets/images/Arrow.png"].map(u =>
             new Promise(done => {
                 const im = new Image();
                 im.onerror = () => done();
