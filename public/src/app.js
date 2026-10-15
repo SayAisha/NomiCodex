@@ -272,7 +272,7 @@ function gridHtml(entries, dimX, dimY, { compact = false, outputs = false } = {}
                 cells.push(`<div class="slot hole" style="${pos}"></div>`);
         }
     }
-    return `<div class="sgrid" style="width:${useX * 44 + 8}px;height:${useY * 44 + 8}px">${cells}</div>`;
+    return `<div class="sgrid" style="width:${useX * 44 + 8}px;height:${useY * 44 + 8}px">${cells.join("")}</div>`;
 }
 
 function metaChips(r) {
