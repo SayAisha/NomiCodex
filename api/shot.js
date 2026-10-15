@@ -142,7 +142,7 @@ export default async function handler(req, res) {
     // unknown params don't affect the prender key
     // rv=7: tier fix — recipe tier derives from EU/t (ceiling), not the pack's
     // voltageTier field; 19% of cards changed
-    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=7` +
+    const selfUrl = `/api/shot?${params.toString()}&item=${encodeURIComponent(item)}&rv=19` +
         (q.get("sel") ? "&sel=" + q.get("sel") : "");
     const key = target + "|" + sel;
 

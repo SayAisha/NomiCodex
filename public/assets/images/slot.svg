@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <!-- frame option A — flat minimal on the classic 44px grid; all paint
+       inset >=1.5px so tiling never bleeds at any scale -->
+  <rect x="1.5" y="1.5" width="41" height="41" rx="8" fill="#1c2029" fill-opacity=".92"/>
+  <rect x="2.5" y="2.5" width="39" height="39" rx="7" fill="none" stroke="#323a49" stroke-width="1.75"/>
+</svg>

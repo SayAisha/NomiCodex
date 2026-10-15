@@ -652,13 +652,13 @@ html.light .rcard-arrow { filter: saturate(1.15); }
 
 .sgrid {
     position: relative;
-    background-image: url("./assets/images/Slot.png");
+    background-image: url("./assets/images/slot.svg?v=1");
     background-size: 44px;
     background-position: 4px 4px;
     background-repeat: repeat;
 }
 
-html.light .sgrid { background-image: url("./assets/images/Slot-light.png"); }
+html.light .sgrid { background-image: url("./assets/images/slot-light.svg?v=1"); }
 
 .sgrid .slot {
     position: absolute;
