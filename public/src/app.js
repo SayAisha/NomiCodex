@@ -269,7 +269,7 @@ function gridHtml(entries, dimX, dimY, { compact = false, outputs = false } = {}
             if (e)
                 cells.push(`<div class="slot" style="${pos}">${slotHtml(e.goods, { ore: e.type === 1, fluid: e.type === 2 || e.type === 4, amount: e.amount, prob: outputs ? e.probability : 1 })}</div>`);
             else
-                cells.push(`<div class="slot empty" style="${pos}"></div>`);
+                cells.push(`<div class="slot hole" style="${pos}"></div>`);
         }
     }
     return `<div class="sgrid" style="width:${useX * 44 + 8}px;height:${useY * 44 + 8}px">${cells}</div>`;
