@@ -650,15 +650,13 @@ html.light .rcard-arrow { filter: saturate(1.15); }
 
 /* slot grids */
 
+/* frames drawn as real CSS borders on each slot — no tiled background
+   raster, so no seams at any device pixel ratio */
 .sgrid {
     position: relative;
-    background-image: url("./assets/images/slot.svg?v=2");
-    background-size: 44px;
-    background-position: 4px 4px;
-    background-repeat: repeat;
 }
 
-html.light .sgrid { background-image: url("./assets/images/slot-light.svg?v=2"); }
+html.light .sgrid { background-image: none; }
 
 .sgrid .slot {
     position: absolute;
@@ -667,7 +665,13 @@ html.light .sgrid { background-image: url("./assets/images/slot-light.svg?v=2");
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    background: #1b2029;
+    border: 1.75px solid #323a49;
+    border-radius: 8px;
 }
+
+html.light .slot { background: #f2f1f6; border-color: #cfcadd; }
 
 .sicon {
     display: block;

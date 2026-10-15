@@ -256,10 +256,22 @@ function gridHtml(entries, dimX, dimY, { compact = false, outputs = false } = {}
             useY = Math.max(useY, Math.floor(e.slot / dimX) + 1);
         }
     }
-    const cells = entries.map(e => {
-        return `<div class="slot" style="left:${(e.slot % dimX) * 44 + 4}px;top:${Math.floor(e.slot / dimX) * 44 + 4}px">
-            ${slotHtml(e.goods, { ore: e.type === 1, fluid: e.type === 2 || e.type === 4, amount: e.amount, prob: outputs ? e.probability : 1 })}</div>`;
-    }).join("");
+    // frames are per-slot CSS borders (no tiled background image — repeated
+    // rasters get uneven seams at fractional device pixels). Walk the grid's
+    // bounding box; entries are looked up by absolute slot (row*dimX+col) so
+    // shaped recipes keep their visible empty cells
+    const byPos = new Map(entries.map(e => [e.slot, e]));
+    const cells = [];
+    for (let row = 0; row < useY; row++) {
+        for (let col = 0; col < useX; col++) {
+            const pos = `left:${col * 44 + 4}px;top:${row * 44 + 4}px`;
+            const e = byPos.get(row * dimX + col);
+            if (e)
+                cells.push(`<div class="slot" style="${pos}">${slotHtml(e.goods, { ore: e.type === 1, fluid: e.type === 2 || e.type === 4, amount: e.amount, prob: outputs ? e.probability : 1 })}</div>`);
+            else
+                cells.push(`<div class="slot empty" style="${pos}"></div>`);
+        }
+    }
     return `<div class="sgrid" style="width:${useX * 44 + 8}px;height:${useY * 44 + 8}px">${cells}</div>`;
 }
 
@@ -610,7 +622,7 @@ async function boot() {
         // the shot service screenshots on the ready flag — the card's icons
         // and frames are CSS backgrounds, so they MUST be fetched and decoded
         // before we render, or the capture beats them on a cold browser cache
-        await Promise.all([...(needAtlas ? [atlasUrl] : []), "assets/images/slot.svg?v=2", "assets/images/Arrow.png"].map(u =>
+        await Promise.all([...(needAtlas ? [atlasUrl] : []), "assets/images/Arrow.png"].map(u =>
             new Promise(done => {
                 const im = new Image();
                 im.onerror = () => done();
