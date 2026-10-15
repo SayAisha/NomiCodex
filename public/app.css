@@ -622,13 +622,10 @@ body {
     width: 44px;
     height: 30px;
     flex: 0 0 auto;
-    background: url("./assets/images/Arrow.png") center/44px no-repeat;
-    image-rendering: pixelated;
-    filter: saturate(1.1);
-    opacity: 0.9;
+    background: url("./assets/images/arrow.svg?v=1") center/contain no-repeat;
 }
 
-html.light .rcard-arrow { filter: invert(0.82) saturate(1.05); }
+html.light .rcard-arrow { filter: saturate(1.15); }
 
 .rcard-foot {
     display: flex;
@@ -687,8 +684,6 @@ html.light .sgrid { background-image: url("./assets/images/Slot-light.png"); }
 }
 
 .sicon:hover { filter: brightness(1.3); outline: 1px solid var(--accent-line); z-index: 3; }
-
-.sicon.ore { box-shadow: 0 0 0 2px rgba(195, 155, 255, 0.55); border-radius: 3px; }
 
 .sicon .amt {
     position: absolute;

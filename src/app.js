@@ -11,7 +11,10 @@ const TIERS = ["ULV", "LV", "MV", "HV", "EV", "IV", "LuV", "ZPM", "UV", "UHV",
 let ATLAS_COLS = 128;
 let ATLAS_UNIT = 64;
 const SHOT = new URLSearchParams(location.hash.split("?")[1] ?? "").get("shot") === "1";
-const DATA_V = 16, ATLAS_V = 7;
+const DATA_V = 16, ATLAS_V = 7, ICON_V = 1;
+// standalone per-item icon PNGs (the crisp re-rip); when loaded the
+// multi-MB atlas is skipped — null keeps the atlas fallback
+let ICONS_V2 = null;
 
 const $ = (s, r = document) => r.querySelector(s);
 const el = (html) => {
@@ -36,6 +39,10 @@ let state = { filter: null, view: "recipes", showAll: false };
 function iconStyle(iconId, size = SHOT ? 32 : 36) {
     if (iconId == null || iconId < 0)
         return "background:linear-gradient(45deg,#22262e 25%,#191c22 25% 50%,#22262e 50% 75%,#191c22 75%)";
+    if (ICONS_V2 && ICONS_V2[iconId])
+        // UNQUOTED url(): lands inside a style="..." attribute — quotes would
+        // terminate the attribute and kill the style
+        return `background-image:url(icons/${ICONS_V2[iconId]}.png?v=${ICON_V});background-size:100% 100%`;
     const s = size / ATLAS_UNIT;
     const x = (iconId % ATLAS_COLS) * ATLAS_UNIT * s;
     const y = Math.floor(iconId / ATLAS_COLS) * ATLAS_UNIT * s;
@@ -458,7 +465,20 @@ function renderItem(id) {
         view().innerHTML = `<div class="wrap"><div class="cards single">${r ? recipeCard(r) : ""}</div></div>`;
         document.title = (goods.name ?? goods.id) + " — NomiCodex";
         bindGo(view());
-        requestAnimationFrame(() => { document.body.dataset.ready = "1"; });
+        // card icons are individual PNGs — the shot service captures on the
+        // ready flag, so every icon background must be decoded first
+        const iconUrls = new Set();
+        view().querySelectorAll(".sicon").forEach(el => {
+            const m = /url\(([^")]+)\)/.exec(el.style.backgroundImage || "");
+            if (m) iconUrls.add(m[1]);
+        });
+        Promise.all([...iconUrls].map(u => new Promise(done => {
+            const im = new Image();
+            im.onerror = () => done();
+            im.src = u;
+            im.decode().then(done, done);
+        }))).finally(() =>
+            requestAnimationFrame(() => { document.body.dataset.ready = "1"; }));
         return;
     }
 
@@ -577,14 +597,20 @@ async function boot() {
     document.querySelectorAll(".seg [data-mode]").forEach(b =>
         b.classList.toggle("on", b.dataset.mode === mode));
     if (SHOT) { ATLAS_COLS = 256; ATLAS_UNIT = 32; }
+    try {
+        const r = await fetch(`./data-${mode}/icons-v2.json?v=${ICON_V}`);
+        if (r.ok) ICONS_V2 = await r.json();
+    } catch (e) { ICONS_V2 = null; }
+    const needAtlas = !ICONS_V2 || ICONS_V2.some(x => !x);
     const atlasUrl = new URL(`data-${mode}/${SHOT ? "atlas.webp" : "atlas2.webp"}?v=${ATLAS_V}`, document.baseURI).href;
-    document.documentElement.style.setProperty("--atlas-url", `url("${atlasUrl}")`);
+    if (needAtlas)
+        document.documentElement.style.setProperty("--atlas-url", `url("${atlasUrl}")`);
     if (SHOT) {
         document.body.classList.add("shot");
         // the shot service screenshots on the ready flag — the card's icons
         // and frames are CSS backgrounds, so they MUST be fetched and decoded
         // before we render, or the capture beats them on a cold browser cache
-        await Promise.all([atlasUrl, "assets/images/Slot.png", "assets/images/Arrow.png"].map(u =>
+        await Promise.all([...(needAtlas ? [atlasUrl] : []), "assets/images/Slot.png", "assets/images/Arrow.png"].map(u =>
             new Promise(done => {
                 const im = new Image();
                 im.onerror = () => done();
