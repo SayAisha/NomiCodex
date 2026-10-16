@@ -13,7 +13,7 @@
       <feGaussianBlur stdDeviation="1.7"/>
     </filter>
   </defs>
-  <g filter="url(#soft)" opacity=".33">
+  <g filter="url(#soft)">
     <path d="M5 15h22" stroke="#a78bfa" stroke-width="5" stroke-linecap="round"/>
     <path d="M24.5 7.5 35 15 24.5 22.5" fill="none" stroke="#b79dfb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
   </g>

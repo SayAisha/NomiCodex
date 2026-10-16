@@ -264,7 +264,7 @@ function gridHtml(entries, dimX, dimY, { compact = false, outputs = false } = {}
     const cells = [];
     for (let row = 0; row < useY; row++) {
         for (let col = 0; col < useX; col++) {
-            const pos = `left:${col * 44 + 4}px;top:${row * 44 + 4}px`;
+            const pos = `left:${col * 44 + 5}px;top:${row * 44 + 5}px`; // 42px box in a 44px cell = 2px gap between boxes
             const e = byPos.get(row * dimX + col);
             if (e)
                 cells.push(`<div class="slot" style="${pos}">${slotHtml(e.goods, { ore: e.type === 1, fluid: e.type === 2 || e.type === 4, amount: e.amount, prob: outputs ? e.probability : 1 })}</div>`);

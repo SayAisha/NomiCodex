@@ -622,7 +622,7 @@ body {
     width: 44px;
     height: 30px;
     flex: 0 0 auto;
-    background: url("./assets/images/arrow.svg?v=1") center/contain no-repeat;
+    background: url("./assets/images/arrow.svg?v=2") center/contain no-repeat;
 }
 
 html.light .rcard-arrow { filter: saturate(1.15); }
@@ -660,8 +660,8 @@ html.light .sgrid { background-image: none; }
 
 .sgrid .slot {
     position: absolute;
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
