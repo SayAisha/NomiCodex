@@ -1,22 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="44" height="30" viewBox="0 0 44 30">
-  <!-- NomiCodex recipe arrow — slate-to-violet, soft glow -->
+  <!-- plain arrow: straight shaft + simple triangular head, shared gradient -->
   <defs>
-    <linearGradient id="shaft" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#5d6577"/>
-      <stop offset="1" stop-color="#8f7cf0"/>
-    </linearGradient>
-    <linearGradient id="head" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#8f7cf0"/>
       <stop offset="1" stop-color="#b79dfb"/>
     </linearGradient>
-    <filter id="soft" x="-40%" y="-60%" width="190%" height="220%">
-      <feGaussianBlur stdDeviation="1.7"/>
-    </filter>
   </defs>
-  <g filter="url(#soft)">
-    <path d="M5 15h22" stroke="#a78bfa" stroke-width="5" stroke-linecap="round"/>
-    <path d="M24.5 7.5 35 15 24.5 22.5" fill="none" stroke="#b79dfb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <path d="M5 15h22" stroke="url(#shaft)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M24.5 7.5 35 15 24.5 22.5" fill="none" stroke="url(#head)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5 15 H28" stroke="url(#g)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M27 7.5 38.5 15 27 22.5 Z" fill="url(#g)"/>
 </svg>

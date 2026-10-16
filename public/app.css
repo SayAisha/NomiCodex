@@ -622,7 +622,7 @@ body {
     width: 44px;
     height: 30px;
     flex: 0 0 auto;
-    background: url("./assets/images/arrow.svg?v=2") center/contain no-repeat;
+    background: url("./assets/images/arrow.svg?v=3") center/contain no-repeat;
 }
 
 html.light .rcard-arrow { filter: saturate(1.15); }
