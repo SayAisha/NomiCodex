@@ -162,6 +162,26 @@ function scoreItem(item, tokens, alias) {
             }
         }
         if (!matched) {
+            // typo tolerance: one mistyped word in a multi-word query
+            // shouldn't kill the whole match — try each name word with an
+            // edit-distance budget scaled to the token length
+            if (ct.length >= 3 && ct.length <= 10) {
+                const words = cname.split(" ");
+                const maxD = ct.length <= 4 ? 1 : ct.length <= 7 ? 2 : 3;
+                for (const w of words) {
+                    if (w.length < 2 || Math.abs(w.length - ct.length) > maxD) continue;
+                    if (levenshtein(ct, w) <= maxD) { total += 3; matched = true; break; }
+                }
+                if (!matched && /^[a-z]+$/.test(ct) && ct.length >= 2) {
+                    // acronym: the token spells the initials of the item's
+                    // words ("pcb" -> "Plastic Circuit Board")
+                    const wordsA = words.filter(x => /^[a-z]/.test(x));
+                    if (ct.length === wordsA.length && wordsA.map(x => x[0]).join("") === ct)
+                        { total += 1; matched = true; }
+                }
+            }
+        }
+        if (!matched) {
             if (aliasCanon && cname.indexOf(aliasCanon) !== -1) continue;
             return null;
         }
@@ -305,8 +325,24 @@ export default async function handler(req, res) {
         }
     }
 
-    if (candidates.length === 0)
-        return send({ error: "not found", query, alternatives: [] });
+    if (candidates.length === 0) {
+        // did-you-mean: rescore against each single token (typo tolerance
+        // included) and suggest the best handful — the tag shows these as
+        // "Try: ..." so a bad query still points somewhere useful
+        const scored = [];
+        const seen = new Set();
+        for (const t of tokens) {
+            if (t.length < 3) continue;
+            for (const item of items) {
+                if (seen.has(item[0])) continue;
+                const s = scoreItem(item, [t], alias);
+                if (s !== null) { seen.add(item[0]); scored.push({ item, score: s }); }
+            }
+        }
+        scored.sort((a, b) => a.score - b.score || a.item[1].length - b.item[1].length);
+        return send({ error: "not found", query,
+            alternatives: scored.slice(0, 5).map(c => ({ name: c.item[1], id: c.item[0], recipes: c.item[4] })) });
+    }
 
     const queryCanon = canon(queryLower);
     candidates.sort((a, b) => {

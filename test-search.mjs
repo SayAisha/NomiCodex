@@ -177,5 +177,21 @@ for (const q of ["steel ingot", "pbi", "iridium ore ebf", "fusion reactor", "hig
         `filter=${r.body.machineFilter} types=${types.join(", ")}`);
 }
 
+
+// ---- typo tolerance, word order, acronyms ----
+{
+    const typo = await call("steel casng");
+    check("typo 'steel casng' -> a steel casing item", /casing/i.test(typo.body.item?.name || "") && /steel/i.test(typo.body.item?.name || ""), JSON.stringify(typo.body.item?.name));
+    const typo2 = await call("machine casng");
+    check("typo 'machine casng' -> machine casing", /machine casing/i.test(typo2.body.item?.name || ""), JSON.stringify(typo2.body.item?.name));
+    const shuffle = await call("casing machine steel");
+    check("shuffled 'casing machine steel' -> steel machine casing", /steel machine casing/i.test(shuffle.body.item?.name || ""), JSON.stringify(shuffle.body.item?.name));
+    const pcb = await call("pcb");
+    const pcbNames = [pcb.body.item?.name, ...(pcb.body.alternatives || []).map(a => a.name)].filter(Boolean);
+    check("acronym 'pcb' surfaces Plastic Circuit Board", pcbNames.some(n => /plastic circuit board/i.test(n)), JSON.stringify(pcbNames.slice(0, 3)));
+    const dym = await call("zzzqqq casng");
+    check("zero-hit gives did-you-mean alternatives", (dym.body.alternatives || []).length > 0 && /casing/i.test(dym.body.alternatives[0].name || ""), JSON.stringify((dym.body.alternatives || []).slice(0, 2)));
+}
+
 console.log(fails ? `\n${fails} FAILURES` : "\nall passed");
 process.exit(fails ? 1 : 0);
