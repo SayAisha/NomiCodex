@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
-  <!-- option A, seam-proof: the panel fill covers the FULL tile edge-to-edge
-       (opaque, square) so tiling has zero transparent pixels — no resampling
-       ghosting possible at any scale. The rounded frame is drawn inside. -->
-  <rect x="0" y="0" width="44" height="44" fill="#1b2029"/>
-  <rect x="2.5" y="2.5" width="39" height="39" rx="7" fill="none" stroke="#323a49" stroke-width="1.75"/>
-</svg>
