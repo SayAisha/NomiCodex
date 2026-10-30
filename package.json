@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@sparticuz/chromium": "^153.0.0",
+    "@vercel/analytics": "^2.0.1",
     "puppeteer-core": "^25.11.0"
   }
 }
