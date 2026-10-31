@@ -1,5 +1,6 @@
 // NomiCodex — from-scratch frontend (2026). Built directly on the binary
 // repository (repository.js) and the atlas; no classic-UI code involved.
+import { inject } from '@vercel/analytics';
 import { Repository, Item, Fluid, OreDict, Recipe } from "./repository.js?v=22";
 import { tierIndexOf } from "./utils.js?v=23";
 import { OpenOceu } from "./oceu.js?v=21";
@@ -603,6 +604,9 @@ function route() {
 /* ---------------- boot ---------------- */
 
 async function boot() {
+    // Initialize Vercel Analytics
+    inject();
+
     const splash = $("#splash .msg");
     const qp = new URLSearchParams(location.hash.split("?")[1] ?? "");
     const mode = qp.get("mode") === "expert" || (!qp.has("mode") && localStorage.getItem("nomi-mode") === "expert") ? "expert" : "normal";
